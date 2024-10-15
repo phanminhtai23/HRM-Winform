@@ -3,16 +3,92 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FRONTENDPlayer
 {
     public partial class DangKy : DevExpress.XtraEditors.XtraForm
     {
+        private bool TrungTaiKhoan(string username)
+        {
+            // Chuỗi kết nối đến cơ sở dữ liệu
+            //Trust Server Certificate = True; Encrypt = True;
+            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True;";
+
+            // Truy vấn SQL kiểm tra tài khoản
+            string query = "SELECT COUNT(1) FROM TaiKhoan WHERE TenTaiKhoan = @username";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo đối tượng SqlCommand
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    // Thêm tham số để tránh SQL Injection
+                    cmd.Parameters.AddWithValue("@username", username);
+                    // Thực thi truy vấn và lấy kết quả
+                    int count = (int)cmd.ExecuteScalar();
+
+                    // Nếu count = 1, tức là tài khoản tồn tại
+                    return count == 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối: " + ex.Message);
+                    return false;
+                }
+            }
+        }
+        private bool ThemTaiKhoan(string Username, string Password, string Email)
+        {
+            // Chuỗi kết nối đến cơ sở dữ liệu
+            //Trust Server Certificate = True; Encrypt = True;
+            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True;";
+
+            // Truy vấn SQL kiểm tra tài khoản
+            string query = "INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, Email) VALUES (@Username, @Password, @Email)";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo đối tượng SqlCommand
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    // Thêm các tham số vào câu lệnh SQL
+                    cmd.Parameters.AddWithValue("@Username", Username);
+                    cmd.Parameters.AddWithValue("@Password", Password); // Bạn nên mã hóa mật khẩu trước khi lưu vào DB
+                    cmd.Parameters.AddWithValue("@Email", Email);
+
+                    // Thực thi truy vấn và lấy kết quả
+                    int count = (int)cmd.ExecuteScalar();
+
+                    // Nếu count = 1, thêm tk thành công
+                    return count == 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi kết nối: " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+
         public DangKy()
         {
             InitializeComponent();
@@ -66,6 +142,7 @@ namespace FRONTENDPlayer
             textBox_TaiKhoan.Text = string.Empty;
             textBox2_MatKhau.Text = string.Empty;
             textBox3_XacNhanMK.Text = string.Empty;
+            textBox1_Gmail.Text = string.Empty;
             textBox_TaiKhoan.Focus();
         }
 
@@ -129,12 +206,19 @@ namespace FRONTENDPlayer
                 textBox1_Gmail.Focus();
             }
             // VIẾT CHƯA XONG - nếu tại tk hợp lệ -> lưu tài khoản và chuyển đến trang đăng ký
-            else if (textBox_TaiKhoan.Text == "Nếu Đăng ký thành công")
+            else if (!TrungTaiKhoan(textBox_TaiKhoan.Text))
             {
-                MessageBox.Show("Tạo tài khoản thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                Dangnhap dangnhap = new Dangnhap();
-                dangnhap.Show();
+                if (ThemTaiKhoan(textBox_TaiKhoan.Text, textBox2_MatKhau.Text, textBox1_Gmail.Text))
+                {
+                    MessageBox.Show("Tạo tài khoản thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Dangnhap dangnhap = new Dangnhap();
+                    dangnhap.Show();
+                }
+                
+            } else
+            {
+                label6_ThongBaoTrungTK.Visible = true;
             }
 
         }
@@ -149,7 +233,7 @@ namespace FRONTENDPlayer
             DialogResult result = MessageBox.Show("Bạn chắn chắn muốn thoát ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
             }
         }
 

@@ -23,7 +23,7 @@ namespace FRONTENDPlayer
             string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True;";
 
         // Truy vấn SQL kiểm tra tài khoản
-        string query = "SELECT COUNT(1) FROM Users WHERE username = @username AND password = @password";
+        string query = "SELECT COUNT(1) FROM TaiKhoan WHERE TenTaiKhoan = @username AND MatKhau = @password";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1_Gmail = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button2_DangKy = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,8 +44,7 @@
             this.textBox2_MatKhau = new System.Windows.Forms.TextBox();
             this.textBox_TaiKhoan = new System.Windows.Forms.TextBox();
             this.button1_DangKy = new System.Windows.Forms.Button();
-            this.textBox1_Gmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label6_ThongBaoTrungTK = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -67,6 +68,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer1.Panel2.Controls.Add(this.label6_ThongBaoTrungTK);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Controls.Add(this.textBox1_Gmail);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox3);
@@ -96,6 +98,25 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(71, 347);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 23);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Gmail:";
+            // 
+            // textBox1_Gmail
+            // 
+            this.textBox1_Gmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox1_Gmail.Location = new System.Drawing.Point(75, 373);
+            this.textBox1_Gmail.Multiline = true;
+            this.textBox1_Gmail.Name = "textBox1_Gmail";
+            this.textBox1_Gmail.Size = new System.Drawing.Size(301, 40);
+            this.textBox1_Gmail.TabIndex = 22;
             // 
             // pictureBox3
             // 
@@ -217,25 +238,16 @@
             this.button1_DangKy.UseVisualStyleBackColor = true;
             this.button1_DangKy.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1_Gmail
+            // label6_ThongBaoTrungTK
             // 
-            this.textBox1_Gmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1_Gmail.Location = new System.Drawing.Point(75, 373);
-            this.textBox1_Gmail.Multiline = true;
-            this.textBox1_Gmail.Name = "textBox1_Gmail";
-            this.textBox1_Gmail.PasswordChar = '*';
-            this.textBox1_Gmail.Size = new System.Drawing.Size(301, 40);
-            this.textBox1_Gmail.TabIndex = 22;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(71, 347);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 23);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Gmail:";
+            this.label6_ThongBaoTrungTK.AutoSize = true;
+            this.label6_ThongBaoTrungTK.ForeColor = System.Drawing.Color.Red;
+            this.label6_ThongBaoTrungTK.Location = new System.Drawing.Point(162, 428);
+            this.label6_ThongBaoTrungTK.Name = "label6_ThongBaoTrungTK";
+            this.label6_ThongBaoTrungTK.Size = new System.Drawing.Size(143, 16);
+            this.label6_ThongBaoTrungTK.TabIndex = 24;
+            this.label6_ThongBaoTrungTK.Text = "Tên tài khoản đã tồn tại";
+            this.label6_ThongBaoTrungTK.Visible = false;
             // 
             // DangKy
             // 
@@ -275,5 +287,6 @@
         private System.Windows.Forms.Button button1_DangKy;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1_Gmail;
+        private System.Windows.Forms.Label label6_ThongBaoTrungTK;
     }
 }

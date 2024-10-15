@@ -62,7 +62,7 @@ namespace FRONTENDPlayer
             if (result == DialogResult.Yes)
             {
                 // Đóng ứng dụng
-                Application.Exit();
+                System.Windows.Forms.Application.Exit();
             } else if (result == DialogResult.No)
             {
                 e.Cancel = true;
