@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7be256c950294b97b228d41b56375324" Name="Diagram1">
+        <EntityTypeShape EntityType="HRMModel.DM_ChucVu" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.DM_Luong" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.Luong" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.NgayNghi" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.NhanVien" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.PhongBan" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.QT_CongTac" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HRMModel.TaiKhoan" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="HRMModel.FK__NhanVien__MaChuc__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__DM_Luong__MaNhan__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__Luong__MaNhanVie__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__NgayNghi__MaNhan__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__NhanVien__MaPhon__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="HRMModel.FK__QT_CongTa__MaNha__3F466844" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

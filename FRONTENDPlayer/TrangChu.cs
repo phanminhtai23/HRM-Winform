@@ -1,0 +1,136 @@
+﻿using DevExpress.XtraBars;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FRONTENDPlayer
+{
+    public partial class TrangChu : DevExpress.XtraBars.Ribbon.RibbonForm
+    {
+        public TrangChu()
+        {
+            InitializeComponent();
+
+        }
+
+        void openForm(Type typeForm)
+        {
+            foreach (var frm in MdiChildren)
+            {
+                if (frm.GetType() == typeForm)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            Form f = (Form)Activator.CreateInstance(typeForm);
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ten_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn chắn chắn muốn đăng xuất ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Dangnhap dangnhap = new Dangnhap();
+                dangnhap.Show();
+            }
+        }
+
+        private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Hiển thị thông báo xác nhận
+            var result = MessageBox.Show("Bạn có chắc chắn muốn thoát?",
+                                           "Xác nhận thoát",
+                                           MessageBoxButtons.YesNo,
+                                           MessageBoxIcon.Question);
+
+            // Nếu người dùng chọn "No", hủy việc đóng form
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true; // Hủy hành động đóng
+            }
+        }
+
+        private void PhongBang_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(frmPhongBan));
+        }
+
+
+        private void TrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            openForm(typeof(frmChucVu));
+        }
+
+        private void Thoat_H_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void Thoat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void NhanVien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(frmNhanVien));
+        }
+
+        private void HopDong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof (frmHopDong));
+        }
+
+        private void KhienThuongKyLuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(frmKhenThuongKyLuat));
+        }
+
+        private void DieuChuyen_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void ThoiViec_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void DoiMatKhau_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void KhoiPhucDuLieu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void SauLuuDuLieu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+
+    }
+}
