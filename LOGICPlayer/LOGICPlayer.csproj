@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChucVuBackEnd.cs" />
+    <Compile Include="PhongBanBackEnd.cs" />
     <Compile Include="Logic_TaiKhoan.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="NhanVienBackEnd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

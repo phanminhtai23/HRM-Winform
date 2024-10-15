@@ -35,16 +35,17 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 65);
+            this.textBox1.Location = new System.Drawing.Point(57, 65);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 23);
+            this.textBox1.Size = new System.Drawing.Size(156, 23);
             this.textBox1.TabIndex = 0;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(77, 12);
+            this.textEdit1.Location = new System.Drawing.Point(57, 13);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(125, 22);
+            this.textEdit1.Size = new System.Drawing.Size(156, 23);
             this.textEdit1.TabIndex = 1;
             // 
             // ThemThongTinNhanVien

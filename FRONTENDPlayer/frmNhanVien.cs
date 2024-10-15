@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using LOGICPlayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,8 @@ namespace FRONTENDPlayer
             InitializeComponent();
         }
 
+        NhanVienBackEnd nhanvienbackend = new NhanVienBackEnd();
+
         private void Them_NV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ThemThongTinNhanVien FormThemNV = new ThemThongTinNhanVien();
@@ -25,6 +28,16 @@ namespace FRONTENDPlayer
             {
 
             }
+        }
+
+        private void Dong_fromNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmNhanVien_Load(object sender, EventArgs e)
+        {
+            dataGridView_NhanVien.DataSource = nhanvienbackend.LoadDataTable();
         }
     }
 }

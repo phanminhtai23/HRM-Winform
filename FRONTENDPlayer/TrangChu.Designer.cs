@@ -48,9 +48,11 @@
             this.NhanVien = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.CongTac = new DevExpress.XtraBars.BarButtonItem();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.NhanSu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.DanhMucDungChung = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Luong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -60,8 +62,6 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -69,6 +69,7 @@
             // 
             // ribbon
             // 
+            this.ribbon.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(37);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -91,15 +92,17 @@
             this.CongTac,
             this.skinDropDownButtonItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbon.MaxItemId = 27;
             this.ribbon.Name = "ribbon";
+            this.ribbon.OptionsMenuMinWidth = 412;
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.NhanSu,
             this.Luong,
             this.ThongKe,
             this.HeThong});
             this.ribbon.QuickToolbarItemLinks.Add(this.Ten);
-            this.ribbon.Size = new System.Drawing.Size(1045, 193);
+            this.ribbon.Size = new System.Drawing.Size(1037, 181);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
@@ -234,6 +237,11 @@
             this.CongTac.Name = "CongTac";
             this.CongTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CongTac_ItemClick);
             // 
+            // skinDropDownButtonItem1
+            // 
+            this.skinDropDownButtonItem1.Id = 26;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            // 
             // NhanSu
             // 
             this.NhanSu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -260,6 +268,12 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.Thoat_N, true);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Nghiệp Vụ";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.skinDropDownButtonItem1);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Giao diện";
             // 
             // Luong
             // 
@@ -305,10 +319,11 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 603);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 606);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1045, 30);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1037, 27);
             // 
             // documentManager1
             // 
@@ -318,22 +333,11 @@
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.skinDropDownButtonItem1);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Giao diện";
-            // 
-            // skinDropDownButtonItem1
-            // 
-            this.skinDropDownButtonItem1.Id = 26;
-            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
-            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 633);
+            this.ClientSize = new System.Drawing.Size(1037, 633);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;

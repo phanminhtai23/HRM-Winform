@@ -28,3 +28,15 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\DATAPlay
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\DATAPlayer\obj\Debug\DATAPlayer.csproj.Up2Date
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\DATAPlayer\obj\Debug\DATAPlayer.dll
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\DATAPlayer\obj\Debug\DATAPlayer.pdb
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.dll.config
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.pdb
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.AssemblyReference.cache
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.CoreCompileInputs.cache
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.Up2Date
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.pdb

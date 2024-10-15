@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using LOGICPlayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +19,12 @@ namespace FRONTENDPlayer
             InitializeComponent();
         }
 
+        PhongBanBackEnd phongbanbackend = new PhongBanBackEnd();
+        
+
         private void frmPhongBan_Load(object sender, EventArgs e)
         {
-
+            dataGridView_PhongBan.DataSource = phongbanbackend.LoadDataTable();
         }
     }
 }
