@@ -22,3 +22,18 @@ D:\Quan_Tri_Du_Lieu\HRM\HRM-WinForms\LOGICPlayer\bin\Debug\EntityFramework.SqlSe
 D:\Quan_Tri_Du_Lieu\HRM\HRM-WinForms\LOGICPlayer\bin\Debug\DATAPlayer.dll.config
 D:\Quan_Tri_Du_Lieu\HRM\HRM-WinForms\LOGICPlayer\bin\Debug\EntityFramework.xml
 D:\Quan_Tri_Du_Lieu\HRM\HRM-WinForms\LOGICPlayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\LOGICPlayer.dll.config
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\LOGICPlayer.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\LOGICPlayer.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\DATAPlayer.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\EntityFramework.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\DATAPlayer.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\DATAPlayer.dll.config
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\EntityFramework.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\obj\Debug\LOGICPlayer.csproj.AssemblyReference.cache
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\obj\Debug\LOGICPlayer.csproj.CoreCompileInputs.cache
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\obj\Debug\LOGICPla.1E6DCFD4.Up2Date
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\obj\Debug\LOGICPlayer.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-WinForms\LOGICPlayer\obj\Debug\LOGICPlayer.pdb

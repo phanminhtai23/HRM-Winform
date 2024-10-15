@@ -123,6 +123,11 @@ namespace FRONTENDPlayer
                 MessageBox.Show("Bạn đã nhập sai xác nhận mật khẩu !", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox3_XacNhanMK.Focus();
             }
+            else if (textBox1_Gmail.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập Gmail !", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox1_Gmail.Focus();
+            }
             // VIẾT CHƯA XONG - nếu tại tk hợp lệ -> lưu tài khoản và chuyển đến trang đăng ký
             else if (textBox_TaiKhoan.Text == "Nếu Đăng ký thành công")
             {
