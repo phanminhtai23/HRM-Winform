@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DATAPlayer;
+using DevExpress.DataAccess.Native.EntityFramework;
+using DevExpress.Pdf.Native.BouncyCastle.Ocsp;
 
 namespace FRONTENDPlayer
 {
@@ -17,7 +19,8 @@ namespace FRONTENDPlayer
         private bool KiemTraDangNhap(string username, string password)
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True;Encrypt=True;";
+            //Trust Server Certificate = True; Encrypt = True;
+            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True;";
 
         // Truy vấn SQL kiểm tra tài khoản
         string query = "SELECT COUNT(1) FROM Users WHERE username = @username AND password = @password";
@@ -35,7 +38,6 @@ namespace FRONTENDPlayer
                     // Thêm tham số để tránh SQL Injection
                     cmd.Parameters.AddWithValue("@username", username);
                     cmd.Parameters.AddWithValue("@password", password);
-
                     // Thực thi truy vấn và lấy kết quả
                     int count = (int)cmd.ExecuteScalar();
 
