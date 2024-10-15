@@ -59,9 +59,13 @@ namespace FRONTENDPlayer
                                            MessageBoxIcon.Question);
 
             // Nếu người dùng chọn "No", hủy việc đóng form
-            if (result == DialogResult.No)
+            if (result == DialogResult.Yes)
             {
-                e.Cancel = true; // Hủy hành động đóng
+                // Đóng ứng dụng
+                Application.Exit();
+            } else if (result == DialogResult.No)
+            {
+                e.Cancel = true;
             }
         }
 

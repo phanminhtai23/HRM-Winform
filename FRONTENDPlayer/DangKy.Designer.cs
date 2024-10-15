@@ -118,7 +118,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(78, 158);
+            this.label4.Location = new System.Drawing.Point(71, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 7;
@@ -129,7 +129,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(78, 241);
+            this.label3.Location = new System.Drawing.Point(71, 240);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 23);
             this.label3.TabIndex = 8;
@@ -140,7 +140,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(78, 323);
+            this.label2.Location = new System.Drawing.Point(71, 322);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 23);
             this.label2.TabIndex = 9;
@@ -173,32 +173,32 @@
             // textBox3_XacNhanMK
             // 
             this.textBox3_XacNhanMK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3_XacNhanMK.Location = new System.Drawing.Point(82, 349);
+            this.textBox3_XacNhanMK.Location = new System.Drawing.Point(75, 348);
             this.textBox3_XacNhanMK.Multiline = true;
             this.textBox3_XacNhanMK.Name = "textBox3_XacNhanMK";
             this.textBox3_XacNhanMK.PasswordChar = '*';
-            this.textBox3_XacNhanMK.Size = new System.Drawing.Size(294, 40);
+            this.textBox3_XacNhanMK.Size = new System.Drawing.Size(301, 40);
             this.textBox3_XacNhanMK.TabIndex = 2;
             this.textBox3_XacNhanMK.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2_MatKhau
             // 
             this.textBox2_MatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2_MatKhau.Location = new System.Drawing.Point(82, 267);
+            this.textBox2_MatKhau.Location = new System.Drawing.Point(75, 266);
             this.textBox2_MatKhau.Multiline = true;
             this.textBox2_MatKhau.Name = "textBox2_MatKhau";
             this.textBox2_MatKhau.PasswordChar = '*';
-            this.textBox2_MatKhau.Size = new System.Drawing.Size(294, 40);
+            this.textBox2_MatKhau.Size = new System.Drawing.Size(301, 40);
             this.textBox2_MatKhau.TabIndex = 1;
             this.textBox2_MatKhau.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox_TaiKhoan
             // 
             this.textBox_TaiKhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox_TaiKhoan.Location = new System.Drawing.Point(82, 184);
+            this.textBox_TaiKhoan.Location = new System.Drawing.Point(75, 183);
             this.textBox_TaiKhoan.Multiline = true;
             this.textBox_TaiKhoan.Name = "textBox_TaiKhoan";
-            this.textBox_TaiKhoan.Size = new System.Drawing.Size(294, 40);
+            this.textBox_TaiKhoan.Size = new System.Drawing.Size(301, 40);
             this.textBox_TaiKhoan.TabIndex = 0;
             this.textBox_TaiKhoan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 

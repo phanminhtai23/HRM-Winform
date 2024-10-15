@@ -62,6 +62,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel2.Controls.Add(this.label4_SaiTK);
             this.splitContainer1.Panel2.Controls.Add(this.linkLabel1);
