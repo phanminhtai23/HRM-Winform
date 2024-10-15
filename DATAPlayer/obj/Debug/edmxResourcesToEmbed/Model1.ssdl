@@ -76,7 +76,6 @@
     <Property Name="TenTaiKhoan" Type="nvarchar" MaxLength="100" />
     <Property Name="MatKhau" Type="nvarchar" MaxLength="100" />
     <Property Name="Email" Type="nvarchar" MaxLength="100" />
-    <Property Name="TinhTrang" Type="bit" />
   </EntityType>
   <Association Name="FK__DM_Luong__MaNhan__4222D4EF">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />

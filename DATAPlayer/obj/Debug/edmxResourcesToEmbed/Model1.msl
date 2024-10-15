@@ -77,11 +77,10 @@
     <EntitySetMapping Name="TaiKhoans">
       <EntityTypeMapping TypeName="HRMModel.TaiKhoan">
         <MappingFragment StoreEntitySet="TaiKhoan">
-          <ScalarProperty Name="STT_Tk" ColumnName="STT_Tk" />
-          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
-          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+          <ScalarProperty Name="STT_Tk" ColumnName="STT_Tk" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

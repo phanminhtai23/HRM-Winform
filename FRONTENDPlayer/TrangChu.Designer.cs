@@ -47,6 +47,7 @@
             this.ThoiGian = new DevExpress.XtraBars.BarButtonItem();
             this.NhanVien = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.CongTac = new DevExpress.XtraBars.BarButtonItem();
             this.NhanSu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.DanhMucDungChung = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -59,7 +60,8 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.CongTac = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -86,9 +88,10 @@
             this.ThoiGian,
             this.NhanVien,
             this.barButtonItem1,
-            this.CongTac});
+            this.CongTac,
+            this.skinDropDownButtonItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 26;
+            this.ribbon.MaxItemId = 27;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.NhanSu,
@@ -223,11 +226,20 @@
             this.barButtonItem1.Id = 24;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
+            // CongTac
+            // 
+            this.CongTac.Caption = "Công Tác";
+            this.CongTac.Id = 25;
+            this.CongTac.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("CongTac.ImageOptions.SvgImage")));
+            this.CongTac.Name = "CongTac";
+            this.CongTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CongTac_ItemClick);
+            // 
             // NhanSu
             // 
             this.NhanSu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.DanhMucDungChung,
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup5});
             this.NhanSu.Name = "NhanSu";
             this.NhanSu.Text = "Nhân Sự";
             // 
@@ -306,13 +318,16 @@
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // CongTac
+            // ribbonPageGroup5
             // 
-            this.CongTac.Caption = "Công Tác";
-            this.CongTac.Id = 25;
-            this.CongTac.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("CongTac.ImageOptions.SvgImage")));
-            this.CongTac.Name = "CongTac";
-            this.CongTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CongTac_ItemClick);
+            this.ribbonPageGroup5.ItemLinks.Add(this.skinDropDownButtonItem1);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Giao diện";
+            // 
+            // skinDropDownButtonItem1
+            // 
+            this.skinDropDownButtonItem1.Id = 26;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
             // 
             // TrangChu
             // 
@@ -369,5 +384,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ThongKe;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem CongTac;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
     }
 }

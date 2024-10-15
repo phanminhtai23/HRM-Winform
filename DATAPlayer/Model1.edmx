@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="HRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DM_ChucVu">
           <Key>
             <PropertyRef Name="MaChucVu" />
@@ -81,7 +81,6 @@
           <Property Name="TenTaiKhoan" Type="nvarchar" MaxLength="100" />
           <Property Name="MatKhau" Type="nvarchar" MaxLength="100" />
           <Property Name="Email" Type="nvarchar" MaxLength="100" />
-          <Property Name="TinhTrang" Type="bit" />
         </EntityType>
         <Association Name="FK__DM_Luong__MaNhan__4222D4EF">
           <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
@@ -189,8 +188,7 @@
             <End Role="QT_CongTac" EntitySet="QT_CongTac" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -274,16 +272,6 @@
           <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK__QT_CongTa__MaNha__3F466844" FromRole="QT_CongTac" ToRole="NhanVien" />
         </EntityType>
-        <EntityType Name="TaiKhoan">
-          <Key>
-            <PropertyRef Name="STT_Tk" />
-          </Key>
-          <Property Name="STT_Tk" Type="Int32" Nullable="false" />
-          <Property Name="TenTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="TinhTrang" Type="Boolean" />
-        </EntityType>
         <Association Name="FK__NhanVien__MaChuc__3C69FB99">
           <End Role="DM_ChucVu" Type="Self.DM_ChucVu" Multiplicity="0..1" />
           <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
@@ -364,7 +352,6 @@
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="PhongBans" EntityType="Self.PhongBan" />
           <EntitySet Name="QT_CongTac" EntityType="Self.QT_CongTac" />
-          <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
           <AssociationSet Name="FK__NhanVien__MaChuc__3C69FB99" Association="Self.FK__NhanVien__MaChuc__3C69FB99">
             <End Role="DM_ChucVu" EntitySet="DM_ChucVu" />
             <End Role="NhanVien" EntitySet="NhanViens" />
@@ -389,7 +376,17 @@
             <End Role="NhanVien" EntitySet="NhanViens" />
             <End Role="QT_CongTac" EntitySet="QT_CongTac" />
           </AssociationSet>
+          <EntitySet Name="TaiKhoans" EntityType="HRMModel.TaiKhoan" />
         </EntityContainer>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="STT_Tk" />
+          </Key>
+          <Property Name="STT_Tk" Type="Int32" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -472,11 +469,10 @@
           <EntitySetMapping Name="TaiKhoans">
             <EntityTypeMapping TypeName="HRMModel.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
-                <ScalarProperty Name="STT_Tk" ColumnName="STT_Tk" />
-                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="STT_Tk" ColumnName="STT_Tk" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

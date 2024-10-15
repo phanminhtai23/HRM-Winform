@@ -190,6 +190,7 @@
             this.button_DangNhap.Text = "Đăng nhập";
             this.button_DangNhap.UseVisualStyleBackColor = true;
             this.button_DangNhap.Click += new System.EventHandler(this.button_DangNhap_Click);
+            this.button_DangNhap.Enter += new System.EventHandler(this.button_DangNhap_Enter);
             // 
             // Dangnhap
             // 

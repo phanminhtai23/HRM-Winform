@@ -55,6 +55,7 @@ namespace FRONTENDPlayer
         public Dangnhap()
         {
             InitializeComponent();
+            this.AcceptButton = this.button_DangNhap;
         }
 
 
@@ -125,6 +126,9 @@ namespace FRONTENDPlayer
             }
         }
 
-
+        private void button_DangNhap_Enter(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

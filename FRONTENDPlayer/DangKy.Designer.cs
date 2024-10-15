@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6_ThongBaoTrungTK = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1_Gmail = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -44,7 +45,6 @@
             this.textBox2_MatKhau = new System.Windows.Forms.TextBox();
             this.textBox_TaiKhoan = new System.Windows.Forms.TextBox();
             this.button1_DangKy = new System.Windows.Forms.Button();
-            this.label6_ThongBaoTrungTK = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,6 +68,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.splitContainer1.Panel2.Controls.Add(this.label6_ThongBaoTrungTK);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Controls.Add(this.textBox1_Gmail);
@@ -99,6 +100,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label6_ThongBaoTrungTK
+            // 
+            this.label6_ThongBaoTrungTK.AutoSize = true;
+            this.label6_ThongBaoTrungTK.ForeColor = System.Drawing.Color.Red;
+            this.label6_ThongBaoTrungTK.Location = new System.Drawing.Point(162, 428);
+            this.label6_ThongBaoTrungTK.Name = "label6_ThongBaoTrungTK";
+            this.label6_ThongBaoTrungTK.Size = new System.Drawing.Size(143, 16);
+            this.label6_ThongBaoTrungTK.TabIndex = 24;
+            this.label6_ThongBaoTrungTK.Text = "Tên tài khoản đã tồn tại";
+            this.label6_ThongBaoTrungTK.Visible = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -116,7 +128,7 @@
             this.textBox1_Gmail.Multiline = true;
             this.textBox1_Gmail.Name = "textBox1_Gmail";
             this.textBox1_Gmail.Size = new System.Drawing.Size(301, 40);
-            this.textBox1_Gmail.TabIndex = 22;
+            this.textBox1_Gmail.TabIndex = 3;
             // 
             // pictureBox3
             // 
@@ -134,7 +146,7 @@
             this.button2_DangKy.Location = new System.Drawing.Point(240, 465);
             this.button2_DangKy.Name = "button2_DangKy";
             this.button2_DangKy.Size = new System.Drawing.Size(136, 42);
-            this.button2_DangKy.TabIndex = 4;
+            this.button2_DangKy.TabIndex = 5;
             this.button2_DangKy.Text = "Làm mới";
             this.button2_DangKy.UseVisualStyleBackColor = true;
             this.button2_DangKy.Click += new System.EventHandler(this.button2_Click_2);
@@ -179,7 +191,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(129, 547);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(201, 23);
-            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Bạn đã có tài khoản ?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
@@ -233,21 +245,10 @@
             this.button1_DangKy.Location = new System.Drawing.Point(75, 465);
             this.button1_DangKy.Name = "button1_DangKy";
             this.button1_DangKy.Size = new System.Drawing.Size(136, 42);
-            this.button1_DangKy.TabIndex = 3;
+            this.button1_DangKy.TabIndex = 4;
             this.button1_DangKy.Text = "Đăng ký";
             this.button1_DangKy.UseVisualStyleBackColor = true;
             this.button1_DangKy.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label6_ThongBaoTrungTK
-            // 
-            this.label6_ThongBaoTrungTK.AutoSize = true;
-            this.label6_ThongBaoTrungTK.ForeColor = System.Drawing.Color.Red;
-            this.label6_ThongBaoTrungTK.Location = new System.Drawing.Point(162, 428);
-            this.label6_ThongBaoTrungTK.Name = "label6_ThongBaoTrungTK";
-            this.label6_ThongBaoTrungTK.Size = new System.Drawing.Size(143, 16);
-            this.label6_ThongBaoTrungTK.TabIndex = 24;
-            this.label6_ThongBaoTrungTK.Text = "Tên tài khoản đã tồn tại";
-            this.label6_ThongBaoTrungTK.Visible = false;
             // 
             // DangKy
             // 

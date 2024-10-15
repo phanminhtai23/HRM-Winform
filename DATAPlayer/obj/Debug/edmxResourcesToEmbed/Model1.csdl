@@ -80,16 +80,6 @@
     <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="NhanVien" Relationship="Self.FK__QT_CongTa__MaNha__3F466844" FromRole="QT_CongTac" ToRole="NhanVien" />
   </EntityType>
-  <EntityType Name="TaiKhoan">
-    <Key>
-      <PropertyRef Name="STT_Tk" />
-    </Key>
-    <Property Name="STT_Tk" Type="Int32" Nullable="false" />
-    <Property Name="TenTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="TinhTrang" Type="Boolean" />
-  </EntityType>
   <Association Name="FK__NhanVien__MaChuc__3C69FB99">
     <End Role="DM_ChucVu" Type="Self.DM_ChucVu" Multiplicity="0..1" />
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
@@ -170,7 +160,6 @@
     <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
     <EntitySet Name="PhongBans" EntityType="Self.PhongBan" />
     <EntitySet Name="QT_CongTac" EntityType="Self.QT_CongTac" />
-    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
     <AssociationSet Name="FK__NhanVien__MaChuc__3C69FB99" Association="Self.FK__NhanVien__MaChuc__3C69FB99">
       <End Role="DM_ChucVu" EntitySet="DM_ChucVu" />
       <End Role="NhanVien" EntitySet="NhanViens" />
@@ -195,5 +184,15 @@
       <End Role="NhanVien" EntitySet="NhanViens" />
       <End Role="QT_CongTac" EntitySet="QT_CongTac" />
     </AssociationSet>
+    <EntitySet Name="TaiKhoans" EntityType="HRMModel.TaiKhoan" />
   </EntityContainer>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="STT_Tk" />
+    </Key>
+    <Property Name="STT_Tk" Type="Int32" Nullable="false" />
+    <Property Name="TenTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

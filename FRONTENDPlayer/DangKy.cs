@@ -57,8 +57,8 @@ namespace FRONTENDPlayer
             string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True;";
 
             // Truy vấn SQL kiểm tra tài khoản
-            string query = "INSERT INTO TaiKhoan (TenTaiKhoan, MatKhau, Email) VALUES (@Username, @Password, @Email)";
-
+            string query = "INSERT INTO TaiKhoan (STT_Tk, TenTaiKhoan, MatKhau, Email) VALUES (@count_acc, @Username, @Password, @Email)";
+            string query_count_acc = "SELECT COUNT(*) FROM TaiKhoan";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
@@ -67,18 +67,23 @@ namespace FRONTENDPlayer
                     conn.Open();
 
                     // Tạo đối tượng SqlCommand
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlCommand cmd_count_acc = new SqlCommand(query_count_acc, conn);
+                    int count_acc = (int)cmd_count_acc.ExecuteScalar();
+                    count_acc += 1;
 
+
+                                        SqlCommand cmd = new SqlCommand(query, conn);
                     // Thêm các tham số vào câu lệnh SQL
                     cmd.Parameters.AddWithValue("@Username", Username);
                     cmd.Parameters.AddWithValue("@Password", Password); // Bạn nên mã hóa mật khẩu trước khi lưu vào DB
                     cmd.Parameters.AddWithValue("@Email", Email);
+                    cmd.Parameters.AddWithValue("@count_acc", count_acc);
 
-                    // Thực thi truy vấn và lấy kết quả
-                    int count = (int)cmd.ExecuteScalar();
+                    // Thực thi câu lệnh SQL
+                    int rowsAffected = cmd.ExecuteNonQuery();
 
                     // Nếu count = 1, thêm tk thành công
-                    return count == 1;
+                    return rowsAffected > 0;
                 }
                 catch (Exception ex)
                 {
@@ -92,7 +97,7 @@ namespace FRONTENDPlayer
         public DangKy()
         {
             InitializeComponent();
-            textBox_TaiKhoan.Focus();
+            this.AcceptButton = this.button1_DangKy;
         }
 
         private void button2_Click(object sender, EventArgs e)
