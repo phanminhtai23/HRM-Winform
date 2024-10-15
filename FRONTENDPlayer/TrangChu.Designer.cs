@@ -46,19 +46,20 @@
             this.Thoat_H = new DevExpress.XtraBars.BarButtonItem();
             this.ThoiGian = new DevExpress.XtraBars.BarButtonItem();
             this.NhanVien = new DevExpress.XtraBars.BarButtonItem();
-            this.HeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.NhanSu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.DanhMucDungChung = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Luong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.HeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.ThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.CongTac = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -84,9 +85,10 @@
             this.Thoat_H,
             this.ThoiGian,
             this.NhanVien,
-            this.barButtonItem1});
+            this.barButtonItem1,
+            this.CongTac});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 24;
+            this.ribbon.MaxItemId = 26;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.NhanSu,
@@ -216,21 +218,10 @@
             this.NhanVien.Name = "NhanVien";
             this.NhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NhanVien_ItemClick);
             // 
-            // HeThong
+            // barButtonItem1
             // 
-            this.HeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.HeThong.Name = "HeThong";
-            this.HeThong.Text = "Hệ Thống";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.DoiMatKhau);
-            this.ribbonPageGroup1.ItemLinks.Add(this.KhoiPhucDuLieu, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.SauLuuDuLieu, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.Thoat_H, true);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.barButtonItem1.Id = 24;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // NhanSu
             // 
@@ -267,9 +258,38 @@
             // 
             // ribbonPageGroup3
             // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.CongTac);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            // 
+            // ThongKe
+            // 
+            this.ThongKe.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
+            this.ThongKe.Name = "ThongKe";
+            this.ThongKe.Text = "Thống Kê";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            // 
+            // HeThong
+            // 
+            this.HeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.HeThong.Name = "HeThong";
+            this.HeThong.Text = "Hệ Thống";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.DoiMatKhau);
+            this.ribbonPageGroup1.ItemLinks.Add(this.KhoiPhucDuLieu, true);
+            this.ribbonPageGroup1.ItemLinks.Add(this.SauLuuDuLieu, true);
+            this.ribbonPageGroup1.ItemLinks.Add(this.Thoat_H, true);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // ribbonStatusBar
             // 
@@ -286,23 +306,13 @@
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // barButtonItem1
+            // CongTac
             // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 23;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // ThongKe
-            // 
-            this.ThongKe.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.ThongKe.Name = "ThongKe";
-            this.ThongKe.Text = "Thống Kê";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            this.CongTac.Caption = "Công Tác";
+            this.CongTac.Id = 25;
+            this.CongTac.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("CongTac.ImageOptions.SvgImage")));
+            this.CongTac.Name = "CongTac";
+            this.CongTac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CongTac_ItemClick);
             // 
             // TrangChu
             // 
@@ -358,5 +368,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ThongKe;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem CongTac;
     }
 }

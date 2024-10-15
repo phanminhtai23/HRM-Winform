@@ -135,6 +135,9 @@ namespace FRONTENDPlayer
 
         }
 
+        private void CongTac_ItemClick(object sender, ItemClickEventArgs e)
+        {
 
+        }
     }
 }
