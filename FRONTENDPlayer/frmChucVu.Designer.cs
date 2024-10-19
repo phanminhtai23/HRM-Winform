@@ -104,6 +104,7 @@
             this.Sua_Cvu.Id = 1;
             this.Sua_Cvu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Sua_Cvu.ImageOptions.SvgImage")));
             this.Sua_Cvu.Name = "Sua_Cvu";
+            this.Sua_Cvu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Sua_Cvu_ItemClick);
             // 
             // Tim_CVu
             // 
@@ -111,6 +112,7 @@
             this.Tim_CVu.Id = 2;
             this.Tim_CVu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Tim_CVu.ImageOptions.SvgImage")));
             this.Tim_CVu.Name = "Tim_CVu";
+            this.Tim_CVu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Tim_CVu_ItemClick);
             // 
             // Xoa_CVu
             // 
@@ -118,6 +120,7 @@
             this.Xoa_CVu.Id = 3;
             this.Xoa_CVu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Xoa_CVu.ImageOptions.SvgImage")));
             this.Xoa_CVu.Name = "Xoa_CVu";
+            this.Xoa_CVu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Xoa_CVu_ItemClick);
             // 
             // In_CVu
             // 
@@ -125,6 +128,7 @@
             this.In_CVu.Id = 4;
             this.In_CVu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("In_CVu.ImageOptions.SvgImage")));
             this.In_CVu.Name = "In_CVu";
+            this.In_CVu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.In_CVu_ItemClick);
             // 
             // Dong_CVu
             // 
@@ -190,11 +194,15 @@
             this.HeSoLuong});
             this.dataGridView_ChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_ChucVu.Location = new System.Drawing.Point(0, 34);
+            this.dataGridView_ChucVu.MultiSelect = false;
             this.dataGridView_ChucVu.Name = "dataGridView_ChucVu";
+            this.dataGridView_ChucVu.ReadOnly = true;
             this.dataGridView_ChucVu.RowHeadersWidth = 51;
             this.dataGridView_ChucVu.RowTemplate.Height = 24;
+            this.dataGridView_ChucVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_ChucVu.Size = new System.Drawing.Size(883, 484);
             this.dataGridView_ChucVu.TabIndex = 4;
+            this.dataGridView_ChucVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ChucVu_CellContentClick);
             // 
             // MaChucVu
             // 
@@ -202,6 +210,7 @@
             this.MaChucVu.HeaderText = "Mã Chức Vụ";
             this.MaChucVu.MinimumWidth = 6;
             this.MaChucVu.Name = "MaChucVu";
+            this.MaChucVu.ReadOnly = true;
             // 
             // Column1
             // 
@@ -209,6 +218,7 @@
             this.Column1.HeaderText = "Column1";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Visible = false;
             // 
             // TenChucVu
@@ -217,6 +227,7 @@
             this.TenChucVu.HeaderText = "Tên Chức Vụ";
             this.TenChucVu.MinimumWidth = 6;
             this.TenChucVu.Name = "TenChucVu";
+            this.TenChucVu.ReadOnly = true;
             // 
             // HeSoLuong
             // 
@@ -224,6 +235,7 @@
             this.HeSoLuong.HeaderText = "Hệ Số Lương";
             this.HeSoLuong.MinimumWidth = 6;
             this.HeSoLuong.Name = "HeSoLuong";
+            this.HeSoLuong.ReadOnly = true;
             // 
             // frmChucVu
             // 

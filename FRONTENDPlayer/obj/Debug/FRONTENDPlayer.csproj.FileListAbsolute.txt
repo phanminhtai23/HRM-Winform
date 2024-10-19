@@ -342,7 +342,6 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDP
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmNhanVien.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmPhongBan.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.Properties.Resources.resources
-C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemChuVu.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemThongTinNhanVien.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.TrangChu.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.csproj.GenerateResource.cache
@@ -355,3 +354,5 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDP
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaPhongBan.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmCapQuyen.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.TimKiemPhongBan.resources
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemChucVu.resources
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaChucVu.resources

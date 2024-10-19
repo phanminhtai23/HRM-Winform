@@ -1,0 +1,11 @@
+# Bỏ qua thư mục DATAPlayer
+DATAPlayer/
+
+# Bỏ qua tệp App.config trong thư mục FRONTENDPlayer
+FRONTENDPlayer/App.config
+
+# Bỏ qua tệp App.config trong thư mục LOGICPlayer
+LOGICPlayer/App.config
+
+# Bỏ qua thư mục .vs
+.vs/

@@ -1,0 +1,103 @@
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraRichEdit.Import.Html;
+using LOGICPlayer;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FRONTENDPlayer
+{
+    public partial class ThemChucVu : DevExpress.XtraEditors.XtraForm
+    {
+        public ThemChucVu()
+        {
+            InitializeComponent();
+        }
+        ChucVuBackEnd chucVuBackEnd = new ChucVuBackEnd();
+
+        private void button_DongThemChucVu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button_LuuThemChucVu_Click(object sender, EventArgs e)
+        {
+            
+
+            try
+            {
+                // Lay du lieu tu cac truong 
+                string maChucVu = textEdit_MaChucVu.Text;
+                string tenChucVu = textEdit_TenChucVu.Text;
+                decimal heSoLuong;
+                // Kiểm tra các điều kiện không được để trống
+                if (string.IsNullOrEmpty(maChucVu))
+                {
+                    MessageBox.Show("Mã chức vụ không được để trống.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (maChucVu.Length < 2)
+                {
+                    MessageBox.Show("Mã chức vụ phải có ít nhất 2 ký tự.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+                if (string.IsNullOrEmpty(tenChucVu))
+                {
+                    MessageBox.Show("Tên chức vụ không được để trống.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!decimal.TryParse(comboBox_HeSoLuong.Text, out heSoLuong))
+                {
+                    MessageBox.Show("Hệ số lương không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Kiểm tra trùng lặp mã hoặc tên chức vụ
+                if (chucVuBackEnd.IsDuplicate(maChucVu, tenChucVu))
+                {
+                    MessageBox.Show("Mã hoặc tên chức vụ đã tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                bool result = chucVuBackEnd.AddChucVu(maChucVu, tenChucVu, heSoLuong);
+
+                if (result)
+                {
+                    MessageBox.Show("Thêm chức vụ thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi khi thêm chức vụ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } catch {
+                MessageBox.Show("Lỗi khi thêm chức vụ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void textEdit_MaChucVu_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textEdit_TenChucVu_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_HeSoLuong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
