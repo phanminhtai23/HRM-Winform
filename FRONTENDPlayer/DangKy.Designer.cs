@@ -63,7 +63,6 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -83,7 +82,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.textBox2_MatKhau);
             this.splitContainer1.Panel2.Controls.Add(this.textBox_TaiKhoan);
             this.splitContainer1.Panel2.Controls.Add(this.button1_DangKy);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(918, 606);
             this.splitContainer1.SplitterDistance = 459;
             this.splitContainer1.TabIndex = 0;
@@ -98,7 +96,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label6_ThongBaoTrungTK
             // 
@@ -160,7 +157,6 @@
             this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tài khoản:";
-            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label3
             // 
@@ -171,7 +167,6 @@
             this.label3.Size = new System.Drawing.Size(97, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "Mật khẩu:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -182,7 +177,6 @@
             this.label2.Size = new System.Drawing.Size(183, 23);
             this.label2.TabIndex = 9;
             this.label2.Text = "Xác nhận mật khẩu:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // linkLabel1
             // 
@@ -205,7 +199,6 @@
             this.label1.Size = new System.Drawing.Size(185, 49);
             this.label1.TabIndex = 6;
             this.label1.Text = "Đăng ký";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // textBox3_XacNhanMK
             // 
@@ -216,7 +209,6 @@
             this.textBox3_XacNhanMK.PasswordChar = '*';
             this.textBox3_XacNhanMK.Size = new System.Drawing.Size(301, 40);
             this.textBox3_XacNhanMK.TabIndex = 2;
-            this.textBox3_XacNhanMK.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2_MatKhau
             // 
@@ -227,7 +219,6 @@
             this.textBox2_MatKhau.PasswordChar = '*';
             this.textBox2_MatKhau.Size = new System.Drawing.Size(301, 40);
             this.textBox2_MatKhau.TabIndex = 1;
-            this.textBox2_MatKhau.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox_TaiKhoan
             // 
@@ -237,7 +228,6 @@
             this.textBox_TaiKhoan.Name = "textBox_TaiKhoan";
             this.textBox_TaiKhoan.Size = new System.Drawing.Size(301, 40);
             this.textBox_TaiKhoan.TabIndex = 0;
-            this.textBox_TaiKhoan.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1_DangKy
             // 

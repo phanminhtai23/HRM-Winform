@@ -39,17 +39,6 @@ namespace FRONTENDPlayer
 
         }
 
-        private void Ten_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn chắn chắn muốn đăng xuất ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Hide();
-                Dangnhap dangnhap = new Dangnhap();
-                dangnhap.Show();
-            }
-        }
-
         private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Hiển thị thông báo xác nhận
@@ -59,11 +48,7 @@ namespace FRONTENDPlayer
                                            MessageBoxIcon.Question);
 
             // Nếu người dùng chọn "No", hủy việc đóng form
-            if (result == DialogResult.Yes)
-            {
-                // Đóng ứng dụng
-                System.Windows.Forms.Application.Exit();
-            } else if (result == DialogResult.No)
+            if (result == DialogResult.No)
             {
                 e.Cancel = true;
             }
@@ -92,7 +77,7 @@ namespace FRONTENDPlayer
 
         private void Thoat_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void NhanVien_ItemClick(object sender, ItemClickEventArgs e)
@@ -138,6 +123,28 @@ namespace FRONTENDPlayer
         private void CongTac_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+        }
+
+
+        private void barStaticItem3_DangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn chắn chắn muốn đăng xuất ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Dangnhap dangnhap = new Dangnhap();
+                dangnhap.Show();
+            }
+        }
+
+        private void barStaticItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmCapQuyen frmCapQuyen = new frmCapQuyen();
+
+            if (frmCapQuyen.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

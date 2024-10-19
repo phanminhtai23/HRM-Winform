@@ -27,11 +27,11 @@ namespace DATAPlayer
     
         public virtual DbSet<DM_ChucVu> DM_ChucVu { get; set; }
         public virtual DbSet<DM_Luong> DM_Luong { get; set; }
-        public virtual DbSet<Luong> Luongs { get; set; }
-        public virtual DbSet<NgayNghi> NgayNghis { get; set; }
-        public virtual DbSet<NhanVien> NhanViens { get; set; }
-        public virtual DbSet<PhongBan> PhongBans { get; set; }
+        public virtual DbSet<Luong> Luong { get; set; }
+        public virtual DbSet<NgayNghi> NgayNghi { get; set; }
+        public virtual DbSet<NhanVien> NhanVien { get; set; }
         public virtual DbSet<QT_CongTac> QT_CongTac { get; set; }
-        public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
+        public virtual DbSet<TaiKhoan> TaiKhoan { get; set; }
+        public virtual DbSet<PhongBan> PhongBan { get; set; }
     }
 }

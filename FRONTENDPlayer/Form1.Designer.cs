@@ -105,9 +105,8 @@
             this.label4_SaiTK.ForeColor = System.Drawing.Color.Red;
             this.label4_SaiTK.Location = new System.Drawing.Point(129, 369);
             this.label4_SaiTK.Name = "label4_SaiTK";
-            this.label4_SaiTK.Size = new System.Drawing.Size(216, 19);
+            this.label4_SaiTK.Size = new System.Drawing.Size(0, 19);
             this.label4_SaiTK.TabIndex = 8;
-            this.label4_SaiTK.Text = "Sai tài khoản hoặc mật khẩu";
             this.label4_SaiTK.Visible = false;
             // 
             // linkLabel1

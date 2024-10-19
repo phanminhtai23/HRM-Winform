@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChucVuBackEnd.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="PhongBanBackEnd.cs" />
     <Compile Include="Logic_TaiKhoan.cs" />
     <Compile Include="NhanVienBackEnd.cs" />

@@ -7,7 +7,7 @@
     <Property Name="MaChucVu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TenChucVu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="HeSoLuong" Type="Decimal" Precision="5" Scale="2" />
-    <NavigationProperty Name="NhanViens" Relationship="Self.FK__NhanVien__MaChuc__3C69FB99" FromRole="DM_ChucVu" ToRole="NhanVien" />
+    <NavigationProperty Name="NhanVien" Relationship="Self.FK__NhanVien__MaChuc__3C69FB99" FromRole="DM_ChucVu" ToRole="NhanVien" />
   </EntityType>
   <EntityType Name="DM_Luong">
     <Key>
@@ -54,19 +54,10 @@
     <Property Name="MaChucVu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="DM_ChucVu" Relationship="Self.FK__NhanVien__MaChuc__3C69FB99" FromRole="NhanVien" ToRole="DM_ChucVu" />
     <NavigationProperty Name="DM_Luong" Relationship="Self.FK__DM_Luong__MaNhan__4222D4EF" FromRole="NhanVien" ToRole="DM_Luong" />
-    <NavigationProperty Name="Luongs" Relationship="Self.FK__Luong__MaNhanVie__47DBAE45" FromRole="NhanVien" ToRole="Luong" />
-    <NavigationProperty Name="NgayNghis" Relationship="Self.FK__NgayNghi__MaNhan__44FF419A" FromRole="NhanVien" ToRole="NgayNghi" />
-    <NavigationProperty Name="PhongBan" Relationship="Self.FK__NhanVien__MaPhon__3B75D760" FromRole="NhanVien" ToRole="PhongBan" />
+    <NavigationProperty Name="Luong" Relationship="Self.FK__Luong__MaNhanVie__47DBAE45" FromRole="NhanVien" ToRole="Luong" />
+    <NavigationProperty Name="NgayNghi" Relationship="Self.FK__NgayNghi__MaNhan__44FF419A" FromRole="NhanVien" ToRole="NgayNghi" />
     <NavigationProperty Name="QT_CongTac" Relationship="Self.FK__QT_CongTa__MaNha__3F466844" FromRole="NhanVien" ToRole="QT_CongTac" />
-  </EntityType>
-  <EntityType Name="PhongBan">
-    <Key>
-      <PropertyRef Name="MaPhongBan" />
-    </Key>
-    <Property Name="MaPhongBan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="TenPhongBan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="VanPhong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="NhanViens" Relationship="Self.FK__NhanVien__MaPhon__3B75D760" FromRole="PhongBan" ToRole="NhanVien" />
+    <NavigationProperty Name="PhongBan" Relationship="HRMModel.FK__NhanVien__MaPhon__3B75D760" FromRole="NhanVien" ToRole="PhongBan" />
   </EntityType>
   <EntityType Name="QT_CongTac">
     <Key>
@@ -128,18 +119,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NhanVien__MaPhon__3B75D760">
-    <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="0..1" />
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PhongBan">
-        <PropertyRef Name="MaPhongBan" />
-      </Principal>
-      <Dependent Role="NhanVien">
-        <PropertyRef Name="MaPhongBan" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__QT_CongTa__MaNha__3F466844">
     <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="QT_CongTac" Type="Self.QT_CongTac" Multiplicity="*" />
@@ -155,36 +134,36 @@
   <EntityContainer Name="HRMEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="DM_ChucVu" EntityType="Self.DM_ChucVu" />
     <EntitySet Name="DM_Luong" EntityType="Self.DM_Luong" />
-    <EntitySet Name="Luongs" EntityType="Self.Luong" />
-    <EntitySet Name="NgayNghis" EntityType="Self.NgayNghi" />
-    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
-    <EntitySet Name="PhongBans" EntityType="Self.PhongBan" />
+    <EntitySet Name="Luong" EntityType="Self.Luong" />
+    <EntitySet Name="NgayNghi" EntityType="Self.NgayNghi" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" />
     <EntitySet Name="QT_CongTac" EntityType="Self.QT_CongTac" />
     <AssociationSet Name="FK__NhanVien__MaChuc__3C69FB99" Association="Self.FK__NhanVien__MaChuc__3C69FB99">
       <End Role="DM_ChucVu" EntitySet="DM_ChucVu" />
-      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="NhanVien" EntitySet="NhanVien" />
     </AssociationSet>
     <AssociationSet Name="FK__DM_Luong__MaNhan__4222D4EF" Association="Self.FK__DM_Luong__MaNhan__4222D4EF">
-      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="DM_Luong" EntitySet="DM_Luong" />
     </AssociationSet>
     <AssociationSet Name="FK__Luong__MaNhanVie__47DBAE45" Association="Self.FK__Luong__MaNhanVie__47DBAE45">
-      <End Role="NhanVien" EntitySet="NhanViens" />
-      <End Role="Luong" EntitySet="Luongs" />
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="Luong" EntitySet="Luong" />
     </AssociationSet>
     <AssociationSet Name="FK__NgayNghi__MaNhan__44FF419A" Association="Self.FK__NgayNghi__MaNhan__44FF419A">
-      <End Role="NhanVien" EntitySet="NhanViens" />
-      <End Role="NgayNghi" EntitySet="NgayNghis" />
-    </AssociationSet>
-    <AssociationSet Name="FK__NhanVien__MaPhon__3B75D760" Association="Self.FK__NhanVien__MaPhon__3B75D760">
-      <End Role="PhongBan" EntitySet="PhongBans" />
-      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="NgayNghi" EntitySet="NgayNghi" />
     </AssociationSet>
     <AssociationSet Name="FK__QT_CongTa__MaNha__3F466844" Association="Self.FK__QT_CongTa__MaNha__3F466844">
-      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="QT_CongTac" EntitySet="QT_CongTac" />
     </AssociationSet>
-    <EntitySet Name="TaiKhoans" EntityType="HRMModel.TaiKhoan" />
+    <EntitySet Name="TaiKhoan" EntityType="HRMModel.TaiKhoan" />
+    <EntitySet Name="PhongBan" EntityType="HRMModel.PhongBan" />
+    <AssociationSet Name="FK__NhanVien__MaPhon__3B75D760" Association="HRMModel.FK__NhanVien__MaPhon__3B75D760">
+      <End Role="PhongBan" EntitySet="PhongBan" />
+      <End Role="NhanVien" EntitySet="NhanVien" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -194,5 +173,27 @@
     <Property Name="TenTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
   </EntityType>
+  <EntityType Name="PhongBan">
+    <Key>
+      <PropertyRef Name="MaPhongBan" />
+    </Key>
+    <Property Name="MaPhongBan" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TenPhongBan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VanPhong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__NhanVien__MaPhon__3B75D760" FromRole="PhongBan" ToRole="NhanVien" />
+  </EntityType>
+  <Association Name="FK__NhanVien__MaPhon__3B75D760">
+    <End Type="HRMModel.PhongBan" Role="PhongBan" Multiplicity="0..1" />
+    <End Type="HRMModel.NhanVien" Role="NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhongBan">
+        <PropertyRef Name="MaPhongBan" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="MaPhongBan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

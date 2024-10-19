@@ -17,8 +17,8 @@ namespace DATAPlayer
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanVien()
         {
-            this.Luongs = new HashSet<Luong>();
-            this.NgayNghis = new HashSet<NgayNghi>();
+            this.Luong = new HashSet<Luong>();
+            this.NgayNghi = new HashSet<NgayNghi>();
             this.QT_CongTac = new HashSet<QT_CongTac>();
         }
     
@@ -33,11 +33,11 @@ namespace DATAPlayer
         public virtual DM_ChucVu DM_ChucVu { get; set; }
         public virtual DM_Luong DM_Luong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Luong> Luongs { get; set; }
+        public virtual ICollection<Luong> Luong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NgayNghi> NgayNghis { get; set; }
-        public virtual PhongBan PhongBan { get; set; }
+        public virtual ICollection<NgayNghi> NgayNghi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QT_CongTac> QT_CongTac { get; set; }
+        public virtual PhongBan PhongBan { get; set; }
     }
 }

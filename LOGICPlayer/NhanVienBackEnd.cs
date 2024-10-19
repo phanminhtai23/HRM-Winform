@@ -10,6 +10,6 @@ namespace LOGICPlayer
     public class NhanVienBackEnd
     {
         readonly HRMEntities Adapter = new HRMEntities();
-        public List<NhanVien> LoadDataTable() => Adapter.NhanViens.AsNoTracking().ToList();
+        public List<NhanVien> LoadDataTable() => Adapter.NhanVien.AsNoTracking().ToList();
     }
 }

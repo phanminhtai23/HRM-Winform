@@ -10,47 +10,14 @@ using System.Windows.Forms;
 using DATAPlayer;
 using DevExpress.DataAccess.Native.EntityFramework;
 using DevExpress.Pdf.Native.BouncyCastle.Ocsp;
+using LOGICPlayer;
 
 namespace FRONTENDPlayer
 {
 
     public partial class Dangnhap : DevExpress.XtraEditors.XtraForm
     {
-        private bool KiemTraDangNhap(string username, string password)
-        {
-            // Chuỗi kết nối đến cơ sở dữ liệu
-            //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source=LAPTOP-881KRHJ2\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True;";
-
-        // Truy vấn SQL kiểm tra tài khoản
-        string query = "SELECT COUNT(1) FROM TaiKhoan WHERE TenTaiKhoan = @username AND MatKhau = @password";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    // Mở kết nối
-                    conn.Open();
-
-                    // Tạo đối tượng SqlCommand
-                    SqlCommand cmd = new SqlCommand(query, conn);
-
-                    // Thêm tham số để tránh SQL Injection
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
-                    // Thực thi truy vấn và lấy kết quả
-                    int count = (int)cmd.ExecuteScalar();
-
-                    // Nếu count = 1, tức là tài khoản tồn tại
-                    return count == 1;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi kết nối: " + ex.Message);
-                    return false;
-                }
-            }
-        }
+        
 
         public Dangnhap()
         {
@@ -88,6 +55,8 @@ namespace FRONTENDPlayer
 
         private void button_DangNhap_Click(object sender, EventArgs e)
         {
+            Logic_TaiKhoan logic_TaiKhoan = new Logic_TaiKhoan();
+
             label4_SaiTK.Visible = false;
             if (textBox_TaiKhoan.Text == "")
             {
@@ -99,14 +68,28 @@ namespace FRONTENDPlayer
                 MessageBox.Show("Vui lòng nhập mật khẩu !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox_MatKhau.Focus();
             }
-            else if (KiemTraDangNhap(textBox_TaiKhoan.Text, textBox_MatKhau.Text))
+            else // Đăng nhập 
             {
-                TrangChu trangChu = new TrangChu();
-                this.Hide();
-                trangChu.Show();
-            } else
-            {
-                label4_SaiTK.Visible = true;
+                try
+                {
+                    Object[] Object_TaiKhoan = logic_TaiKhoan.KiemTraDangNhap(textBox_TaiKhoan.Text, textBox_MatKhau.Text);
+                    // đk ok
+                    if ((bool)Object_TaiKhoan[0] == true)
+                    {
+                        TrangChu trangChu = new TrangChu();
+                        this.Hide();
+                        trangChu.Show();
+                    }
+                    else // Sai tk, mk hoặc TK chưa kích hoạt
+                    {
+                        label4_SaiTK.Text = (String)Object_TaiKhoan[1];
+                        label4_SaiTK.Visible = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }     
             }
         }
 

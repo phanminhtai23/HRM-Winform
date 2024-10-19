@@ -20,7 +20,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Luongs">
+    <EntitySetMapping Name="Luong">
       <EntityTypeMapping TypeName="HRMModel.Luong">
         <MappingFragment StoreEntitySet="Luong">
           <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
@@ -31,7 +31,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NgayNghis">
+    <EntitySetMapping Name="NgayNghi">
       <EntityTypeMapping TypeName="HRMModel.NgayNghi">
         <MappingFragment StoreEntitySet="NgayNghi">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
@@ -41,7 +41,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NhanViens">
+    <EntitySetMapping Name="NhanVien">
       <EntityTypeMapping TypeName="HRMModel.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
@@ -51,15 +51,6 @@
           <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
           <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
           <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="PhongBans">
-      <EntityTypeMapping TypeName="HRMModel.PhongBan">
-        <MappingFragment StoreEntitySet="PhongBan">
-          <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
-          <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
-          <ScalarProperty Name="VanPhong" ColumnName="VanPhong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -74,13 +65,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TaiKhoans">
+    <EntitySetMapping Name="TaiKhoan">
       <EntityTypeMapping TypeName="HRMModel.TaiKhoan">
         <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
           <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
           <ScalarProperty Name="STT_Tk" ColumnName="STT_Tk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhongBan">
+      <EntityTypeMapping TypeName="HRMModel.PhongBan">
+        <MappingFragment StoreEntitySet="PhongBan">
+          <ScalarProperty Name="VanPhong" ColumnName="VanPhong" />
+          <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
+          <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -40,3 +40,15 @@ D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.CoreCompi
 D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.Up2Date
 D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.dll
 D:\Quan_Tri_Du_Lieu\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.dll.config
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.AssemblyReference.cache
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.CoreCompileInputs.cache
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.Up2Date
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.pdb

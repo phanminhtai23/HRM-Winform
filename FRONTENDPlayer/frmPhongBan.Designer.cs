@@ -34,8 +34,8 @@
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.Them_PBan = new DevExpress.XtraBars.BarButtonItem();
             this.Sua_PBan = new DevExpress.XtraBars.BarButtonItem();
-            this.Xem_PBan = new DevExpress.XtraBars.BarButtonItem();
             this.Xoa_PBan = new DevExpress.XtraBars.BarButtonItem();
+            this.TimKiem_pBan = new DevExpress.XtraBars.BarButtonItem();
             this.In_PBan = new DevExpress.XtraBars.BarButtonItem();
             this.Dong_PBan = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
@@ -47,6 +47,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_PhongBan)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.Them_PBan,
             this.Sua_PBan,
-            this.Xem_PBan,
+            this.TimKiem_pBan,
             this.Xoa_PBan,
             this.In_PBan,
             this.Dong_PBan});
@@ -81,8 +82,8 @@
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Them_PBan, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Sua_PBan, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Xem_PBan, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Xoa_PBan, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.TimKiem_pBan, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.In_PBan, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Dong_PBan, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
@@ -95,6 +96,7 @@
             this.Them_PBan.Id = 0;
             this.Them_PBan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Them_PBan.ImageOptions.SvgImage")));
             this.Them_PBan.Name = "Them_PBan";
+            this.Them_PBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Them_PBan_ItemClick);
             // 
             // Sua_PBan
             // 
@@ -102,13 +104,7 @@
             this.Sua_PBan.Id = 1;
             this.Sua_PBan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Sua_PBan.ImageOptions.SvgImage")));
             this.Sua_PBan.Name = "Sua_PBan";
-            // 
-            // Xem_PBan
-            // 
-            this.Xem_PBan.Caption = "Xem";
-            this.Xem_PBan.Id = 2;
-            this.Xem_PBan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Xem_PBan.ImageOptions.SvgImage")));
-            this.Xem_PBan.Name = "Xem_PBan";
+            this.Sua_PBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Sua_PBan_ItemClick);
             // 
             // Xoa_PBan
             // 
@@ -116,6 +112,15 @@
             this.Xoa_PBan.Id = 3;
             this.Xoa_PBan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Xoa_PBan.ImageOptions.SvgImage")));
             this.Xoa_PBan.Name = "Xoa_PBan";
+            this.Xoa_PBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Xoa_PBan_ItemClick);
+            // 
+            // TimKiem_pBan
+            // 
+            this.TimKiem_pBan.Caption = "Tìm kiếm";
+            this.TimKiem_pBan.Id = 2;
+            this.TimKiem_pBan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("TimKiem_pBan.ImageOptions.SvgImage")));
+            this.TimKiem_pBan.Name = "TimKiem_pBan";
+            this.TimKiem_pBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.TimKiemPhongBan_ItemClick);
             // 
             // In_PBan
             // 
@@ -130,6 +135,7 @@
             this.Dong_PBan.Id = 5;
             this.Dong_PBan.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Dong_PBan.ImageOptions.SvgImage")));
             this.Dong_PBan.Name = "Dong_PBan";
+            this.Dong_PBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Dong_PBan_ItemClick);
             // 
             // bar3
             // 
@@ -149,15 +155,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(834, 34);
+            this.barDockControlTop.Size = new System.Drawing.Size(1050, 34);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 407);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 577);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(834, 22);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1050, 22);
             // 
             // barDockControlLeft
             // 
@@ -165,15 +171,15 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 373);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 543);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(834, 34);
+            this.barDockControlRight.Location = new System.Drawing.Point(1050, 34);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 373);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 543);
             // 
             // dataGridView_PhongBan
             // 
@@ -183,14 +189,19 @@
             this.dataGridView_PhongBan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.NhanVien});
             this.dataGridView_PhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_PhongBan.Location = new System.Drawing.Point(0, 34);
+            this.dataGridView_PhongBan.MultiSelect = false;
             this.dataGridView_PhongBan.Name = "dataGridView_PhongBan";
+            this.dataGridView_PhongBan.ReadOnly = true;
             this.dataGridView_PhongBan.RowHeadersWidth = 51;
             this.dataGridView_PhongBan.RowTemplate.Height = 24;
-            this.dataGridView_PhongBan.Size = new System.Drawing.Size(834, 373);
+            this.dataGridView_PhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_PhongBan.Size = new System.Drawing.Size(1050, 543);
             this.dataGridView_PhongBan.TabIndex = 4;
+            this.dataGridView_PhongBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_PhongBan_CellClick);
             // 
             // Column1
             // 
@@ -198,6 +209,7 @@
             this.Column1.HeaderText = "Mã Phòng Ban";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -205,6 +217,7 @@
             this.Column2.HeaderText = "Tên Phòng Ban";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -212,12 +225,22 @@
             this.Column3.HeaderText = "Văn Phòng";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // NhanVien
+            // 
+            this.NhanVien.DataPropertyName = "NhanVien";
+            this.NhanVien.HeaderText = "Column4";
+            this.NhanVien.MinimumWidth = 6;
+            this.NhanVien.Name = "NhanVien";
+            this.NhanVien.ReadOnly = true;
+            this.NhanVien.Visible = false;
             // 
             // frmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 429);
+            this.ClientSize = new System.Drawing.Size(1050, 599);
             this.Controls.Add(this.dataGridView_PhongBan);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -244,7 +267,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem Sua_PBan;
-        private DevExpress.XtraBars.BarButtonItem Xem_PBan;
+        private DevExpress.XtraBars.BarButtonItem TimKiem_pBan;
         private DevExpress.XtraBars.BarButtonItem Xoa_PBan;
         private DevExpress.XtraBars.BarButtonItem In_PBan;
         private DevExpress.XtraBars.BarButtonItem Dong_PBan;
@@ -252,5 +275,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NhanVien;
     }
 }
