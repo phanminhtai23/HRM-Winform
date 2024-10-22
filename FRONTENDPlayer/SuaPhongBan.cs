@@ -22,30 +22,27 @@ namespace FRONTENDPlayer
             textBox2_TenPhongBan.Text = cot2;
             textBox3_TenVanPhong.Text = cot3;
 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.simpleButton2_XacNhan;
         }
 
-        private void SuaPhongBan_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void simpleButton1_Huy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void simpleButton2_XacNhan_Click(object sender, EventArgs e)
         {
             if (textBox2_TenPhongBan.Text.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập tên phòng ban !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox2_TenPhongBan.Focus();
-            } else if (textBox3_TenVanPhong.Text.Trim() == "")
+            }
+            else if (textBox3_TenVanPhong.Text.Trim() == "")
             {
                 MessageBox.Show("Vui lòng nhập tên văn phòng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 textBox3_TenVanPhong.Focus();
-            } else
+            }
+            else
             {
                 try
                 {

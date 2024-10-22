@@ -51,6 +51,7 @@
     <Reference Include="DevExpress.XtraEditors.v24.1" />
     <Reference Include="DevExpress.Printing.v24.1.Core" />
     <Reference Include="DevExpress.Drawing.v24.1" />
+    <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -116,11 +117,16 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPhongBan.cs">
+    <Compile Include="frmPhongBan1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPhongBan.Designer.cs">
-      <DependentUpon>frmPhongBan.cs</DependentUpon>
+    <Compile Include="frmPhongBan1.Designer.cs">
+      <DependentUpon>frmPhongBan1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HRMDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,12 +160,6 @@
     <Compile Include="ThemThongTinNhanVien.Designer.cs">
       <DependentUpon>ThemThongTinNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="TimKiemPhongBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TimKiemPhongBan.Designer.cs">
-      <DependentUpon>TimKiemPhongBan.cs</DependentUpon>
-    </Compile>
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,8 +187,8 @@
     <EmbeddedResource Include="frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPhongBan.resx">
-      <DependentUpon>frmPhongBan.cs</DependentUpon>
+    <EmbeddedResource Include="frmPhongBan1.resx">
+      <DependentUpon>frmPhongBan1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -203,11 +203,9 @@
     <EmbeddedResource Include="SuaPhongBan.resx">
       <DependentUpon>SuaPhongBan.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="SuaChucVu.resx">
       <DependentUpon>SuaChucVu.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="ThemChucVu.resx">
       <DependentUpon>ThemChucVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,13 +215,21 @@
     <EmbeddedResource Include="ThemThongTinNhanVien.resx">
       <DependentUpon>ThemThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TimKiemPhongBan.resx">
-      <DependentUpon>TimKiemPhongBan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="HRMDataSet.xsc">
+      <DependentUpon>HRMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HRMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HRMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HRMDataSet.xss">
+      <DependentUpon>HRMDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

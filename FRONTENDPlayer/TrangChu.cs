@@ -56,7 +56,7 @@ namespace FRONTENDPlayer
 
         private void PhongBang_ItemClick(object sender, ItemClickEventArgs e)
         {
-            openForm(typeof(frmPhongBan));
+            openForm(typeof(frmPhongBan1));
         }
 
 

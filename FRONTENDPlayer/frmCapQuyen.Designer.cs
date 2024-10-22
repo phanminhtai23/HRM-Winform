@@ -33,6 +33,8 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -44,8 +46,6 @@
             this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
-            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_capQuyen)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +91,24 @@
             this.barStaticItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barStaticItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem1_ItemClick);
             // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "Thu hồi ";
+            this.barStaticItem2.Id = 1;
+            this.barStaticItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem2.ImageOptions.SvgImage")));
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barStaticItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem2_ItemClick);
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = "Xóa";
+            this.barStaticItem3.Id = 2;
+            this.barStaticItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem3.ImageOptions.SvgImage")));
+            this.barStaticItem3.Name = "barStaticItem3";
+            this.barStaticItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barStaticItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem3_ItemClick);
+            // 
             // bar3
             // 
             this.bar3.BarName = "Status bar";
@@ -109,31 +127,31 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(749, 26);
+            this.barDockControlTop.Size = new System.Drawing.Size(745, 45);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 481);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 370);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(749, 22);
+            this.barDockControlBottom.Size = new System.Drawing.Size(745, 29);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 26);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 455);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 325);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(749, 26);
+            this.barDockControlRight.Location = new System.Drawing.Point(745, 45);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 455);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 325);
             // 
             // dataGridView_capQuyen
             // 
@@ -147,14 +165,14 @@
             this.Email,
             this.TinhTrang});
             this.dataGridView_capQuyen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView_capQuyen.Location = new System.Drawing.Point(0, 26);
+            this.dataGridView_capQuyen.Location = new System.Drawing.Point(0, 45);
             this.dataGridView_capQuyen.MultiSelect = false;
             this.dataGridView_capQuyen.Name = "dataGridView_capQuyen";
             this.dataGridView_capQuyen.ReadOnly = true;
             this.dataGridView_capQuyen.RowHeadersWidth = 51;
             this.dataGridView_capQuyen.RowTemplate.Height = 24;
             this.dataGridView_capQuyen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_capQuyen.Size = new System.Drawing.Size(749, 455);
+            this.dataGridView_capQuyen.Size = new System.Drawing.Size(745, 325);
             this.dataGridView_capQuyen.TabIndex = 4;
             this.dataGridView_capQuyen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_capQuyen_CellClick);
             // 
@@ -198,29 +216,11 @@
             this.TinhTrang.Name = "TinhTrang";
             this.TinhTrang.ReadOnly = true;
             // 
-            // barStaticItem2
-            // 
-            this.barStaticItem2.Caption = "Thu hồi ";
-            this.barStaticItem2.Id = 1;
-            this.barStaticItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem2.ImageOptions.SvgImage")));
-            this.barStaticItem2.Name = "barStaticItem2";
-            this.barStaticItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barStaticItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem2_ItemClick);
-            // 
-            // barStaticItem3
-            // 
-            this.barStaticItem3.Caption = "Xóa";
-            this.barStaticItem3.Id = 2;
-            this.barStaticItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barStaticItem3.ImageOptions.SvgImage")));
-            this.barStaticItem3.Name = "barStaticItem3";
-            this.barStaticItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barStaticItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barStaticItem3_ItemClick);
-            // 
             // frmCapQuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 503);
+            this.ClientSize = new System.Drawing.Size(745, 399);
             this.Controls.Add(this.dataGridView_capQuyen);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);

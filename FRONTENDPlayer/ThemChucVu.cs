@@ -18,6 +18,7 @@ namespace FRONTENDPlayer
         public ThemChucVu()
         {
             InitializeComponent();
+            this.AcceptButton = this.button_LuuThemChucVu;
         }
         ChucVuBackEnd chucVuBackEnd = new ChucVuBackEnd();
 

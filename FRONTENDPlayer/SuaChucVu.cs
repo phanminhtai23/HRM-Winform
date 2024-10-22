@@ -27,6 +27,7 @@ namespace FRONTENDPlayer
 
             // Gán giá trị cho comboBox_HeSoLuong
             comboBox_HeSoLuong.SelectedItem = heSoLuong.ToString();
+            this.AcceptButton = this.button_LuuThemChucVu;
         }
 
 

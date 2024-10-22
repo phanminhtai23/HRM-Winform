@@ -12,6 +12,8 @@ namespace LOGICPlayer
         readonly HRMEntities Adapter = new HRMEntities();
         public List<PhongBan> LoadDataTable() => Adapter.PhongBan.AsNoTracking().ToList();
 
+        public List<PhongBan> Load_DataTimKiem() => Adapter.PhongBan.AsNoTracking().ToList();
+
         public void Add(PhongBan ThemPhongBan)
         {
             try
@@ -43,7 +45,6 @@ namespace LOGICPlayer
 
             }
         }
-
         public void Remove(PhongBan RemovePhongBan)
         {
             try
