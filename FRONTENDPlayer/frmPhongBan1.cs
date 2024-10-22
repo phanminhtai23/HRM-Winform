@@ -1,6 +1,7 @@
 ﻿using DATAPlayer;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
+using FRONTENDPlayer.HRMDataSetTableAdapters;
 using LOGICPlayer;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,7 @@ namespace FRONTENDPlayer
                     // Sau khi sửa, tải lại dữ liệu vào GridControl
                     this.phongBanTableAdapter.Fill(this.hRMDataSet.PhongBan);
                 }
+                
             }
             else
             {

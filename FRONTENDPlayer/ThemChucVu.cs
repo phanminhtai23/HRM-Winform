@@ -18,19 +18,39 @@ namespace FRONTENDPlayer
         public ThemChucVu()
         {
             InitializeComponent();
-            this.AcceptButton = this.button_LuuThemChucVu;
+            this.AcceptButton = this.simpleButton_Luu;
         }
         ChucVuBackEnd chucVuBackEnd = new ChucVuBackEnd();
 
-        private void button_DongThemChucVu_Click(object sender, EventArgs e)
+        private void textEdit_MaChucVu_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textEdit_TenChucVu_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_HeSoLuong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThemChucVu_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hRMDataSet.DM_ChucVu' table. You can move, or remove it, as needed.
+            this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
+
+        }
+
+        private void simpleButton_Huy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button_LuuThemChucVu_Click(object sender, EventArgs e)
+        private void simpleButton_Luu_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
                 // Lay du lieu tu cac truong 
@@ -80,25 +100,11 @@ namespace FRONTENDPlayer
                 {
                     MessageBox.Show("Lỗi khi thêm chức vụ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } catch {
+            }
+            catch
+            {
                 MessageBox.Show("Lỗi khi thêm chức vụ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-        }
-
-        private void textEdit_MaChucVu_EditValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textEdit_TenChucVu_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox_HeSoLuong_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

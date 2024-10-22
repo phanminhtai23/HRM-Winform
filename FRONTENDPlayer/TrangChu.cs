@@ -67,7 +67,7 @@ namespace FRONTENDPlayer
 
         private void ChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            openForm(typeof(frmChucVu));
+            openForm(typeof(frmChucVu1));
         }
 
         private void Thoat_H_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

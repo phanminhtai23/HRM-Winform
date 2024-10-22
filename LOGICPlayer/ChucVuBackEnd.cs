@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,27 +73,6 @@ namespace LOGICPlayer
             }
         }
 
-        public List<DM_ChucVu> SearchChucVu(string keyword)
-        {
-            try
-            {
-                // Sử dụng LINQ để tìm kiếm chức vụ dựa trên từ khóa
-                var result = Adapter.DM_ChucVu.AsNoTracking()
-                                .Where(cv => cv.MaChucVu.ToLower().Contains(keyword)
-                                          || cv.TenChucVu.ToLower().Contains(keyword)
-                                          || cv.HeSoLuong.ToString().Contains(keyword))
-                                .ToList();
-
-                return result;
-            }
-            catch (Exception ex)
-            {
-                // Xử lý lỗi nếu có
-                Console.WriteLine(ex.Message);
-                return new List<DM_ChucVu>(); // Trả về danh sách rỗng nếu có lỗi
-            }
-        }
-
         public void Remove(DM_ChucVu chucVu)
         {
             try
@@ -107,5 +87,7 @@ namespace LOGICPlayer
                 throw new Exception("Loi: " + ex.Message);
             }
         }
+
+
     }
 }

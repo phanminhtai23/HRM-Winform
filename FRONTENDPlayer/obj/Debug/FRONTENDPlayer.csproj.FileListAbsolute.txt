@@ -357,3 +357,4 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDP
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraGrid.v24.1.dll
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraGrid.v24.1.xml
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmPhongBan1.resources
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmChucVu1.resources

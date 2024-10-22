@@ -27,16 +27,24 @@ namespace FRONTENDPlayer
 
             // Gán giá trị cho comboBox_HeSoLuong
             comboBox_HeSoLuong.SelectedItem = heSoLuong.ToString();
-            this.AcceptButton = this.button_LuuThemChucVu;
+
+            this.AcceptButton = this.simpleButton_Luu;
         }
 
 
-        private void button_HuyThemChucVu_Click(object sender, EventArgs e)
+        private void SuaChucVu_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'hRMDataSet.DM_ChucVu' table. You can move, or remove it, as needed.
+            this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
+
+        }
+
+        private void simpleButton1_Huy_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button_LuuThemChucVu_Click(object sender, EventArgs e)
+        private void simpleButton_Luu_Click(object sender, EventArgs e)
         {
             // Lấy dữ liệu đã chỉnh sửa
             string tenChucVuMoi = textEdit_TenChucVu.Text.Trim();
@@ -71,7 +79,5 @@ namespace FRONTENDPlayer
                 MessageBox.Show("Lỗi khi sửa chức vụ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
- 
     }
 }
