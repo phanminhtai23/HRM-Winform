@@ -111,7 +111,7 @@ namespace FRONTENDPlayer
             DialogResult result = MessageBox.Show("Bạn chắn chắn muốn thoát ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                System.Windows.Forms.Application.Exit();
+                this.Close();
             }
         }
 

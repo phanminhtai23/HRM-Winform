@@ -29,6 +29,7 @@ namespace DATAPlayer
         public string SoDienThoai { get; set; }
         public string MaPhongBan { get; set; }
         public string MaChucVu { get; set; }
+        public bool TinhTrangLamViec { get; set; }
     
         public virtual DM_ChucVu DM_ChucVu { get; set; }
         public virtual DM_Luong DM_Luong { get; set; }

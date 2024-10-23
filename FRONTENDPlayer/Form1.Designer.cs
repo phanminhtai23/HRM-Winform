@@ -73,6 +73,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.textBox_TaiKhoan);
             this.splitContainer1.Panel2.Controls.Add(this.button_Thoat);
             this.splitContainer1.Panel2.Controls.Add(this.button_DangNhap);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(918, 606);
             this.splitContainer1.SplitterDistance = 459;
             this.splitContainer1.TabIndex = 0;
@@ -155,17 +156,19 @@
             // 
             this.textBox_MatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox_MatKhau.Location = new System.Drawing.Point(177, 302);
+            this.textBox_MatKhau.Multiline = true;
             this.textBox_MatKhau.Name = "textBox_MatKhau";
             this.textBox_MatKhau.PasswordChar = '*';
-            this.textBox_MatKhau.Size = new System.Drawing.Size(218, 30);
+            this.textBox_MatKhau.Size = new System.Drawing.Size(218, 40);
             this.textBox_MatKhau.TabIndex = 1;
             // 
             // textBox_TaiKhoan
             // 
             this.textBox_TaiKhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox_TaiKhoan.Location = new System.Drawing.Point(177, 237);
+            this.textBox_TaiKhoan.Multiline = true;
             this.textBox_TaiKhoan.Name = "textBox_TaiKhoan";
-            this.textBox_TaiKhoan.Size = new System.Drawing.Size(218, 30);
+            this.textBox_TaiKhoan.Size = new System.Drawing.Size(218, 40);
             this.textBox_TaiKhoan.TabIndex = 0;
             // 
             // button_Thoat

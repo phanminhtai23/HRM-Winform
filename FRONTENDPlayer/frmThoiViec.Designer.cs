@@ -1,6 +1,6 @@
 ﻿namespace FRONTENDPlayer
 {
-    partial class frmNhanVien
+    partial class frmThoiViec
     {
         /// <summary>
         /// Required designer variable.
@@ -29,22 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThoiViec));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
-            this.Them_NV = new DevExpress.XtraBars.BarButtonItem();
-            this.Sua_NV = new DevExpress.XtraBars.BarButtonItem();
-            this.Xoa_NV = new DevExpress.XtraBars.BarButtonItem();
-            this.ChoThoiViec = new DevExpress.XtraBars.BarButtonItem();
-            this.Dong_fromNV = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1_LamViecLai = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
-            this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
-            this.gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1_ChoThoiViec = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,9 +47,11 @@
             this.TenPhongBan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TinhTrangLamViec = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDanhSach_ThoiViec = new DevExpress.XtraGrid.GridControl();
+            this.bar1 = new DevExpress.XtraBars.Bar();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1_ChoThoiViec)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach_ThoiViec)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -69,14 +65,9 @@
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.Them_NV,
-            this.Sua_NV,
-            this.Dong_fromNV,
-            this.Xoa_NV,
-            this.barDockingMenuItem1,
-            this.ChoThoiViec});
+            this.barButtonItem1_LamViecLai});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 10;
+            this.barManager1.MaxItemId = 2;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -86,54 +77,18 @@
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Them_NV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Sua_NV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Xoa_NV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.ChoThoiViec, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Dong_fromNV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1_LamViecLai, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
             // 
-            // Them_NV
+            // barButtonItem1_LamViecLai
             // 
-            this.Them_NV.Caption = "Thêm";
-            this.Them_NV.Id = 0;
-            this.Them_NV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Them_NV.ImageOptions.SvgImage")));
-            this.Them_NV.Name = "Them_NV";
-            this.Them_NV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Them_NV_ItemClick);
-            // 
-            // Sua_NV
-            // 
-            this.Sua_NV.Caption = "Sửa";
-            this.Sua_NV.Id = 2;
-            this.Sua_NV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Sua_NV.ImageOptions.SvgImage")));
-            this.Sua_NV.Name = "Sua_NV";
-            this.Sua_NV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Sua_NV_ItemClick);
-            // 
-            // Xoa_NV
-            // 
-            this.Xoa_NV.Caption = "Xóa";
-            this.Xoa_NV.Id = 5;
-            this.Xoa_NV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Xoa_NV.ImageOptions.SvgImage")));
-            this.Xoa_NV.Name = "Xoa_NV";
-            this.Xoa_NV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Xoa_NV_ItemClick);
-            // 
-            // ChoThoiViec
-            // 
-            this.ChoThoiViec.Caption = "Cho Thôi Việc";
-            this.ChoThoiViec.Id = 8;
-            this.ChoThoiViec.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ChoThoiViec.ImageOptions.SvgImage")));
-            this.ChoThoiViec.Name = "ChoThoiViec";
-            this.ChoThoiViec.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ChoThoiViec_ItemClick);
-            // 
-            // Dong_fromNV
-            // 
-            this.Dong_fromNV.Caption = "Đóng";
-            this.Dong_fromNV.Id = 4;
-            this.Dong_fromNV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Dong_fromNV.ImageOptions.SvgImage")));
-            this.Dong_fromNV.Name = "Dong_fromNV";
-            this.Dong_fromNV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Dong_fromNV_ItemClick);
+            this.barButtonItem1_LamViecLai.Caption = "Làm Việc Lại";
+            this.barButtonItem1_LamViecLai.Id = 0;
+            this.barButtonItem1_LamViecLai.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1_LamViecLai.ImageOptions.SvgImage")));
+            this.barButtonItem1_LamViecLai.Name = "barButtonItem1_LamViecLai";
+            this.barButtonItem1_LamViecLai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_LamViecLai_ItemClick);
             // 
             // bar3
             // 
@@ -153,15 +108,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1004, 47);
+            this.barDockControlTop.Size = new System.Drawing.Size(711, 47);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 432);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 396);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1004, 29);
+            this.barDockControlBottom.Size = new System.Drawing.Size(711, 29);
             // 
             // barDockControlLeft
             // 
@@ -169,39 +124,19 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 385);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 349);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1004, 47);
+            this.barDockControlRight.Location = new System.Drawing.Point(711, 47);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 385);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 349);
             // 
-            // barDockingMenuItem1
+            // gridView1_ChoThoiViec
             // 
-            this.barDockingMenuItem1.Caption = "barDockingMenuItem1";
-            this.barDockingMenuItem1.Id = 6;
-            this.barDockingMenuItem1.Name = "barDockingMenuItem1";
-            this.barDockingMenuItem1.ListItemClick += new DevExpress.XtraBars.ListItemClickEventHandler(this.barDockingMenuItem1_ListItemClick);
-            // 
-            // gcDanhSach
-            // 
-            this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcDanhSach.Location = new System.Drawing.Point(0, 47);
-            this.gcDanhSach.MainView = this.gvDanhSach;
-            this.gcDanhSach.MenuManager = this.barManager1;
-            this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(1004, 385);
-            this.gcDanhSach.TabIndex = 14;
-            this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvDanhSach});
-            this.gcDanhSach.Click += new System.EventHandler(this.gcDanhSach_Click);
-            // 
-            // gvDanhSach
-            // 
-            this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridView1_ChoThoiViec.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaNhanVien,
             this.TenNhanVien,
             this.NgaySinh,
@@ -210,14 +145,8 @@
             this.TenPhongBan,
             this.TenChucVu,
             this.TinhTrangLamViec});
-            this.gvDanhSach.GridControl = this.gcDanhSach;
-            this.gvDanhSach.Name = "gvDanhSach";
-            this.gvDanhSach.OptionsFind.AlwaysVisible = true;
-            this.gvDanhSach.OptionsFind.FindDelay = 100;
-            this.gvDanhSach.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm...";
-            this.gvDanhSach.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
-            this.gvDanhSach.OptionsFind.ShowFindButton = false;
-            this.gvDanhSach.OptionsView.ShowGroupPanel = false;
+            this.gridView1_ChoThoiViec.GridControl = this.gcDanhSach_ThoiViec;
+            this.gridView1_ChoThoiViec.Name = "gridView1_ChoThoiViec";
             // 
             // MaNhanVien
             // 
@@ -299,22 +228,43 @@
             this.TinhTrangLamViec.VisibleIndex = 7;
             this.TinhTrangLamViec.Width = 94;
             // 
-            // frmNhanVien
+            // gcDanhSach_ThoiViec
+            // 
+            this.gcDanhSach_ThoiViec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcDanhSach_ThoiViec.Location = new System.Drawing.Point(0, 47);
+            this.gcDanhSach_ThoiViec.MainView = this.gridView1_ChoThoiViec;
+            this.gcDanhSach_ThoiViec.MenuManager = this.barManager1;
+            this.gcDanhSach_ThoiViec.Name = "gcDanhSach_ThoiViec";
+            this.gcDanhSach_ThoiViec.Size = new System.Drawing.Size(711, 349);
+            this.gcDanhSach_ThoiViec.TabIndex = 4;
+            this.gcDanhSach_ThoiViec.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1_ChoThoiViec});
+            this.gcDanhSach_ThoiViec.Click += new System.EventHandler(this.gcDanhSach_ThoiViec_Click);
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Tools";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 1;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.Text = "Tools";
+            // 
+            // frmThoiViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 461);
-            this.Controls.Add(this.gcDanhSach);
+            this.ClientSize = new System.Drawing.Size(711, 425);
+            this.Controls.Add(this.gcDanhSach_ThoiViec);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "frmNhanVien";
-            this.Text = "Nhân Viên";
-            this.Load += new System.EventHandler(this.frmNhanVien_Load);
+            this.Name = "frmThoiViec";
+            this.Text = "Danh sách cho thôi việc";
+            this.Load += new System.EventHandler(this.frmThoiViec_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1_ChoThoiViec)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach_ThoiViec)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,13 +279,10 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.BarButtonItem Them_NV;
-        private DevExpress.XtraBars.BarButtonItem Sua_NV;
-        private DevExpress.XtraBars.BarButtonItem Dong_fromNV;
-        private DevExpress.XtraBars.BarButtonItem Xoa_NV;
-        private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
-        private DevExpress.XtraGrid.GridControl gcDanhSach;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1_LamViecLai;
+        private DevExpress.XtraGrid.GridControl gcDanhSach_ThoiViec;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1_ChoThoiViec;
+        private DevExpress.XtraBars.Bar bar1;
         private DevExpress.XtraGrid.Columns.GridColumn MaNhanVien;
         private DevExpress.XtraGrid.Columns.GridColumn TenNhanVien;
         private DevExpress.XtraGrid.Columns.GridColumn NgaySinh;
@@ -344,6 +291,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn TenPhongBan;
         private DevExpress.XtraGrid.Columns.GridColumn TenChucVu;
         private DevExpress.XtraGrid.Columns.GridColumn TinhTrangLamViec;
-        private DevExpress.XtraBars.BarButtonItem ChoThoiViec;
     }
 }

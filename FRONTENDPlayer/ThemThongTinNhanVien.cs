@@ -85,7 +85,8 @@ namespace FRONTENDPlayer
                     DiaChi = diaChi,
                     SoDienThoai = soDienThoai,
                     MaPhongBan = maPhongBan,
-                    MaChucVu = maChucVu
+                    MaChucVu = maChucVu,
+                    TinhTrangLamViec = true
                 };
 
                 // Gọi logic layer để thêm nhân viên

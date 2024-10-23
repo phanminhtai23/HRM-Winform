@@ -117,6 +117,7 @@
     <Property Name="SoDienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="MaPhongBan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="MaChucVu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TinhTrangLamViec" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="DM_ChucVu" Relationship="HRMModel.FK__NhanVien__MaChuc__3C69FB99" FromRole="NhanVien" ToRole="DM_ChucVu" />
     <NavigationProperty Name="DM_Luong" Relationship="HRMModel.FK__DM_Luong__MaNhan__4222D4EF" FromRole="NhanVien" ToRole="DM_Luong" />
     <NavigationProperty Name="Luong" Relationship="HRMModel.FK__Luong__MaNhanVie__47DBAE45" FromRole="NhanVien" ToRole="Luong" />

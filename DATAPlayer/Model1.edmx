@@ -53,6 +53,7 @@
           <Property Name="SoDienThoai" Type="nvarchar" MaxLength="15" />
           <Property Name="MaPhongBan" Type="nvarchar" MaxLength="10" />
           <Property Name="MaChucVu" Type="nvarchar" MaxLength="10" />
+          <Property Name="TinhTrangLamViec" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="PhongBan">
           <Key>
@@ -279,7 +280,7 @@
             <End Role="NhanVien" EntitySet="NhanVien" />
             <End Role="QT_CongTac" EntitySet="QT_CongTac" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="TaiKhoan">
           <Key>
             <PropertyRef Name="STT_Tk" />
@@ -310,6 +311,7 @@
           <Property Name="SoDienThoai" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="MaPhongBan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="MaChucVu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TinhTrangLamViec" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="DM_ChucVu" Relationship="HRMModel.FK__NhanVien__MaChuc__3C69FB99" FromRole="NhanVien" ToRole="DM_ChucVu" />
           <NavigationProperty Name="DM_Luong" Relationship="HRMModel.FK__DM_Luong__MaNhan__4222D4EF" FromRole="NhanVien" ToRole="DM_Luong" />
           <NavigationProperty Name="Luong" Relationship="HRMModel.FK__Luong__MaNhanVie__47DBAE45" FromRole="NhanVien" ToRole="Luong" />
@@ -389,7 +391,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -469,6 +471,7 @@
           <EntitySetMapping Name="NhanVien">
             <EntityTypeMapping TypeName="HRMModel.NhanVien">
               <MappingFragment StoreEntitySet="NhanVien">
+                <ScalarProperty Name="TinhTrangLamViec" ColumnName="TinhTrangLamViec" />
                 <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
                 <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
                 <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />

@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="HRMModel.QT_CongTac" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HRMModel.TaiKhoan" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="HRMModel.PhongBan" Width="1.5" PointX="0.75" PointY="2.75" />
-        <EntityTypeShape EntityType="HRMModel.NhanVien" Width="1.5" PointX="3" PointY="3.375" />
+        <EntityTypeShape EntityType="HRMModel.NhanVien" Width="1.5" PointX="3" PointY="3.25" />
         <AssociationConnector Association="HRMModel.FK__NhanVien__MaChuc__3C69FB99" />
         <AssociationConnector Association="HRMModel.FK__DM_Luong__MaNhan__4222D4EF" />
         <AssociationConnector Association="HRMModel.FK__Luong__MaNhanVie__47DBAE45" />

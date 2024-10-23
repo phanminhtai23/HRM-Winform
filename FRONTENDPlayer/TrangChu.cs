@@ -102,7 +102,7 @@ namespace FRONTENDPlayer
 
         private void ThoiViec_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            openForm(typeof(frmThoiViec));
         }
 
         private void DoiMatKhau_ItemClick(object sender, ItemClickEventArgs e)

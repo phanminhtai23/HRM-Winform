@@ -75,18 +75,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
-  <Compile Include="SuaNhanVien.cs">
+    <Compile Include="frmThoiViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThoiViec.Designer.cs">
+      <DependentUpon>frmThoiViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SuaNhanVien.Designer.cs">
       <DependentUpon>SuaNhanVien.cs</DependentUpon>
     </Compile>
-  <EmbeddedResource Include="SuaNhanVien.resx">
+    <EmbeddedResource Include="frmThoiViec.resx">
+      <DependentUpon>frmThoiViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaNhanVien.resx">
       <DependentUpon>SuaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-
-
     <Compile Include="frmChucVu1.cs">
       <SubType>Form</SubType>
     </Compile>

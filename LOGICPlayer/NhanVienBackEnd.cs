@@ -35,7 +35,64 @@ namespace LOGICPlayer
                         DiaChi = nvpb.nv.DiaChi,
                         SoDienThoai = nvpb.nv.SoDienThoai,
                         TenPhongBan = nvpb.pb.TenPhongBan,  // Lấy tên phòng ban
-                        TenChucVu = cv.TenChucVu  // Lấy tên chức vụ
+                        TenChucVu = cv.TenChucVu,  // Lấy tên chức vụ
+                        TinhTrangLamViec = nvpb.nv.TinhTrangLamViec
+                    })
+                .ToList<object>();
+        }
+
+        public List<object> LoadDataTable_ThoiViec()
+        {
+            return Adapter.NhanVien
+                .AsNoTracking()
+                .Where(nv => nv.TinhTrangLamViec == false) // Điều kiện lọc nhân viên nghỉ việc
+                .Join(
+                    Adapter.PhongBan,  // Bảng PhongBan
+                    nv => nv.MaPhongBan,  // Khóa ngoại ở NhanVien
+                    pb => pb.MaPhongBan,  // Khóa chính ở PhongBan
+                    (nv, pb) => new { nv, pb })  // Kết hợp dữ liệu
+                .Join(
+                    Adapter.DM_ChucVu,  // Bảng ChucVu
+                    nvpb => nvpb.nv.MaChucVu,  // Khóa ngoại ở NhanVien
+                    cv => cv.MaChucVu,  // Khóa chính ở ChucVu
+                    (nvpb, cv) => new // Kết hợp thêm dữ liệu của ChucVu
+                    {
+                        MaNhanVien = nvpb.nv.MaNhanVien,
+                        TenNhanVien = nvpb.nv.TenNhanVien,
+                        NgaySinh = nvpb.nv.NgaySinh,
+                        DiaChi = nvpb.nv.DiaChi,
+                        SoDienThoai = nvpb.nv.SoDienThoai,
+                        TenPhongBan = nvpb.pb.TenPhongBan,  // Lấy tên phòng ban
+                        TenChucVu = cv.TenChucVu,  // Lấy tên chức vụ
+                        TinhTrangLamViec = nvpb.nv.TinhTrangLamViec
+                    })
+                .ToList<object>();
+        }
+
+        public List<object> LoadDataTable_DangLamViec()
+        {
+            return Adapter.NhanVien
+                .AsNoTracking()
+                .Where(nv => nv.TinhTrangLamViec == true) // Điều kiện lọc nhân viên nghỉ việc
+                .Join(
+                    Adapter.PhongBan,  // Bảng PhongBan
+                    nv => nv.MaPhongBan,  // Khóa ngoại ở NhanVien
+                    pb => pb.MaPhongBan,  // Khóa chính ở PhongBan
+                    (nv, pb) => new { nv, pb })  // Kết hợp dữ liệu
+                .Join(
+                    Adapter.DM_ChucVu,  // Bảng ChucVu
+                    nvpb => nvpb.nv.MaChucVu,  // Khóa ngoại ở NhanVien
+                    cv => cv.MaChucVu,  // Khóa chính ở ChucVu
+                    (nvpb, cv) => new // Kết hợp thêm dữ liệu của ChucVu
+                    {
+                        MaNhanVien = nvpb.nv.MaNhanVien,
+                        TenNhanVien = nvpb.nv.TenNhanVien,
+                        NgaySinh = nvpb.nv.NgaySinh,
+                        DiaChi = nvpb.nv.DiaChi,
+                        SoDienThoai = nvpb.nv.SoDienThoai,
+                        TenPhongBan = nvpb.pb.TenPhongBan,  // Lấy tên phòng ban
+                        TenChucVu = cv.TenChucVu,  // Lấy tên chức vụ
+                        TinhTrangLamViec = nvpb.nv.TinhTrangLamViec
                     })
                 .ToList<object>();
         }
@@ -138,9 +195,43 @@ namespace LOGICPlayer
             }
         }
 
+        public bool ChoThoiViec(NhanVien nhanVien)
+        {
+            try
+            {
+                string maNV = nhanVien.MaNhanVien;
+                NhanVien Row = Adapter.NhanVien.FirstOrDefault(x => x.MaNhanVien == maNV);
+                Row.TinhTrangLamViec = false;
 
+                Adapter.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+                throw new Exception("Lỗi: " + ex.Message);
 
+            }
+        }
 
+        public bool LamViecLai(NhanVien nhanVien)
+        {
+            try
+            {
+                string maNV = nhanVien.MaNhanVien;
+                NhanVien Row = Adapter.NhanVien.FirstOrDefault(x => x.MaNhanVien == maNV);
+                Row.TinhTrangLamViec = true;
+
+                Adapter.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+                throw new Exception("Lỗi: " + ex.Message);
+
+            }
+        }
 
 
         public bool AddNhanVien(NhanVien nhanVienMoi)

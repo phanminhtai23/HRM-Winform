@@ -75,6 +75,7 @@
     <EntitySetMapping Name="NhanVien">
       <EntityTypeMapping TypeName="HRMModel.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="TinhTrangLamViec" ColumnName="TinhTrangLamViec" />
           <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
           <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
           <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />

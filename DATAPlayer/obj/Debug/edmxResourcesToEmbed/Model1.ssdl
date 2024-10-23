@@ -48,6 +48,7 @@
     <Property Name="SoDienThoai" Type="nvarchar" MaxLength="15" />
     <Property Name="MaPhongBan" Type="nvarchar" MaxLength="10" />
     <Property Name="MaChucVu" Type="nvarchar" MaxLength="10" />
+    <Property Name="TinhTrangLamViec" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="PhongBan">
     <Key>
