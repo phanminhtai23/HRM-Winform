@@ -34,30 +34,27 @@
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.Them_NV = new DevExpress.XtraBars.BarButtonItem();
             this.Sua_NV = new DevExpress.XtraBars.BarButtonItem();
-            this.Tim_NV = new DevExpress.XtraBars.BarButtonItem();
-            this.In_NV = new DevExpress.XtraBars.BarButtonItem();
+            this.Xoa_NV = new DevExpress.XtraBars.BarButtonItem();
             this.Dong_fromNV = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.dataGridView_NhanVien = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
+            this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
+            this.gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SoDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenPhongBan = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TenChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TinhTrang = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -73,11 +70,11 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.Them_NV,
             this.Sua_NV,
-            this.Tim_NV,
             this.Dong_fromNV,
-            this.In_NV});
+            this.Xoa_NV,
+            this.barDockingMenuItem1});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 6;
+            this.barManager1.MaxItemId = 8;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -89,9 +86,8 @@
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Them_NV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Sua_NV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Tim_NV, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.In_NV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Dong_fromNV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Xoa_NV, "", true, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.Dong_fromNV, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -110,20 +106,14 @@
             this.Sua_NV.Id = 2;
             this.Sua_NV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Sua_NV.ImageOptions.SvgImage")));
             this.Sua_NV.Name = "Sua_NV";
+            this.Sua_NV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Sua_NV_ItemClick);
             // 
-            // Tim_NV
+            // Xoa_NV
             // 
-            this.Tim_NV.Caption = "Tìm Kiếm";
-            this.Tim_NV.Id = 3;
-            this.Tim_NV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Tim_NV.ImageOptions.SvgImage")));
-            this.Tim_NV.Name = "Tim_NV";
-            // 
-            // In_NV
-            // 
-            this.In_NV.Caption = "In";
-            this.In_NV.Id = 5;
-            this.In_NV.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("In_NV.ImageOptions.SvgImage")));
-            this.In_NV.Name = "In_NV";
+            this.Xoa_NV.Caption = "Xóa";
+            this.Xoa_NV.Id = 5;
+            this.Xoa_NV.Name = "Xoa_NV";
+            this.Xoa_NV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Xoa_NV_ItemClick);
             // 
             // Dong_fromNV
             // 
@@ -151,162 +141,157 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1004, 34);
+            this.barDockControlTop.Size = new System.Drawing.Size(1004, 47);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 439);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 432);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1004, 22);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1004, 29);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 405);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 385);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1004, 34);
+            this.barDockControlRight.Location = new System.Drawing.Point(1004, 47);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 405);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 385);
             // 
-            // dataGridView_NhanVien
+            // barDockingMenuItem1
             // 
-            this.dataGridView_NhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_NhanVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView_NhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_NhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13});
-            this.dataGridView_NhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView_NhanVien.Location = new System.Drawing.Point(0, 34);
-            this.dataGridView_NhanVien.Name = "dataGridView_NhanVien";
-            this.dataGridView_NhanVien.RowHeadersWidth = 51;
-            this.dataGridView_NhanVien.RowTemplate.Height = 24;
-            this.dataGridView_NhanVien.Size = new System.Drawing.Size(1004, 405);
-            this.dataGridView_NhanVien.TabIndex = 4;
+            this.barDockingMenuItem1.Caption = "barDockingMenuItem1";
+            this.barDockingMenuItem1.Id = 6;
+            this.barDockingMenuItem1.Name = "barDockingMenuItem1";
+            this.barDockingMenuItem1.ListItemClick += new DevExpress.XtraBars.ListItemClickEventHandler(this.barDockingMenuItem1_ListItemClick);
             // 
-            // Column1
+            // gcDanhSach
             // 
-            this.Column1.DataPropertyName = "MaNhanVien";
-            this.Column1.HeaderText = "Mã Nhân Viên";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
+            this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcDanhSach.Location = new System.Drawing.Point(0, 47);
+            this.gcDanhSach.MainView = this.gvDanhSach;
+            this.gcDanhSach.MenuManager = this.barManager1;
+            this.gcDanhSach.Name = "gcDanhSach";
+            this.gcDanhSach.Size = new System.Drawing.Size(1004, 385);
+            this.gcDanhSach.TabIndex = 14;
+            this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvDanhSach});
+            this.gcDanhSach.Click += new System.EventHandler(this.gcDanhSach_Click);
             // 
-            // Column2
+            // gvDanhSach
             // 
-            this.Column2.DataPropertyName = "TenNhanVien";
-            this.Column2.HeaderText = "Tên Nhân Viên";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
+            this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MaNhanVien,
+            this.TenNhanVien,
+            this.NgaySinh,
+            this.DiaChi,
+            this.SoDienThoai,
+            this.TenPhongBan,
+            this.TenChucVu,
+            this.TinhTrang});
+            this.gvDanhSach.GridControl = this.gcDanhSach;
+            this.gvDanhSach.Name = "gvDanhSach";
+            this.gvDanhSach.OptionsFind.AlwaysVisible = true;
+            this.gvDanhSach.OptionsFind.FindDelay = 100;
+            this.gvDanhSach.OptionsFind.FindNullPrompt = "Nhập từ khóa để tìm kiếm...";
+            this.gvDanhSach.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
+            this.gvDanhSach.OptionsFind.ShowFindButton = false;
+            this.gvDanhSach.OptionsView.ShowGroupPanel = false;
             // 
-            // Column3
+            // MaNhanVien
             // 
-            this.Column3.DataPropertyName = "NgaySinh";
-            this.Column3.HeaderText = "Ngày Sinh";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
+            this.MaNhanVien.Caption = "Mã nhân viên";
+            this.MaNhanVien.FieldName = "MaNhanVien";
+            this.MaNhanVien.MinWidth = 25;
+            this.MaNhanVien.Name = "MaNhanVien";
+            this.MaNhanVien.Visible = true;
+            this.MaNhanVien.VisibleIndex = 0;
+            this.MaNhanVien.Width = 94;
             // 
-            // Column4
+            // TenNhanVien
             // 
-            this.Column4.DataPropertyName = "DiaChi";
-            this.Column4.HeaderText = "Địa Chỉ";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
+            this.TenNhanVien.Caption = "Tên nhân viên";
+            this.TenNhanVien.FieldName = "TenNhanVien";
+            this.TenNhanVien.MinWidth = 25;
+            this.TenNhanVien.Name = "TenNhanVien";
+            this.TenNhanVien.Visible = true;
+            this.TenNhanVien.VisibleIndex = 1;
+            this.TenNhanVien.Width = 94;
             // 
-            // Column5
+            // NgaySinh
             // 
-            this.Column5.DataPropertyName = "SoDienThoai";
-            this.Column5.HeaderText = "Số Điện Thoại";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
+            this.NgaySinh.Caption = "Ngày sinh";
+            this.NgaySinh.FieldName = "NgaySinh";
+            this.NgaySinh.MinWidth = 25;
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.Visible = true;
+            this.NgaySinh.VisibleIndex = 2;
+            this.NgaySinh.Width = 94;
             // 
-            // Column6
+            // DiaChi
             // 
-            this.Column6.DataPropertyName = "MaPhongBan";
-            this.Column6.HeaderText = "Mã Phòng Ban";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
+            this.DiaChi.Caption = "Địa chỉ";
+            this.DiaChi.FieldName = "DiaChi";
+            this.DiaChi.MinWidth = 25;
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Visible = true;
+            this.DiaChi.VisibleIndex = 3;
+            this.DiaChi.Width = 94;
             // 
-            // Column7
+            // SoDienThoai
             // 
-            this.Column7.DataPropertyName = "MaChucVu";
-            this.Column7.HeaderText = "Mã Chức Vụ";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
+            this.SoDienThoai.Caption = "Số điện thoại";
+            this.SoDienThoai.FieldName = "SoDienThoai";
+            this.SoDienThoai.MinWidth = 25;
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.Visible = true;
+            this.SoDienThoai.VisibleIndex = 4;
+            this.SoDienThoai.Width = 94;
             // 
-            // Column8
+            // TenPhongBan
             // 
-            this.Column8.DataPropertyName = "DM_ChucVu";
-            this.Column8.HeaderText = "Column8";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Visible = false;
+            this.TenPhongBan.Caption = "Tên phòng ban";
+            this.TenPhongBan.FieldName = "TenPhongBan";
+            this.TenPhongBan.MinWidth = 25;
+            this.TenPhongBan.Name = "TenPhongBan";
+            this.TenPhongBan.Visible = true;
+            this.TenPhongBan.VisibleIndex = 5;
+            this.TenPhongBan.Width = 94;
             // 
-            // Column9
+            // TenChucVu
             // 
-            this.Column9.DataPropertyName = "DM_Luong";
-            this.Column9.HeaderText = "Column9";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Visible = false;
+            this.TenChucVu.Caption = "Tên chức vụ";
+            this.TenChucVu.FieldName = "TenChucVu";
+            this.TenChucVu.MinWidth = 25;
+            this.TenChucVu.Name = "TenChucVu";
+            this.TenChucVu.Visible = true;
+            this.TenChucVu.VisibleIndex = 6;
+            this.TenChucVu.Width = 94;
             // 
-            // Column10
+            // TinhTrang
             // 
-            this.Column10.DataPropertyName = "Luongs";
-            this.Column10.HeaderText = "Column10";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
-            this.Column10.Visible = false;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "NgayNghis";
-            this.Column11.HeaderText = "Column11";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
-            this.Column11.Visible = false;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "PhongBan";
-            this.Column12.HeaderText = "Column12";
-            this.Column12.MinimumWidth = 6;
-            this.Column12.Name = "Column12";
-            this.Column12.Visible = false;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "QT_CongTac";
-            this.Column13.HeaderText = "Column13";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.Visible = false;
+            this.TinhTrang.Caption = "gridColumn1";
+            this.TinhTrang.MinWidth = 25;
+            this.TinhTrang.Name = "TinhTrang";
+            this.TinhTrang.Visible = true;
+            this.TinhTrang.VisibleIndex = 7;
+            this.TinhTrang.Width = 94;
             // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 461);
-            this.Controls.Add(this.dataGridView_NhanVien);
+            this.Controls.Add(this.gcDanhSach);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
@@ -315,7 +300,8 @@
             this.Text = "Nhân Viên";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_NhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,22 +318,18 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem Them_NV;
         private DevExpress.XtraBars.BarButtonItem Sua_NV;
-        private DevExpress.XtraBars.BarButtonItem Tim_NV;
         private DevExpress.XtraBars.BarButtonItem Dong_fromNV;
-        private DevExpress.XtraBars.BarButtonItem In_NV;
-        private System.Windows.Forms.DataGridView dataGridView_NhanVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private DevExpress.XtraBars.BarButtonItem Xoa_NV;
+        private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem1;
+        private DevExpress.XtraGrid.GridControl gcDanhSach;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
+        private DevExpress.XtraGrid.Columns.GridColumn MaNhanVien;
+        private DevExpress.XtraGrid.Columns.GridColumn TenNhanVien;
+        private DevExpress.XtraGrid.Columns.GridColumn NgaySinh;
+        private DevExpress.XtraGrid.Columns.GridColumn DiaChi;
+        private DevExpress.XtraGrid.Columns.GridColumn SoDienThoai;
+        private DevExpress.XtraGrid.Columns.GridColumn TenPhongBan;
+        private DevExpress.XtraGrid.Columns.GridColumn TenChucVu;
+        private DevExpress.XtraGrid.Columns.GridColumn TinhTrang;
     }
 }

@@ -42,20 +42,20 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.dMChucVuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dMChucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hRMDataSet = new FRONTENDPlayer.HRMDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHeSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dMChucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hRMDataSet = new FRONTENDPlayer.HRMDataSet();
+            this.dMChucVuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dM_ChucVuTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.DM_ChucVuTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -184,8 +184,15 @@
             this.gridView1});
             this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
-
+            // dMChucVuBindingSource
             // 
+            this.dMChucVuBindingSource.DataMember = "DM_ChucVu";
+            this.dMChucVuBindingSource.DataSource = this.hRMDataSet;
+            // 
+            // hRMDataSet
+            // 
+            this.hRMDataSet.DataSetName = "HRMDataSet";
+            this.hRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -203,6 +210,7 @@
             this.gridView1.OptionsEditForm.PopupEditFormWidth = 1250;
             this.gridView1.OptionsFilter.ShowAllTableValuesInFilterPopup = true;
             this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.FindDelay = 100;
             this.gridView1.OptionsFind.SearchInPreview = true;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colHeSoLuong, DevExpress.Data.ColumnSortOrder.Ascending)});
@@ -243,20 +251,9 @@
             this.colHeSoLuong.VisibleIndex = 2;
             this.colHeSoLuong.Width = 146;
             // 
-            // dMChucVuBindingSource
-            // 
-            this.dMChucVuBindingSource.DataMember = "DM_ChucVu";
-            this.dMChucVuBindingSource.DataSource = this.hRMDataSet;
-            // 
-            // hRMDataSet
-            // 
-            this.hRMDataSet.DataSetName = "HRMDataSet";
-            this.hRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dM_ChucVuTableAdapter
             // 
             this.dM_ChucVuTableAdapter.ClearBeforeFill = true;
-            // 
             // 
             // frmChucVu1
             // 
@@ -273,10 +270,10 @@
             this.Load += new System.EventHandler(this.frmChucVu1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

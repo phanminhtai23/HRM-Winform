@@ -36,8 +36,8 @@ namespace DATAPlayer
         public virtual ICollection<Luong> Luong { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NgayNghi> NgayNghi { get; set; }
+        public virtual PhongBan PhongBan { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QT_CongTac> QT_CongTac { get; set; }
-        public virtual PhongBan PhongBan { get; set; }
     }
 }

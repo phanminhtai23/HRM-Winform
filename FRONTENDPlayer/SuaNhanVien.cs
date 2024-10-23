@@ -1,6 +1,5 @@
 ﻿using DATAPlayer;
 using DevExpress.XtraEditors;
-using DevExpress.XtraTreeList.Nodes.Operations;
 using LOGICPlayer;
 using System;
 using System.Collections.Generic;
@@ -11,24 +10,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static FRONTENDPlayer.TrangChu;
+
 
 namespace FRONTENDPlayer
 {
-    public partial class ThemThongTinNhanVien : DevExpress.XtraEditors.XtraForm
+    public partial class SuaNhanVien : DevExpress.XtraEditors.XtraForm
     {
+        public NhanVien NhanVienHienTai { get; set; }
         NhanVienBackEnd nhanVienBE = new NhanVienBackEnd();
-        public ThemThongTinNhanVien()
+        public SuaNhanVien(NhanVien nhanVien)
         {
             InitializeComponent();
-            LoadMaNhanVien();
+            NhanVienHienTai = nhanVien;
+            LoadData();
         }
-        private void LoadMaNhanVien()
+        public SuaNhanVien(NhanVien nhanVien, Action reloadDataCallback)
         {
-            txtMaNhanVien.Text = nhanVienBE.TaoMaNhanVienMoi();
+            InitializeComponent();
+            NhanVienHienTai = nhanVien;
+            LoadData();
         }
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void LoadData()
         {
+            if (NhanVienHienTai != null)
+            {
+                txtMaNhanVien.Text = NhanVienHienTai.MaNhanVien;
+                txtTenNhanVien.Text = NhanVienHienTai.TenNhanVien;
+                dateNgaySinh.Text = NhanVienHienTai.NgaySinh?.ToString("dd/MM/yyyy");
+                txtDiaChi.Text = NhanVienHienTai.DiaChi;
+                txtSdt.Text = NhanVienHienTai.SoDienThoai;
+                cmbPhongBan.EditValue = NhanVienHienTai.MaPhongBan;
+                cmbChucVu.EditValue = NhanVienHienTai.MaChucVu;
+            }
+        }
+       
 
+
+        // Xử lý sự kiện nút Cập Nhật trong form SuaNhanVien
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
             try
             {
                 // Lấy dữ liệu từ các điều khiển
@@ -52,6 +73,7 @@ namespace FRONTENDPlayer
 
                 string diaChi = txtDiaChi.Text;
                 string soDienThoai = txtSdt.Text;
+
                 // Kiểm tra số điện thoại: phải là chuỗi số và độ dài bằng 10
                 if (soDienThoai.Length != 10 || !soDienThoai.All(char.IsDigit))
                 {
@@ -75,9 +97,8 @@ namespace FRONTENDPlayer
                     return;
                 }
 
-
-                // Tạo đối tượng NhanVien mới
-                NhanVien nhanVienMoi = new NhanVien
+                // Tạo đối tượng NhanVien để cập nhật
+                NhanVien nhanVienSua = new NhanVien
                 {
                     MaNhanVien = maNhanVien,
                     TenNhanVien = tenNhanVien,
@@ -88,17 +109,17 @@ namespace FRONTENDPlayer
                     MaChucVu = maChucVu
                 };
 
-                // Gọi logic layer để thêm nhân viên
-                bool isAdded = nhanVienBE.AddNhanVien(nhanVienMoi);
+                // Gọi logic layer để cập nhật nhân viên
+                bool isUpdated = nhanVienBE.UpdateNhanVien(nhanVienSua);
 
-                if (isAdded)
+                if (isUpdated)
                 {
-                    XtraMessageBox.Show("Thêm nhân viên mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show("Cập nhật thông tin nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
                 {
-                    XtraMessageBox.Show("Thêm nhân viên thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    XtraMessageBox.Show("Cập nhật thông tin nhân viên thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -111,15 +132,21 @@ namespace FRONTENDPlayer
             this.Close();
         }
 
-
-        private void frmThemThongTinNhanVien_Load(object sender, EventArgs e)
+        private void frmSuaNhanVien_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tKD_HRMDataSet.DM_ChucVu' table. You can move, or remove it, as needed.
             this.dM_ChucVuTableAdapter.Fill(this.HRMDataSet.DM_ChucVu);
             // TODO: This line of code loads data into the 'tKD_HRMDataSet.PhongBan' table. You can move, or remove it, as needed.
             this.phongBanTableAdapter.Fill(this.HRMDataSet.PhongBan);
+            // TODO: This line of code loads data into the 'tKD_HRMDataSet.PhongBan' table. You can move, or remove it, as needed.
+            this.phongBanTableAdapter.Fill(this.HRMDataSet.PhongBan);
+
 
         }
 
+        private void dateNgaySinh_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-} 
+}

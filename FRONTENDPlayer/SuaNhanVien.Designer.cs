@@ -2,7 +2,7 @@
 
 namespace FRONTENDPlayer
 {
-    partial class ThemThongTinNhanVien
+    partial class SuaNhanVien
     {
         /// <summary>
         /// Required designer variable.
@@ -40,31 +40,31 @@ namespace FRONTENDPlayer
             this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.txtSdt = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCapNhat = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.cmbPhongBan = new DevExpress.XtraEditors.LookUpEdit();
+            this.phongBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tKDHRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.HRMDataSet = new FRONTENDPlayer.HRMDataSet();
             this.cmbChucVu = new DevExpress.XtraEditors.LookUpEdit();
+            this.dMChucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.HRMDataSet = new FRONTENDPlayer.HRMDataSet();
-            this.HRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.phongBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.phongBanTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.PhongBanTableAdapter();
-            this.dMChucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dM_ChucVuTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.DM_ChucVuTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNhanVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNhanVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSdt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPhongBan.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tKDHRMDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HRMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbChucVu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HRMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HRMDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phongBanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMaNhanVien
@@ -74,7 +74,7 @@ namespace FRONTENDPlayer
             this.txtMaNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNhanVien.Name = "txtMaNhanVien";
             this.txtMaNhanVien.Properties.ReadOnly = true;
-            this.txtMaNhanVien.Size = new System.Drawing.Size(156, 26);
+            this.txtMaNhanVien.Size = new System.Drawing.Size(156, 34);
             this.txtMaNhanVien.TabIndex = 6;
             // 
             // labelControl1
@@ -122,7 +122,7 @@ namespace FRONTENDPlayer
             this.txtTenNhanVien.Location = new System.Drawing.Point(143, 84);
             this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
-            this.txtTenNhanVien.Size = new System.Drawing.Size(156, 26);
+            this.txtTenNhanVien.Size = new System.Drawing.Size(156, 34);
             this.txtTenNhanVien.TabIndex = 7;
             // 
             // txtDiaChi
@@ -130,7 +130,7 @@ namespace FRONTENDPlayer
             this.txtDiaChi.Location = new System.Drawing.Point(143, 131);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(156, 26);
+            this.txtDiaChi.Size = new System.Drawing.Size(156, 34);
             this.txtDiaChi.TabIndex = 8;
             // 
             // txtSdt
@@ -138,7 +138,7 @@ namespace FRONTENDPlayer
             this.txtSdt.Location = new System.Drawing.Point(143, 178);
             this.txtSdt.Margin = new System.Windows.Forms.Padding(4);
             this.txtSdt.Name = "txtSdt";
-            this.txtSdt.Size = new System.Drawing.Size(156, 26);
+            this.txtSdt.Size = new System.Drawing.Size(156, 34);
             this.txtSdt.TabIndex = 9;
             // 
             // labelControl5
@@ -151,14 +151,14 @@ namespace FRONTENDPlayer
             this.labelControl5.TabIndex = 5;
             this.labelControl5.Text = "Ngày sinh";
             // 
-            // btnLuu
+            // btnCapNhat
             // 
-            this.btnLuu.Location = new System.Drawing.Point(391, 277);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(94, 29);
-            this.btnLuu.TabIndex = 13;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.btnCapNhat.Location = new System.Drawing.Point(391, 277);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(94, 29);
+            this.btnCapNhat.TabIndex = 13;
+            this.btnCapNhat.Text = "Lưu";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // btnThoat
             // 
@@ -179,13 +179,28 @@ namespace FRONTENDPlayer
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenPhongBan", "Tên Phòng Ban"),
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("VanPhong", "Văn Phòng")});
             this.cmbPhongBan.Properties.DataSource = this.phongBanBindingSource;
-            this.cmbPhongBan.Properties.DisplayMember = "TenPhongBan"; // Chỉ hiển thị Tên Phòng Ban
+            this.cmbPhongBan.Properties.DisplayMember = "TenPhongBan";
             this.cmbPhongBan.Properties.NullText = "Phòng Ban";
             this.cmbPhongBan.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.cmbPhongBan.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbPhongBan.Properties.ValueMember = "MaPhongBan"; // Lấy mã Phòng Ban khi chọn
-            this.cmbPhongBan.Size = new System.Drawing.Size(125, 26);
+            this.cmbPhongBan.Properties.ValueMember = "MaPhongBan";
+            this.cmbPhongBan.Size = new System.Drawing.Size(125, 34);
             this.cmbPhongBan.TabIndex = 11;
+            // 
+            // phongBanBindingSource
+            // 
+            this.phongBanBindingSource.DataMember = "PhongBan";
+            this.phongBanBindingSource.DataSource = this.tKDHRMDataSetBindingSource;
+            // 
+            // tKDHRMDataSetBindingSource
+            // 
+            this.tKDHRMDataSetBindingSource.DataSource = this.HRMDataSet;
+            this.tKDHRMDataSetBindingSource.Position = 0;
+            // 
+            // HRMDataSet
+            // 
+            this.HRMDataSet.DataSetName = "TKD_HRMDataSet";
+            this.HRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmbChucVu
             // 
@@ -194,14 +209,19 @@ namespace FRONTENDPlayer
             this.cmbChucVu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbChucVu.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenChucVu", "Tên Chức Vụ")});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenChucVu", "Tên Chức Vụ")});
             this.cmbChucVu.Properties.DataSource = this.dMChucVuBindingSource;
-            this.cmbChucVu.Properties.DisplayMember = "TenChucVu"; // Hiển thị Tên Chức Vụ
+            this.cmbChucVu.Properties.DisplayMember = "TenChucVu";
             this.cmbChucVu.Properties.NullText = "Chức Vụ";
             this.cmbChucVu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbChucVu.Properties.ValueMember = "MaChucVu"; // Lấy mã chức vụ khi chọn
-            this.cmbChucVu.Size = new System.Drawing.Size(125, 26);
+            this.cmbChucVu.Properties.ValueMember = "MaChucVu";
+            this.cmbChucVu.Size = new System.Drawing.Size(125, 34);
             this.cmbChucVu.TabIndex = 12;
+            // 
+            // dMChucVuBindingSource
+            // 
+            this.dMChucVuBindingSource.DataMember = "DM_ChucVu";
+            this.dMChucVuBindingSource.DataSource = this.tKDHRMDataSetBindingSource;
             // 
             // dateNgaySinh
             // 
@@ -218,38 +238,19 @@ namespace FRONTENDPlayer
             this.dateNgaySinh.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.dateNgaySinh.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
             this.dateNgaySinh.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateNgaySinh.Size = new System.Drawing.Size(156, 26);
+            this.dateNgaySinh.Size = new System.Drawing.Size(156, 34);
             this.dateNgaySinh.TabIndex = 10;
-            // 
-            // tKD_HRMDataSet
-            // 
-            this.HRMDataSet.DataSetName = "TKD_HRMDataSet";
-            this.HRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tKDHRMDataSetBindingSource
-            // 
-            this.HRMDataSetBindingSource.DataSource = this.HRMDataSet;
-            this.HRMDataSetBindingSource.Position = 0;
-            // 
-            // phongBanBindingSource
-            // 
-            this.phongBanBindingSource.DataMember = "PhongBan";
-            this.phongBanBindingSource.DataSource = this.HRMDataSetBindingSource;
+            this.dateNgaySinh.EditValueChanged += new System.EventHandler(this.dateNgaySinh_EditValueChanged);
             // 
             // phongBanTableAdapter
             // 
             this.phongBanTableAdapter.ClearBeforeFill = true;
             // 
-            // dMChucVuBindingSource
-            // 
-            this.dMChucVuBindingSource.DataMember = "DM_ChucVu";
-            this.dMChucVuBindingSource.DataSource = this.HRMDataSetBindingSource;
-            // 
             // dM_ChucVuTableAdapter
             // 
             this.dM_ChucVuTableAdapter.ClearBeforeFill = true;
             // 
-            // ThemThongTinNhanVien
+            // SuaNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -258,7 +259,7 @@ namespace FRONTENDPlayer
             this.Controls.Add(this.cmbChucVu);
             this.Controls.Add(this.cmbPhongBan);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.txtSdt);
             this.Controls.Add(this.txtDiaChi);
@@ -268,22 +269,22 @@ namespace FRONTENDPlayer
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtMaNhanVien);
-            this.Name = "ThemThongTinNhanVien";
-            this.Text = "ThemThongTinNhanVien";
-            this.Load += new System.EventHandler(this.frmThemThongTinNhanVien_Load);
+            this.Name = "SuaNhanVien";
+            this.Text = "Sửa Thông Tin Nhân Viên";
+            this.Load += new System.EventHandler(this.frmSuaNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNhanVien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNhanVien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSdt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPhongBan.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongBanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tKDHRMDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HRMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbChucVu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgaySinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HRMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HRMDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phongBanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,16 +301,19 @@ namespace FRONTENDPlayer
         private DevExpress.XtraEditors.TextEdit txtDiaChi;
         private DevExpress.XtraEditors.TextEdit txtSdt;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.SimpleButton btnCapNhat;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.LookUpEdit cmbPhongBan;
         private DevExpress.XtraEditors.LookUpEdit cmbChucVu;
         private DevExpress.XtraEditors.DateEdit dateNgaySinh;
-        private BindingSource HRMDataSetBindingSource;
+        private BindingSource tKDHRMDataSetBindingSource;
+
         private HRMDataSet HRMDataSet;
+
         private BindingSource phongBanBindingSource;
         private HRMDataSetTableAdapters.PhongBanTableAdapter phongBanTableAdapter;
         private BindingSource dMChucVuBindingSource;
         private HRMDataSetTableAdapters.DM_ChucVuTableAdapter dM_ChucVuTableAdapter;
     }
 }
+
