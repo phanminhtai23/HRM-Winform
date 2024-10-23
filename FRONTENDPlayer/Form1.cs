@@ -102,10 +102,11 @@ namespace FRONTENDPlayer
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            //DialogResult result Application.Exit();
             DialogResult result = MessageBox.Show("Bạn chắn chắn muốn thoát ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                Close();
+                System.Windows.Forms.Application.Exit();
             }
         }
 

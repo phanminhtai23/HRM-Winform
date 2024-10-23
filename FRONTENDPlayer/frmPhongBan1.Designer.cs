@@ -192,6 +192,7 @@
             this.gridControl1_PhongBan.TabIndex = 4;
             this.gridControl1_PhongBan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1_PhongBan});
+            this.gridControl1_PhongBan.Click += new System.EventHandler(this.gridControl1_PhongBan_Click);
             // 
             // phongBanBindingSource
             // 
@@ -205,9 +206,9 @@
             // 
             // gridView1_PhongBan
             // 
-            this.gridView1_PhongBan.Appearance.FocusedCell.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1_PhongBan.Appearance.FocusedCell.Font = new System.Drawing.Font("Arial", 7.8F);
             this.gridView1_PhongBan.Appearance.FocusedCell.Options.UseFont = true;
-            this.gridView1_PhongBan.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1_PhongBan.Appearance.FocusedRow.Font = new System.Drawing.Font("Arial", 7.8F);
             this.gridView1_PhongBan.Appearance.FocusedRow.Options.UseFont = true;
             this.gridView1_PhongBan.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMaPhongBan,
@@ -226,12 +227,14 @@
             this.gridView1_PhongBan.OptionsFind.AlwaysVisible = true;
             this.gridView1_PhongBan.OptionsFind.FindDelay = 100;
             this.gridView1_PhongBan.OptionsFind.SearchInPreview = true;
+            this.gridView1_PhongBan.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colTenPhongBan, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colMaPhongBan
             // 
-            this.colMaPhongBan.AppearanceCell.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colMaPhongBan.AppearanceCell.Font = new System.Drawing.Font("Arial", 7.8F);
             this.colMaPhongBan.AppearanceCell.Options.UseFont = true;
-            this.colMaPhongBan.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colMaPhongBan.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.colMaPhongBan.AppearanceHeader.Options.UseFont = true;
             this.colMaPhongBan.Caption = "Mã Phòng Ban";
             this.colMaPhongBan.FieldName = "MaPhongBan";
@@ -243,9 +246,9 @@
             // 
             // colTenPhongBan
             // 
-            this.colTenPhongBan.AppearanceCell.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colTenPhongBan.AppearanceCell.Font = new System.Drawing.Font("Arial", 7.8F);
             this.colTenPhongBan.AppearanceCell.Options.UseFont = true;
-            this.colTenPhongBan.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colTenPhongBan.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.colTenPhongBan.AppearanceHeader.Options.UseFont = true;
             this.colTenPhongBan.Caption = "Tên Phòng Ban";
             this.colTenPhongBan.FieldName = "TenPhongBan";
@@ -257,9 +260,9 @@
             // 
             // colVanPhong
             // 
-            this.colVanPhong.AppearanceCell.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colVanPhong.AppearanceCell.Font = new System.Drawing.Font("Arial", 7.8F);
             this.colVanPhong.AppearanceCell.Options.UseFont = true;
-            this.colVanPhong.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.colVanPhong.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.colVanPhong.AppearanceHeader.Options.UseFont = true;
             this.colVanPhong.Caption = "Văn Phòng";
             this.colVanPhong.FieldName = "VanPhong";

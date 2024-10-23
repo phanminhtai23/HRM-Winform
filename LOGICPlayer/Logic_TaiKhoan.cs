@@ -1,6 +1,7 @@
 ﻿using DATAPlayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -175,6 +176,50 @@ namespace LOGICPlayer
                 }
             }
         }
+        
+        // Procedure
+        public bool TrungTaiKhoan1(string username)
+        {
+            // Chuỗi kết nối đến cơ sở dữ liệu
+            //Trust Server Certificate = True; Encrypt = True;
+            string connectionString = "Data Source = localhost; Initial Catalog = HRM; Integrated Security = True";
+
+
+            // Tạo kết nối
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Tạo SqlCommand để gọi stored procedure
+                    using (SqlCommand command = new SqlCommand("TrungTaiKhoan", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm tham số
+                        command.Parameters.AddWithValue("@TenTaiKhoan", username); // Giả sử bạn có một TextBox để nhập tên tài khoản
+
+                        // Thực thi và nhận kết quả
+                        int ketQua = (int)command.ExecuteScalar();
+
+                        // Xử lý kết quả, 
+                        if (ketQua == 1) // k có tk trong csdl
+                        {
+                            return true; // trùng tk
+                        } else
+                        {
+                            return false; // Tên tài khoản k tồn tại trong csdl
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi kết nối: " + ex.Message);
+                }
+            }
+        }
+
         public bool ThemTaiKhoan(string Username, string Password, string Email, int TinhTrang = 0)
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
@@ -204,6 +249,51 @@ namespace LOGICPlayer
                     cmd.Parameters.AddWithValue("@Email", Email);
                     cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
                     cmd.Parameters.AddWithValue("@count_acc", count_acc);
+                    // Thực thi câu lệnh SQL
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    // Nếu count = 1, thêm tk thành công
+                    return rowsAffected > 0;
+                }
+                catch (Exception ex)
+                {
+                    // Ném ngoại lệ để xử lý ở lớp UI
+                    throw new Exception("Lỗi kết nối: " + ex.Message);
+                }
+            }
+        }
+
+        // Function đếm số account
+        public bool ThemTaiKhoan1(string Username, string Password, string Email, int TinhTrang = 0)
+        {
+            // Chuỗi kết nối đến cơ sở dữ liệu
+            //Trust Server Certificate = True; Encrypt = True;
+            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+
+            // Truy vấn SQL kiểm tra tài khoản
+            string query = "INSERT INTO TaiKhoan (STT_Tk, TenTaiKhoan, MatKhau, Email, TinhTrang) VALUES (@count_acc, @Username, @Password, @Email, @TinhTrang)";
+            string query_count_acc = "SELECT dbo.LaySoTaiKhoan()";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo đối tượng SqlCommand
+                    SqlCommand cmd_count_acc = new SqlCommand(query_count_acc, conn);
+                    int count_acc = (int)cmd_count_acc.ExecuteScalar();
+                    count_acc = count_acc + 1;
+
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    // Thêm các tham số vào câu lệnh SQL
+                    cmd.Parameters.AddWithValue("@Username", Username);
+                    cmd.Parameters.AddWithValue("@Password", Password); // Bạn nên mã hóa mật khẩu trước khi lưu vào DB
+                    cmd.Parameters.AddWithValue("@Email", Email);
+                    cmd.Parameters.AddWithValue("@TinhTrang", TinhTrang);
+                    cmd.Parameters.AddWithValue("@count_acc", count_acc);
+
                     // Thực thi câu lệnh SQL
                     int rowsAffected = cmd.ExecuteNonQuery();
 

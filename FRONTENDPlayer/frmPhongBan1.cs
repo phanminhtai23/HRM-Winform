@@ -103,5 +103,10 @@ namespace FRONTENDPlayer
         {
             this.Close();
         }
+
+        private void gridControl1_PhongBan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

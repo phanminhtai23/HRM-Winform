@@ -88,9 +88,9 @@ namespace FRONTENDPlayer
                 textBox1_Gmail.Focus();
             }
             // nếu tại tk hợp lệ -> lưu tài khoản và chuyển đến trang đăng ký
-            else if (!logic_TaiKhoan.TrungTaiKhoan(textBox_TaiKhoan.Text))
+            else if (!logic_TaiKhoan.TrungTaiKhoan1(textBox_TaiKhoan.Text))
             {
-                if (logic_TaiKhoan.ThemTaiKhoan(textBox_TaiKhoan.Text, textBox2_MatKhau.Text, textBox1_Gmail.Text))
+                if (logic_TaiKhoan.ThemTaiKhoan1(textBox_TaiKhoan.Text, textBox2_MatKhau.Text, textBox1_Gmail.Text))
                 {
                     MessageBox.Show("Tạo tài khoản thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
