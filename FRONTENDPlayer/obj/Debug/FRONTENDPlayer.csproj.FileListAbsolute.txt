@@ -448,3 +448,4 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDP
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmThoiViec.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmNgayNghi.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemNgayNghi.resources
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaNgayNghi.resources

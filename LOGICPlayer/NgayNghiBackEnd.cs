@@ -34,19 +34,20 @@ namespace LOGICPlayer
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
-        public void Update(NgayNghi UpdateNgayNghi)
+        public bool Update(NgayNghi UpdateNgayNghi)
         {
             try
             {
-                String String_MaNhanVien = UpdateNgayNghi.MaNhanVien;
-                String String_ThangNam = UpdateNgayNghi.ThangNam;
-                NgayNghi Row = Adapter.NgayNghi.FirstOrDefault(x => x.MaNhanVien == String_MaNhanVien && x.ThangNam == String_ThangNam);
-                Row.MaNhanVien = UpdateNgayNghi.MaNhanVien; 
-                Row.ThangNam = UpdateNgayNghi.ThangNam;
-                Row.SoNgayNghi = UpdateNgayNghi.SoNgayNghi;
-                Row.GhiChu = UpdateNgayNghi.GhiChu;
+                   String String_MaNhanVien = UpdateNgayNghi.MaNhanVien;
+                   String String_ThangNam = UpdateNgayNghi.ThangNam;
+                   NgayNghi Row = Adapter.NgayNghi.FirstOrDefault(x => (x.MaNhanVien == String_MaNhanVien && x.ThangNam == String_ThangNam));
+                   //Row.MaNhanVien = UpdateNgayNghi.MaNhanVien;
+                   //Row.ThangNam = UpdateNgayNghi.ThangNam;
+                   Row.SoNgayNghi = UpdateNgayNghi.SoNgayNghi;
+                   Row.GhiChu = UpdateNgayNghi.GhiChu;
+                   Adapter.SaveChanges();
 
-                Adapter.SaveChanges();
+                   return true;
             }
             catch (Exception ex)
             {

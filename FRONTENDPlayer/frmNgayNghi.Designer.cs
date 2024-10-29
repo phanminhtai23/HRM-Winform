@@ -105,6 +105,7 @@
             this.barButtonItem2_Sua.Id = 1;
             this.barButtonItem2_Sua.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2_Sua.ImageOptions.SvgImage")));
             this.barButtonItem2_Sua.Name = "barButtonItem2_Sua";
+            this.barButtonItem2_Sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_Sua_ItemClick);
             // 
             // barButtonItem3_Xoa
             // 
@@ -112,6 +113,7 @@
             this.barButtonItem3_Xoa.Id = 2;
             this.barButtonItem3_Xoa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3_Xoa.ImageOptions.SvgImage")));
             this.barButtonItem3_Xoa.Name = "barButtonItem3_Xoa";
+            this.barButtonItem3_Xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_Xoa_ItemClick);
             // 
             // barButtonItem4_Dong
             // 

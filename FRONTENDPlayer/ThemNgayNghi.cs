@@ -20,11 +20,13 @@ namespace FRONTENDPlayer
             InitializeComponent();
             PopulateComboBoxEdit();
             label5_CanhBao.Visible = false;
+
+            this.AcceptButton = this.simpleButton2_XacNhan;
         }
 
         private void PopulateComboBoxEdit()
         {
-            for (int i = 1; i <= 31; i++)
+            for (int i = 0; i <= 31; i++)
             {
                 this.comboBoxEdit_SoNgayNghi.Properties.Items.Add(i);
             }
@@ -50,13 +52,17 @@ namespace FRONTENDPlayer
                 label5_CanhBao.Visible = true;
                 label5_CanhBao.Text = "Vui lòng chọn mã nhân viên.";
                 label5_CanhBao.Location = new Point(316, 21);
-                XtraMessageBox.Show($"MaNhanVien: {lookUpEdit1_MaNhanVien.EditValue?.ToString()}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (dateEdit1_ThangNghi.EditValue == null || string.IsNullOrEmpty(dateEdit1_ThangNghi.EditValue.ToString()))
             {
-                XtraMessageBox.Show($"MaNhanVien: {lookUpEdit1_MaNhanVien.EditValue?.ToString()}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 label5_CanhBao.Visible = true;
                 label5_CanhBao.Text = "Vui lòng chọn tháng nghỉ.";
+                label5_CanhBao.Location = new Point(316, 75);
+            }
+            else if (((DateTime)dateEdit1_ThangNghi.EditValue) > DateTime.Now)
+            {
+                label5_CanhBao.Visible = true;
+                label5_CanhBao.Text = "Phải bé hơn tháng hiện tại.";
                 label5_CanhBao.Location = new Point(316, 75);
             }
             else if (comboBoxEdit_SoNgayNghi.SelectedItem == null)
