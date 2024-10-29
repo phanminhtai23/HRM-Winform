@@ -4,6 +4,10 @@
 
     partial class HRMDataSet
     {
+        partial class NgayNghiDataTable
+        {
+        }
+
         partial class DM_ChucVuTableAdapter
         {
         }

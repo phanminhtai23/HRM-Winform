@@ -75,6 +75,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmNgayNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNgayNghi.Designer.cs">
+      <DependentUpon>frmNgayNghi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThoiViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="SuaNhanVien.Designer.cs">
       <DependentUpon>SuaNhanVien.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmNgayNghi.resx">
+      <DependentUpon>frmNgayNghi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmThoiViec.resx">
       <DependentUpon>frmThoiViec.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +184,12 @@
     <Compile Include="ThemChucVu.Designer.cs">
       <DependentUpon>ThemChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemNgayNghi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNgayNghi.Designer.cs">
+      <DependentUpon>ThemNgayNghi.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemPhongBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemChucVu.resx">
       <DependentUpon>ThemChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNgayNghi.resx">
+      <DependentUpon>ThemNgayNghi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemPhongBan.resx">
       <DependentUpon>ThemPhongBan.cs</DependentUpon>

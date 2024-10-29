@@ -1,16 +1,120 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\frontendplayer\\themngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\themngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\frontendplayer\\themngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\themngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\logicplayer\\ngaynghibackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|solutionrelative:logicplayer\\ngaynghibackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\frontendplayer\\themthongtinnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\themthongtinnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\frontendplayer\\themthongtinnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\themthongtinnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\frontendplayer\\themphongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\themphongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\frontendplayer\\themngaynghi.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\themngaynghi.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 308,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmNgayNghi.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\frmNgayNghi.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\frmNgayNghi.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\frmNgayNghi.cs [Design]",
+              "RelativeToolTip": "FRONTENDPlayer\\frmNgayNghi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T22:00:58.117Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThemNgayNghi.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemNgayNghi.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\ThemNgayNghi.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemNgayNghi.cs [Design]",
+              "RelativeToolTip": "FRONTENDPlayer\\ThemNgayNghi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T22:01:00.332Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ThemNgayNghi.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemNgayNghi.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\ThemNgayNghi.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemNgayNghi.cs",
+              "RelativeToolTip": "FRONTENDPlayer\\ThemNgayNghi.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowFcAAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T22:15:38.91Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NgayNghiBackEnd.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\NgayNghiBackEnd.cs",
+              "RelativeDocumentMoniker": "LOGICPlayer\\NgayNghiBackEnd.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\NgayNghiBackEnd.cs",
+              "RelativeToolTip": "LOGICPlayer\\NgayNghiBackEnd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T22:51:31.225Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmNgayNghi.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\frmNgayNghi.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\frmNgayNghi.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\frmNgayNghi.cs",
+              "RelativeToolTip": "FRONTENDPlayer\\frmNgayNghi.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAEwB8AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T10:03:56.35Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -34,6 +138,69 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThemThongTinNhanVien.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemThongTinNhanVien.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\ThemThongTinNhanVien.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemThongTinNhanVien.cs",
+              "RelativeToolTip": "FRONTENDPlayer\\ThemThongTinNhanVien.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAADwvzwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T09:40:59.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThemThongTinNhanVien.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemThongTinNhanVien.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\ThemThongTinNhanVien.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemThongTinNhanVien.cs [Design]",
+              "RelativeToolTip": "FRONTENDPlayer\\ThemThongTinNhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T09:40:56.5Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ThemPhongBan.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemPhongBan.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\ThemPhongBan.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemPhongBan.cs [Design]",
+              "RelativeToolTip": "FRONTENDPlayer\\ThemPhongBan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T22:48:56.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ThemNgayNghi.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemNgayNghi.Designer.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\ThemNgayNghi.Designer.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\ThemNgayNghi.Designer.cs",
+              "RelativeToolTip": "FRONTENDPlayer\\ThemNgayNghi.Designer.cs",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAYwM8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T22:08:23.322Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 92,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

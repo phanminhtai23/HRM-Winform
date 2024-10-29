@@ -146,5 +146,10 @@ namespace FRONTENDPlayer
 
             }
         }
+
+        private void NgayNghi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(frmNgayNghi));
+        }
     }
 }

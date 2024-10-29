@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ChucVuBackEnd.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="NgayNghiBackEnd.cs" />
     <Compile Include="ThongBao.cs" />
     <Compile Include="PhongBanBackEnd.cs" />
     <Compile Include="Logic_TaiKhoan.cs" />
@@ -65,6 +66,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

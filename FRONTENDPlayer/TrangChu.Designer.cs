@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChu));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
@@ -47,27 +46,27 @@
             this.NhanVien = new DevExpress.XtraBars.BarButtonItem();
             this.CongTac = new DevExpress.XtraBars.BarButtonItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.skinPaletteDropDownButtonItem2 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
+            this.NgayNghi = new DevExpress.XtraBars.BarButtonItem();
+            this.DanhMucLuong = new DevExpress.XtraBars.BarButtonItem();
+            this.ChiTietLuong = new DevExpress.XtraBars.BarButtonItem();
+            this.TKNgayNghi = new DevExpress.XtraBars.BarButtonItem();
+            this.TKLuong = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.NhanSu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.DanhMucDungChung = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Luong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ThongTinLamViec = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ThongTinLuong = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.DanhMucThongKe = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.HeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.GiaoDien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.GiaoDien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.skinPaletteDropDownButtonItem2 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
-            this.NgayNghi = new DevExpress.XtraBars.BarButtonItem();
-            this.ThongTinLuong = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.DanhMucLuong = new DevExpress.XtraBars.BarButtonItem();
-            this.ChiTietLuong = new DevExpress.XtraBars.BarButtonItem();
-            this.TKNgayNghi = new DevExpress.XtraBars.BarButtonItem();
-            this.TKLuong = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -235,6 +234,52 @@
             this.skinPaletteDropDownButtonItem1.Id = 30;
             this.skinPaletteDropDownButtonItem1.Name = "skinPaletteDropDownButtonItem1";
             // 
+            // skinDropDownButtonItem1
+            // 
+            this.skinDropDownButtonItem1.Id = 31;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            // 
+            // skinPaletteDropDownButtonItem2
+            // 
+            this.skinPaletteDropDownButtonItem2.Id = 32;
+            this.skinPaletteDropDownButtonItem2.Name = "skinPaletteDropDownButtonItem2";
+            // 
+            // NgayNghi
+            // 
+            this.NgayNghi.Caption = "Ngày Nghỉ";
+            this.NgayNghi.Id = 33;
+            this.NgayNghi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("NgayNghi.ImageOptions.SvgImage")));
+            this.NgayNghi.Name = "NgayNghi";
+            this.NgayNghi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NgayNghi_ItemClick);
+            // 
+            // DanhMucLuong
+            // 
+            this.DanhMucLuong.Caption = "Danh Mục Lương";
+            this.DanhMucLuong.Id = 35;
+            this.DanhMucLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DanhMucLuong.ImageOptions.SvgImage")));
+            this.DanhMucLuong.Name = "DanhMucLuong";
+            // 
+            // ChiTietLuong
+            // 
+            this.ChiTietLuong.Caption = "Chi Tiết Lương";
+            this.ChiTietLuong.Id = 36;
+            this.ChiTietLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ChiTietLuong.ImageOptions.SvgImage")));
+            this.ChiTietLuong.Name = "ChiTietLuong";
+            // 
+            // TKNgayNghi
+            // 
+            this.TKNgayNghi.Caption = "Thống Kê Ngày Nghỉ";
+            this.TKNgayNghi.Id = 37;
+            this.TKNgayNghi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("TKNgayNghi.ImageOptions.SvgImage")));
+            this.TKNgayNghi.Name = "TKNgayNghi";
+            // 
+            // TKLuong
+            // 
+            this.TKLuong.Caption = "Thống Kê Lương";
+            this.TKLuong.Id = 38;
+            this.TKLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("TKLuong.ImageOptions.SvgImage")));
+            this.TKLuong.Name = "TKLuong";
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -272,6 +317,13 @@
             this.ThongTinLamViec.Name = "ThongTinLamViec";
             this.ThongTinLamViec.Text = "Thông Tin Làm Việc";
             // 
+            // ThongTinLuong
+            // 
+            this.ThongTinLuong.ItemLinks.Add(this.DanhMucLuong);
+            this.ThongTinLuong.ItemLinks.Add(this.ChiTietLuong);
+            this.ThongTinLuong.Name = "ThongTinLuong";
+            this.ThongTinLuong.Text = "Thông Tin Lương";
+            // 
             // ThongKe
             // 
             this.ThongKe.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -303,6 +355,13 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
+            // GiaoDien
+            // 
+            this.GiaoDien.ItemLinks.Add(this.skinDropDownButtonItem1);
+            this.GiaoDien.ItemLinks.Add(this.skinPaletteDropDownButtonItem2);
+            this.GiaoDien.Name = "GiaoDien";
+            this.GiaoDien.Text = "Giao Diện";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 977);
@@ -318,65 +377,6 @@
             this.documentManager1.View = this.tabbedView1;
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
-            // 
-            // GiaoDien
-            // 
-            this.GiaoDien.ItemLinks.Add(this.skinDropDownButtonItem1);
-            this.GiaoDien.ItemLinks.Add(this.skinPaletteDropDownButtonItem2);
-            this.GiaoDien.Name = "GiaoDien";
-            this.GiaoDien.Text = "Giao Diện";
-            // 
-            // skinDropDownButtonItem1
-            // 
-            this.skinDropDownButtonItem1.Id = 31;
-            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
-            // 
-            // skinPaletteDropDownButtonItem2
-            // 
-            this.skinPaletteDropDownButtonItem2.Id = 32;
-            this.skinPaletteDropDownButtonItem2.Name = "skinPaletteDropDownButtonItem2";
-            // 
-            // NgayNghi
-            // 
-            this.NgayNghi.Caption = "Ngày Nghỉ";
-            this.NgayNghi.Id = 33;
-            this.NgayNghi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("NgayNghi.ImageOptions.SvgImage")));
-            this.NgayNghi.Name = "NgayNghi";
-            // 
-            // ThongTinLuong
-            // 
-            this.ThongTinLuong.ItemLinks.Add(this.DanhMucLuong);
-            this.ThongTinLuong.ItemLinks.Add(this.ChiTietLuong);
-            this.ThongTinLuong.Name = "ThongTinLuong";
-            this.ThongTinLuong.Text = "Thông Tin Lương";
-            // 
-            // DanhMucLuong
-            // 
-            this.DanhMucLuong.Caption = "Danh Mục Lương";
-            this.DanhMucLuong.Id = 35;
-            this.DanhMucLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DanhMucLuong.ImageOptions.SvgImage")));
-            this.DanhMucLuong.Name = "DanhMucLuong";
-            // 
-            // ChiTietLuong
-            // 
-            this.ChiTietLuong.Caption = "Chi Tiết Lương";
-            this.ChiTietLuong.Id = 36;
-            this.ChiTietLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ChiTietLuong.ImageOptions.SvgImage")));
-            this.ChiTietLuong.Name = "ChiTietLuong";
-            // 
-            // TKNgayNghi
-            // 
-            this.TKNgayNghi.Caption = "Thống Kê Ngày Nghỉ";
-            this.TKNgayNghi.Id = 37;
-            this.TKNgayNghi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("TKNgayNghi.ImageOptions.SvgImage")));
-            this.TKNgayNghi.Name = "TKNgayNghi";
-            // 
-            // TKLuong
-            // 
-            this.TKLuong.Caption = "Thống Kê Lương";
-            this.TKLuong.Id = 38;
-            this.TKLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("TKLuong.ImageOptions.SvgImage")));
-            this.TKLuong.Name = "TKLuong";
             // 
             // TrangChu
             // 
