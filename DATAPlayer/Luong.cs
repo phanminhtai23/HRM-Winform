@@ -14,7 +14,6 @@ namespace DATAPlayer
     
     public partial class Luong
     {
-        public string MaLuong { get; set; }
         public string MaNhanVien { get; set; }
         public string ThangNam { get; set; }
         public Nullable<int> SoNgayLam { get; set; }

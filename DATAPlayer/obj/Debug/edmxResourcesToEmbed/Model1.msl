@@ -20,17 +20,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Luong">
-      <EntityTypeMapping TypeName="HRMModel.Luong">
-        <MappingFragment StoreEntitySet="Luong">
-          <ScalarProperty Name="MaLuong" ColumnName="MaLuong" />
-          <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-          <ScalarProperty Name="ThangNam" ColumnName="ThangNam" />
-          <ScalarProperty Name="SoNgayLam" ColumnName="SoNgayLam" />
-          <ScalarProperty Name="LuongThucLanh" ColumnName="LuongThucLanh" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="NgayNghi">
       <EntityTypeMapping TypeName="HRMModel.NgayNghi">
         <MappingFragment StoreEntitySet="NgayNghi">
@@ -82,6 +71,16 @@
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
           <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+          <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Luong">
+      <EntityTypeMapping TypeName="HRMModel.Luong">
+        <MappingFragment StoreEntitySet="Luong">
+          <ScalarProperty Name="LuongThucLanh" ColumnName="LuongThucLanh" />
+          <ScalarProperty Name="SoNgayLam" ColumnName="SoNgayLam" />
+          <ScalarProperty Name="ThangNam" ColumnName="ThangNam" />
           <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
         </MappingFragment>
       </EntityTypeMapping>

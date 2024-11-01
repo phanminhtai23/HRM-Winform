@@ -36,7 +36,7 @@ namespace FRONTENDPlayer {
         
         private DM_LuongDataTable tableDM_Luong;
         
-        private DataTable1DataTable tableDataTable1;
+        private LuongDataTable tableLuong;
         
         private global::System.Data.DataRelation relationFK__NgayNghi__MaNhan__44FF419A;
         
@@ -92,8 +92,8 @@ namespace FRONTENDPlayer {
                 if ((ds.Tables["DM_Luong"] != null)) {
                     base.Tables.Add(new DM_LuongDataTable(ds.Tables["DM_Luong"]));
                 }
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["Luong"] != null)) {
+                    base.Tables.Add(new LuongDataTable(ds.Tables["Luong"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -177,9 +177,9 @@ namespace FRONTENDPlayer {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTable1DataTable DataTable1 {
+        public LuongDataTable Luong {
             get {
-                return this.tableDataTable1;
+                return this.tableLuong;
             }
         }
         
@@ -268,8 +268,8 @@ namespace FRONTENDPlayer {
                 if ((ds.Tables["DM_Luong"] != null)) {
                     base.Tables.Add(new DM_LuongDataTable(ds.Tables["DM_Luong"]));
                 }
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["Luong"] != null)) {
+                    base.Tables.Add(new LuongDataTable(ds.Tables["Luong"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -340,10 +340,10 @@ namespace FRONTENDPlayer {
                     this.tableDM_Luong.InitVars();
                 }
             }
-            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
+            this.tableLuong = ((LuongDataTable)(base.Tables["Luong"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable1 != null)) {
-                    this.tableDataTable1.InitVars();
+                if ((this.tableLuong != null)) {
+                    this.tableLuong.InitVars();
                 }
             }
             this.relationFK__NgayNghi__MaNhan__44FF419A = this.Relations["FK__NgayNghi__MaNhan__44FF419A"];
@@ -372,8 +372,8 @@ namespace FRONTENDPlayer {
             base.Tables.Add(this.tableQT_CongTac);
             this.tableDM_Luong = new DM_LuongDataTable();
             base.Tables.Add(this.tableDM_Luong);
-            this.tableDataTable1 = new DataTable1DataTable();
-            base.Tables.Add(this.tableDataTable1);
+            this.tableLuong = new LuongDataTable();
+            base.Tables.Add(this.tableLuong);
             this.relationFK__NgayNghi__MaNhan__44FF419A = new global::System.Data.DataRelation("FK__NgayNghi__MaNhan__44FF419A", new global::System.Data.DataColumn[] {
                         this.tableNhanVien.MaNhanVienColumn}, new global::System.Data.DataColumn[] {
                         this.tableNgayNghi.MaNhanVienColumn}, false);
@@ -388,7 +388,7 @@ namespace FRONTENDPlayer {
             this.Relations.Add(this.relationFK__DM_Luong__MaNhan__4222D4EF);
             this.relationFK__Luong__MaNhanVie__47DBAE45 = new global::System.Data.DataRelation("FK__Luong__MaNhanVie__47DBAE45", new global::System.Data.DataColumn[] {
                         this.tableNhanVien.MaNhanVienColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDataTable1.MaNhanVienColumn}, false);
+                        this.tableLuong.MaNhanVienColumn}, false);
             this.Relations.Add(this.relationFK__Luong__MaNhanVie__47DBAE45);
         }
         
@@ -430,7 +430,7 @@ namespace FRONTENDPlayer {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeDataTable1() {
+        private bool ShouldSerializeLuong() {
             return false;
         }
         
@@ -508,7 +508,7 @@ namespace FRONTENDPlayer {
         public delegate void DM_LuongRowChangeEventHandler(object sender, DM_LuongRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
+        public delegate void LuongRowChangeEventHandler(object sender, LuongRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2288,15 +2288,9 @@ namespace FRONTENDPlayer {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
-            
-            private global::System.Data.DataColumn columnMaLuong;
+        public partial class LuongDataTable : global::System.Data.TypedTableBase<LuongRow> {
             
             private global::System.Data.DataColumn columnMaNhanVien;
-            
-            private global::System.Data.DataColumn columnTenNhanVien;
-            
-            private global::System.Data.DataColumn columnNgaySinh;
             
             private global::System.Data.DataColumn columnThangNam;
             
@@ -2306,8 +2300,8 @@ namespace FRONTENDPlayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1DataTable() {
-                this.TableName = "DataTable1";
+            public LuongDataTable() {
+                this.TableName = "Luong";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2315,7 +2309,7 @@ namespace FRONTENDPlayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DataTable1DataTable(global::System.Data.DataTable table) {
+            internal LuongDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2332,17 +2326,9 @@ namespace FRONTENDPlayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected LuongDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MaLuongColumn {
-                get {
-                    return this.columnMaLuong;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2350,22 +2336,6 @@ namespace FRONTENDPlayer {
             public global::System.Data.DataColumn MaNhanVienColumn {
                 get {
                     return this.columnMaNhanVien;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TenNhanVienColumn {
-                get {
-                    return this.columnTenNhanVien;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NgaySinhColumn {
-                get {
-                    return this.columnNgaySinh;
                 }
             }
             
@@ -2404,61 +2374,59 @@ namespace FRONTENDPlayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row this[int index] {
+            public LuongRow this[int index] {
                 get {
-                    return ((DataTable1Row)(this.Rows[index]));
+                    return ((LuongRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
+            public event LuongRowChangeEventHandler LuongRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
+            public event LuongRowChangeEventHandler LuongRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
+            public event LuongRowChangeEventHandler LuongRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
+            public event LuongRowChangeEventHandler LuongRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddDataTable1Row(DataTable1Row row) {
+            public void AddLuongRow(LuongRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string MaLuong, NhanVienRow parentNhanVienRowByFK__Luong__MaNhanVie__47DBAE45, string TenNhanVien, System.DateTime NgaySinh, string ThangNam, int SoNgayLam, int LuongThucLanh) {
-                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
+            public LuongRow AddLuongRow(NhanVienRow parentNhanVienRowByFK__Luong__MaNhanVie__47DBAE45, string ThangNam, int SoNgayLam, int LuongThucLanh) {
+                LuongRow rowLuongRow = ((LuongRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        MaLuong,
                         null,
-                        TenNhanVien,
-                        NgaySinh,
                         ThangNam,
                         SoNgayLam,
                         LuongThucLanh};
                 if ((parentNhanVienRowByFK__Luong__MaNhanVie__47DBAE45 != null)) {
-                    columnValuesArray[1] = parentNhanVienRowByFK__Luong__MaNhanVie__47DBAE45[0];
+                    columnValuesArray[0] = parentNhanVienRowByFK__Luong__MaNhanVie__47DBAE45[0];
                 }
-                rowDataTable1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTable1Row);
-                return rowDataTable1Row;
+                rowLuongRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLuongRow);
+                return rowLuongRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row FindByMaLuong(string MaLuong) {
-                return ((DataTable1Row)(this.Rows.Find(new object[] {
-                            MaLuong})));
+            public LuongRow FindByMaNhanVienThangNam(string MaNhanVien, string ThangNam) {
+                return ((LuongRow)(this.Rows.Find(new object[] {
+                            MaNhanVien,
+                            ThangNam})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
+                LuongDataTable cln = ((LuongDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2466,16 +2434,13 @@ namespace FRONTENDPlayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTable1DataTable();
+                return new LuongDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnMaLuong = base.Columns["MaLuong"];
                 this.columnMaNhanVien = base.Columns["MaNhanVien"];
-                this.columnTenNhanVien = base.Columns["TenNhanVien"];
-                this.columnNgaySinh = base.Columns["NgaySinh"];
                 this.columnThangNam = base.Columns["ThangNam"];
                 this.columnSoNgayLam = base.Columns["SoNgayLam"];
                 this.columnLuongThucLanh = base.Columns["LuongThucLanh"];
@@ -2484,14 +2449,8 @@ namespace FRONTENDPlayer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnMaLuong = new global::System.Data.DataColumn("MaLuong", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaLuong);
                 this.columnMaNhanVien = new global::System.Data.DataColumn("MaNhanVien", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaNhanVien);
-                this.columnTenNhanVien = new global::System.Data.DataColumn("TenNhanVien", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTenNhanVien);
-                this.columnNgaySinh = new global::System.Data.DataColumn("NgaySinh", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNgaySinh);
                 this.columnThangNam = new global::System.Data.DataColumn("ThangNam", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnThangNam);
                 this.columnSoNgayLam = new global::System.Data.DataColumn("SoNgayLam", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2499,39 +2458,38 @@ namespace FRONTENDPlayer {
                 this.columnLuongThucLanh = new global::System.Data.DataColumn("LuongThucLanh", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLuongThucLanh);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnMaLuong}, true));
-                this.columnMaLuong.AllowDBNull = false;
-                this.columnMaLuong.Unique = true;
-                this.columnMaLuong.MaxLength = 10;
+                                this.columnMaNhanVien,
+                                this.columnThangNam}, true));
+                this.columnMaNhanVien.AllowDBNull = false;
                 this.columnMaNhanVien.MaxLength = 10;
-                this.columnTenNhanVien.MaxLength = 100;
+                this.columnThangNam.AllowDBNull = false;
                 this.columnThangNam.MaxLength = 7;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row NewDataTable1Row() {
-                return ((DataTable1Row)(this.NewRow()));
+            public LuongRow NewLuongRow() {
+                return ((LuongRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTable1Row(builder);
+                return new LuongRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTable1Row);
+                return typeof(LuongRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTable1RowChanged != null)) {
-                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.LuongRowChanged != null)) {
+                    this.LuongRowChanged(this, new LuongRowChangeEvent(((LuongRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2539,8 +2497,8 @@ namespace FRONTENDPlayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTable1RowChanging != null)) {
-                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.LuongRowChanging != null)) {
+                    this.LuongRowChanging(this, new LuongRowChangeEvent(((LuongRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2548,8 +2506,8 @@ namespace FRONTENDPlayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTable1RowDeleted != null)) {
-                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.LuongRowDeleted != null)) {
+                    this.LuongRowDeleted(this, new LuongRowChangeEvent(((LuongRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2557,14 +2515,14 @@ namespace FRONTENDPlayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTable1RowDeleting != null)) {
-                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.LuongRowDeleting != null)) {
+                    this.LuongRowDeleting(this, new LuongRowChangeEvent(((LuongRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveDataTable1Row(DataTable1Row row) {
+            public void RemoveLuongRow(LuongRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2591,7 +2549,7 @@ namespace FRONTENDPlayer {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTable1DataTable";
+                attribute2.FixedValue = "LuongDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2960,12 +2918,12 @@ namespace FRONTENDPlayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row[] GetDataTable1Rows() {
+            public LuongRow[] GetLuongRows() {
                 if ((this.Table.ChildRelations["FK__Luong__MaNhanVie__47DBAE45"] == null)) {
-                    return new DataTable1Row[0];
+                    return new LuongRow[0];
                 }
                 else {
-                    return ((DataTable1Row[])(base.GetChildRows(this.Table.ChildRelations["FK__Luong__MaNhanVie__47DBAE45"])));
+                    return ((LuongRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Luong__MaNhanVie__47DBAE45"])));
                 }
             }
         }
@@ -3226,73 +3184,25 @@ namespace FRONTENDPlayer {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTable1Row : global::System.Data.DataRow {
+        public partial class LuongRow : global::System.Data.DataRow {
             
-            private DataTable1DataTable tableDataTable1;
+            private LuongDataTable tableLuong;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
+            internal LuongRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string MaLuong {
-                get {
-                    return ((string)(this[this.tableDataTable1.MaLuongColumn]));
-                }
-                set {
-                    this[this.tableDataTable1.MaLuongColumn] = value;
-                }
+                this.tableLuong = ((LuongDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string MaNhanVien {
                 get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.MaNhanVienColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaNhanVien\' in table \'DataTable1\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableLuong.MaNhanVienColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.MaNhanVienColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TenNhanVien {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.TenNhanVienColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TenNhanVien\' in table \'DataTable1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.TenNhanVienColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime NgaySinh {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableDataTable1.NgaySinhColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'NgaySinh\' in table \'DataTable1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable1.NgaySinhColumn] = value;
+                    this[this.tableLuong.MaNhanVienColumn] = value;
                 }
             }
             
@@ -3300,15 +3210,10 @@ namespace FRONTENDPlayer {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string ThangNam {
                 get {
-                    try {
-                        return ((string)(this[this.tableDataTable1.ThangNamColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ThangNam\' in table \'DataTable1\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableLuong.ThangNamColumn]));
                 }
                 set {
-                    this[this.tableDataTable1.ThangNamColumn] = value;
+                    this[this.tableLuong.ThangNamColumn] = value;
                 }
             }
             
@@ -3317,14 +3222,14 @@ namespace FRONTENDPlayer {
             public int SoNgayLam {
                 get {
                     try {
-                        return ((int)(this[this.tableDataTable1.SoNgayLamColumn]));
+                        return ((int)(this[this.tableLuong.SoNgayLamColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SoNgayLam\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SoNgayLam\' in table \'Luong\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.SoNgayLamColumn] = value;
+                    this[this.tableLuong.SoNgayLamColumn] = value;
                 }
             }
             
@@ -3333,14 +3238,14 @@ namespace FRONTENDPlayer {
             public int LuongThucLanh {
                 get {
                     try {
-                        return ((int)(this[this.tableDataTable1.LuongThucLanhColumn]));
+                        return ((int)(this[this.tableLuong.LuongThucLanhColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LuongThucLanh\' in table \'DataTable1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'LuongThucLanh\' in table \'Luong\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.LuongThucLanhColumn] = value;
+                    this[this.tableLuong.LuongThucLanhColumn] = value;
                 }
             }
             
@@ -3357,74 +3262,26 @@ namespace FRONTENDPlayer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMaNhanVienNull() {
-                return this.IsNull(this.tableDataTable1.MaNhanVienColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMaNhanVienNull() {
-                this[this.tableDataTable1.MaNhanVienColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTenNhanVienNull() {
-                return this.IsNull(this.tableDataTable1.TenNhanVienColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTenNhanVienNull() {
-                this[this.tableDataTable1.TenNhanVienColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNgaySinhNull() {
-                return this.IsNull(this.tableDataTable1.NgaySinhColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNgaySinhNull() {
-                this[this.tableDataTable1.NgaySinhColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsThangNamNull() {
-                return this.IsNull(this.tableDataTable1.ThangNamColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetThangNamNull() {
-                this[this.tableDataTable1.ThangNamColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsSoNgayLamNull() {
-                return this.IsNull(this.tableDataTable1.SoNgayLamColumn);
+                return this.IsNull(this.tableLuong.SoNgayLamColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetSoNgayLamNull() {
-                this[this.tableDataTable1.SoNgayLamColumn] = global::System.Convert.DBNull;
+                this[this.tableLuong.SoNgayLamColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsLuongThucLanhNull() {
-                return this.IsNull(this.tableDataTable1.LuongThucLanhColumn);
+                return this.IsNull(this.tableLuong.LuongThucLanhColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLuongThucLanhNull() {
-                this[this.tableDataTable1.LuongThucLanhColumn] = global::System.Convert.DBNull;
+                this[this.tableLuong.LuongThucLanhColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3636,22 +3493,22 @@ namespace FRONTENDPlayer {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class DataTable1RowChangeEvent : global::System.EventArgs {
+        public class LuongRowChangeEvent : global::System.EventArgs {
             
-            private DataTable1Row eventRow;
+            private LuongRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
+            public LuongRowChangeEvent(LuongRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTable1Row Row {
+            public LuongRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6089,7 +5946,7 @@ SELECT MaNhanVien, LuongCoBan, PhuCap, KhauTruThue FROM DM_Luong WHERE (MaNhanVi
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataTable1TableAdapter : global::System.ComponentModel.Component {
+    public partial class LuongTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6103,7 +5960,7 @@ SELECT MaNhanVien, LuongCoBan, PhuCap, KhauTruThue FROM DM_Luong WHERE (MaNhanVi
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DataTable1TableAdapter() {
+        public LuongTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6200,11 +6057,8 @@ SELECT MaNhanVien, LuongCoBan, PhuCap, KhauTruThue FROM DM_Luong WHERE (MaNhanVi
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataTable1";
-            tableMapping.ColumnMappings.Add("MaLuong", "MaLuong");
+            tableMapping.DataSetTable = "Luong";
             tableMapping.ColumnMappings.Add("MaNhanVien", "MaNhanVien");
-            tableMapping.ColumnMappings.Add("TenNhanVien", "TenNhanVien");
-            tableMapping.ColumnMappings.Add("NgaySinh", "NgaySinh");
             tableMapping.ColumnMappings.Add("ThangNam", "ThangNam");
             tableMapping.ColumnMappings.Add("SoNgayLam", "SoNgayLam");
             tableMapping.ColumnMappings.Add("LuongThucLanh", "LuongThucLanh");
@@ -6221,21 +6075,26 @@ SELECT MaNhanVien, LuongCoBan, PhuCap, KhauTruThue FROM DM_Luong WHERE (MaNhanVi
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT    Luong.MaLuong, Luong.MaNhanVien, NhanVien.TenNhanVien, NhanVien.NgaySin" +
-                "h, Luong.ThangNam, Luong.SoNgayLam, Luong.LuongThucLanh\r\nFROM         Luong INNE" +
-                "R JOIN\r\n                      NhanVien ON Luong.MaNhanVien = NhanVien.MaNhanVien" +
-                "";
+            this._commandCollection[0].CommandText = "SELECT    Luong.MaNhanVien, Luong.ThangNam, Luong.SoNgayLam, Luong.LuongThucLanh\r" +
+                "\nFROM         Luong INNER JOIN\r\n                      NhanVien ON Luong.MaNhanVi" +
+                "en = NhanVien.MaNhanVien";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT    Luong.MaNhanVien, NhanVien.TenNhanVien, Luong.ThangNam, Luong.SoNgayLam" +
+                ", Luong.LuongThucLanh, NhanVien.NgaySinh\r\nFROM         Luong INNER JOIN\r\n       " +
+                "               NhanVien ON Luong.MaNhanVien = NhanVien.MaNhanVien";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HRMDataSet.DataTable1DataTable dataTable) {
+        public virtual int Fill(HRMDataSet.LuongDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6248,9 +6107,33 @@ SELECT MaNhanVien, LuongCoBan, PhuCap, KhauTruThue FROM DM_Luong WHERE (MaNhanVi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HRMDataSet.DataTable1DataTable GetData() {
+        public virtual HRMDataSet.LuongDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HRMDataSet.DataTable1DataTable dataTable = new HRMDataSet.DataTable1DataTable();
+            HRMDataSet.LuongDataTable dataTable = new HRMDataSet.LuongDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(HRMDataSet.LuongDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual HRMDataSet.LuongDataTable GetDataBy() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            HRMDataSet.LuongDataTable dataTable = new HRMDataSet.LuongDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

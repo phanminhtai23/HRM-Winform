@@ -19,11 +19,11 @@
   </EntityType>
   <EntityType Name="Luong">
     <Key>
-      <PropertyRef Name="MaLuong" />
+      <PropertyRef Name="MaNhanVien" />
+      <PropertyRef Name="ThangNam" />
     </Key>
-    <Property Name="MaLuong" Type="nvarchar" MaxLength="10" Nullable="false" />
-    <Property Name="MaNhanVien" Type="nvarchar" MaxLength="10" />
-    <Property Name="ThangNam" Type="nvarchar" MaxLength="7" />
+    <Property Name="MaNhanVien" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ThangNam" Type="nvarchar" MaxLength="7" Nullable="false" />
     <Property Name="SoNgayLam" Type="int" />
     <Property Name="LuongThucLanh" Type="int" />
   </EntityType>
@@ -92,7 +92,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Luong__MaNhanVie__47DBAE45">
-    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="0..1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
     <End Role="Luong" Type="Self.Luong" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NhanVien">

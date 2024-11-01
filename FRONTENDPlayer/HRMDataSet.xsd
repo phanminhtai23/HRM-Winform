@@ -399,12 +399,12 @@ FROM         DM_Luong INNER JOIN
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LuongTableAdapter" GeneratorDataComponentClassName="LuongTableAdapter" Name="Luong" UserDataComponentName="LuongTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="HRMConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="HRMConnectionString (Settings)" DbObjectName="HRM.dbo.Luong" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT    Luong.MaLuong, Luong.MaNhanVien, NhanVien.TenNhanVien, NhanVien.NgaySinh, Luong.ThangNam, Luong.SoNgayLam, Luong.LuongThucLanh
+                    <CommandText>SELECT    Luong.MaNhanVien, Luong.ThangNam, Luong.SoNgayLam, Luong.LuongThucLanh
 FROM         Luong INNER JOIN
                       NhanVien ON Luong.MaNhanVien = NhanVien.MaNhanVien</CommandText>
                     <Parameters />
@@ -413,15 +413,23 @@ FROM         Luong INNER JOIN
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="MaLuong" DataSetColumn="MaLuong" />
               <Mapping SourceColumn="MaNhanVien" DataSetColumn="MaNhanVien" />
-              <Mapping SourceColumn="TenNhanVien" DataSetColumn="TenNhanVien" />
-              <Mapping SourceColumn="NgaySinh" DataSetColumn="NgaySinh" />
               <Mapping SourceColumn="ThangNam" DataSetColumn="ThangNam" />
               <Mapping SourceColumn="SoNgayLam" DataSetColumn="SoNgayLam" />
               <Mapping SourceColumn="LuongThucLanh" DataSetColumn="LuongThucLanh" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="HRMConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT    Luong.MaNhanVien, NhanVien.TenNhanVien, Luong.ThangNam, Luong.SoNgayLam, Luong.LuongThucLanh, NhanVien.NgaySinh
+FROM         Luong INNER JOIN
+                      NhanVien ON Luong.MaNhanVien = NhanVien.MaNhanVien</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -549,48 +557,33 @@ FROM         Luong INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DM_Luong" msprop:Generator_RowClassName="DM_LuongRow" msprop:Generator_RowEvHandlerName="DM_LuongRowChangeEventHandler" msprop:Generator_RowDeletedName="DM_LuongRowDeleted" msprop:Generator_RowDeletingName="DM_LuongRowDeleting" msprop:Generator_RowEvArgName="DM_LuongRowChangeEvent" msprop:Generator_TablePropName="DM_Luong" msprop:Generator_RowChangedName="DM_LuongRowChanged" msprop:Generator_UserTableName="DM_Luong" msprop:Generator_RowChangingName="DM_LuongRowChanging" msprop:Generator_TableClassName="DM_LuongDataTable" msprop:Generator_TableVarName="tableDM_Luong">
+        <xs:element name="DM_Luong" msprop:Generator_RowEvHandlerName="DM_LuongRowChangeEventHandler" msprop:Generator_RowDeletedName="DM_LuongRowDeleted" msprop:Generator_RowDeletingName="DM_LuongRowDeleting" msprop:Generator_RowEvArgName="DM_LuongRowChangeEvent" msprop:Generator_TablePropName="DM_Luong" msprop:Generator_RowChangedName="DM_LuongRowChanged" msprop:Generator_UserTableName="DM_Luong" msprop:Generator_RowChangingName="DM_LuongRowChanging" msprop:Generator_RowClassName="DM_LuongRow" msprop:Generator_TableClassName="DM_LuongDataTable" msprop:Generator_TableVarName="tableDM_Luong">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MaNhanVien" msprop:Generator_UserColumnName="MaNhanVien" msprop:Generator_ColumnPropNameInTable="MaNhanVienColumn" msprop:Generator_ColumnPropNameInRow="MaNhanVien" msprop:Generator_ColumnVarNameInTable="columnMaNhanVien">
+              <xs:element name="MaNhanVien" msprop:Generator_ColumnPropNameInTable="MaNhanVienColumn" msprop:Generator_ColumnPropNameInRow="MaNhanVien" msprop:Generator_UserColumnName="MaNhanVien" msprop:Generator_ColumnVarNameInTable="columnMaNhanVien">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="LuongCoBan" msprop:Generator_UserColumnName="LuongCoBan" msprop:Generator_ColumnPropNameInTable="LuongCoBanColumn" msprop:Generator_ColumnPropNameInRow="LuongCoBan" msprop:Generator_ColumnVarNameInTable="columnLuongCoBan" type="xs:decimal" minOccurs="0" />
-              <xs:element name="PhuCap" msprop:Generator_UserColumnName="PhuCap" msprop:Generator_ColumnPropNameInTable="PhuCapColumn" msprop:Generator_ColumnPropNameInRow="PhuCap" msprop:Generator_ColumnVarNameInTable="columnPhuCap" type="xs:decimal" minOccurs="0" />
-              <xs:element name="KhauTruThue" msprop:Generator_UserColumnName="KhauTruThue" msprop:Generator_ColumnPropNameInTable="KhauTruThueColumn" msprop:Generator_ColumnPropNameInRow="KhauTruThue" msprop:Generator_ColumnVarNameInTable="columnKhauTruThue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LuongCoBan" msprop:Generator_ColumnPropNameInTable="LuongCoBanColumn" msprop:Generator_ColumnPropNameInRow="LuongCoBan" msprop:Generator_UserColumnName="LuongCoBan" msprop:Generator_ColumnVarNameInTable="columnLuongCoBan" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PhuCap" msprop:Generator_ColumnPropNameInTable="PhuCapColumn" msprop:Generator_ColumnPropNameInRow="PhuCap" msprop:Generator_UserColumnName="PhuCap" msprop:Generator_ColumnVarNameInTable="columnPhuCap" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KhauTruThue" msprop:Generator_ColumnPropNameInTable="KhauTruThueColumn" msprop:Generator_ColumnPropNameInRow="KhauTruThue" msprop:Generator_UserColumnName="KhauTruThue" msprop:Generator_ColumnVarNameInTable="columnKhauTruThue" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+        <xs:element name="Luong" msprop:Generator_RowEvHandlerName="LuongRowChangeEventHandler" msprop:Generator_RowDeletedName="LuongRowDeleted" msprop:Generator_RowDeletingName="LuongRowDeleting" msprop:Generator_RowEvArgName="LuongRowChangeEvent" msprop:Generator_TablePropName="Luong" msprop:Generator_RowChangedName="LuongRowChanged" msprop:Generator_RowChangingName="LuongRowChanging" msprop:Generator_TableClassName="LuongDataTable" msprop:Generator_RowClassName="LuongRow" msprop:Generator_TableVarName="tableLuong" msprop:Generator_UserTableName="Luong">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MaLuong" msprop:Generator_ColumnPropNameInRow="MaLuong" msprop:Generator_ColumnPropNameInTable="MaLuongColumn" msprop:Generator_ColumnVarNameInTable="columnMaLuong" msprop:Generator_UserColumnName="MaLuong">
+              <xs:element name="MaNhanVien" msprop:Generator_ColumnPropNameInRow="MaNhanVien" msprop:Generator_ColumnPropNameInTable="MaNhanVienColumn" msprop:Generator_ColumnVarNameInTable="columnMaNhanVien" msprop:Generator_UserColumnName="MaNhanVien">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="MaNhanVien" msprop:Generator_ColumnPropNameInRow="MaNhanVien" msprop:Generator_ColumnPropNameInTable="MaNhanVienColumn" msprop:Generator_ColumnVarNameInTable="columnMaNhanVien" msprop:Generator_UserColumnName="MaNhanVien" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="TenNhanVien" msprop:Generator_ColumnPropNameInRow="TenNhanVien" msprop:Generator_ColumnPropNameInTable="TenNhanVienColumn" msprop:Generator_ColumnVarNameInTable="columnTenNhanVien" msprop:Generator_UserColumnName="TenNhanVien" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="NgaySinh" msprop:Generator_ColumnPropNameInRow="NgaySinh" msprop:Generator_ColumnPropNameInTable="NgaySinhColumn" msprop:Generator_ColumnVarNameInTable="columnNgaySinh" msprop:Generator_UserColumnName="NgaySinh" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="ThangNam" msprop:Generator_ColumnPropNameInRow="ThangNam" msprop:Generator_ColumnPropNameInTable="ThangNamColumn" msprop:Generator_ColumnVarNameInTable="columnThangNam" msprop:Generator_UserColumnName="ThangNam" minOccurs="0">
+              <xs:element name="ThangNam" msprop:Generator_ColumnPropNameInRow="ThangNam" msprop:Generator_ColumnPropNameInTable="ThangNamColumn" msprop:Generator_ColumnVarNameInTable="columnThangNam" msprop:Generator_UserColumnName="ThangNam">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="7" />
@@ -630,9 +623,10 @@ FROM         Luong INNER JOIN
       <xs:selector xpath=".//mstns:DM_Luong" />
       <xs:field xpath="mstns:MaNhanVien" />
     </xs:unique>
-    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:DataTable1" />
-      <xs:field xpath="mstns:MaLuong" />
+    <xs:unique name="Luong_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Luong" />
+      <xs:field xpath="mstns:MaNhanVien" />
+      <xs:field xpath="mstns:ThangNam" />
     </xs:unique>
   </xs:element>
   <xs:annotation>
@@ -640,7 +634,7 @@ FROM         Luong INNER JOIN
       <msdata:Relationship name="FK__NgayNghi__MaNhan__44FF419A" msdata:parent="NhanVien" msdata:child="NgayNghi" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="NgayNghi" msprop:Generator_RelationVarName="relationFK__NgayNghi__MaNhan__44FF419A" msprop:Generator_ChildPropName="GetNgayNghiRows" msprop:Generator_UserRelationName="FK__NgayNghi__MaNhan__44FF419A" msprop:Generator_ParentPropName="NhanVienRow" />
       <msdata:Relationship name="FK__QT_CongTa__MaNha__3F466844" msdata:parent="NhanVien" msdata:child="QT_CongTac" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="QT_CongTac" msprop:Generator_RelationVarName="relationFK__QT_CongTa__MaNha__3F466844" msprop:Generator_ChildPropName="GetQT_CongTacRows" msprop:Generator_ParentPropName="NhanVienRow" msprop:Generator_UserRelationName="FK__QT_CongTa__MaNha__3F466844" />
       <msdata:Relationship name="FK__DM_Luong__MaNhan__4222D4EF" msdata:parent="NhanVien" msdata:child="DM_Luong" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="DM_Luong" msprop:Generator_RelationVarName="relationFK__DM_Luong__MaNhan__4222D4EF" msprop:Generator_ChildPropName="GetDM_LuongRows" msprop:Generator_UserRelationName="FK__DM_Luong__MaNhan__4222D4EF" msprop:Generator_ParentPropName="NhanVienRow" />
-      <msdata:Relationship name="FK__Luong__MaNhanVie__47DBAE45" msdata:parent="NhanVien" msdata:child="DataTable1" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="DataTable1" msprop:Generator_RelationVarName="relationFK__Luong__MaNhanVie__47DBAE45" msprop:Generator_ChildPropName="GetDataTable1Rows" msprop:Generator_ParentPropName="NhanVienRow" msprop:Generator_UserRelationName="FK__Luong__MaNhanVie__47DBAE45" />
+      <msdata:Relationship name="FK__Luong__MaNhanVie__47DBAE45" msdata:parent="NhanVien" msdata:child="Luong" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="Luong" msprop:Generator_RelationVarName="relationFK__Luong__MaNhanVie__47DBAE45" msprop:Generator_ChildPropName="GetLuongRows" msprop:Generator_ParentPropName="NhanVienRow" msprop:Generator_UserRelationName="FK__Luong__MaNhanVie__47DBAE45" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

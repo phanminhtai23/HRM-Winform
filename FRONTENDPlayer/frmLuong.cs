@@ -23,10 +23,16 @@ namespace FRONTENDPlayer
 
         }
 
+        public void load_data()
+        {
+            this.luongTableAdapter.FillBy(this.hRMDataSet.Luong);
+        }
+
         private void Luong_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'hRMDataSet.Luong' table. You can move, or remove it, as needed.
+            load_data();
             // TODO: This line of code loads data into the 'hRMDataSet.DataTable1' table. You can move, or remove it, as needed.
-            this.dataTable1TableAdapter.Fill(this.hRMDataSet.DataTable1);
 
         }
 
