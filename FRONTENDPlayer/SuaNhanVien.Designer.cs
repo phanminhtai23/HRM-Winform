@@ -233,7 +233,7 @@ namespace FRONTENDPlayer
             this.dateNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateNgaySinh.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.dateNgaySinh.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.dateNgaySinh.Properties.Mask.UseMaskAsDisplayFormat = false;
             this.dateNgaySinh.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
             this.dateNgaySinh.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.dateNgaySinh.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;

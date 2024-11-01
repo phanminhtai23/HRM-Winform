@@ -46,6 +46,7 @@
             this.hRMDataSet = new FRONTENDPlayer.HRMDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colThangNam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoNgayNghi = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -194,6 +195,7 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMaNhanVien,
+            this.colNhanVien,
             this.colThangNam,
             this.colGhiChu,
             this.colSoNgayNghi});
@@ -212,6 +214,16 @@
             this.colMaNhanVien.VisibleIndex = 0;
             this.colMaNhanVien.Width = 94;
             // 
+            // colNhanVien
+            // 
+            this.colNhanVien.Caption = "Tên nhân viên";
+            this.colNhanVien.FieldName = "TenNhanVien";
+            this.colNhanVien.MinWidth = 25;
+            this.colNhanVien.Name = "colNhanVien";
+            this.colNhanVien.Visible = true;
+            this.colNhanVien.VisibleIndex = 1;
+            this.colNhanVien.Width = 94;
+            // 
             // colThangNam
             // 
             this.colThangNam.Caption = "Tháng Năm";
@@ -219,7 +231,7 @@
             this.colThangNam.MinWidth = 25;
             this.colThangNam.Name = "colThangNam";
             this.colThangNam.Visible = true;
-            this.colThangNam.VisibleIndex = 1;
+            this.colThangNam.VisibleIndex = 2;
             this.colThangNam.Width = 94;
             // 
             // colGhiChu
@@ -229,7 +241,7 @@
             this.colGhiChu.MinWidth = 25;
             this.colGhiChu.Name = "colGhiChu";
             this.colGhiChu.Visible = true;
-            this.colGhiChu.VisibleIndex = 2;
+            this.colGhiChu.VisibleIndex = 3;
             this.colGhiChu.Width = 94;
             // 
             // colSoNgayNghi
@@ -239,7 +251,7 @@
             this.colSoNgayNghi.MinWidth = 25;
             this.colSoNgayNghi.Name = "colSoNgayNghi";
             this.colSoNgayNghi.Visible = true;
-            this.colSoNgayNghi.VisibleIndex = 3;
+            this.colSoNgayNghi.VisibleIndex = 4;
             this.colSoNgayNghi.Width = 94;
             // 
             // ngayNghiTableAdapter
@@ -257,7 +269,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frmNgayNghi";
-            this.Text = "frmNgayNghi";
+            this.Text = "Ngày Nghỉ";
             this.Load += new System.EventHandler(this.frmNgayNghi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -291,5 +303,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colGhiChu;
         private DevExpress.XtraGrid.Columns.GridColumn colSoNgayNghi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4_Dong;
+        private DevExpress.XtraGrid.Columns.GridColumn colNhanVien;
     }
 }
