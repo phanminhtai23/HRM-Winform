@@ -122,7 +122,7 @@ namespace FRONTENDPlayer
 
         private void CongTac_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            openForm(typeof(frmCongTac));
         }
 
 
@@ -150,6 +150,16 @@ namespace FRONTENDPlayer
         private void NgayNghi_ItemClick(object sender, ItemClickEventArgs e)
         {
             openForm(typeof(frmNgayNghi));
+        }
+
+        private void DanhMucLuong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(frmDanhMucLuong));
+        }
+
+        private void ChiTietLuong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            openForm(typeof(frmLuong));
         }
     }
 }

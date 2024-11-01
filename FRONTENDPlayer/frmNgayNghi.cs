@@ -23,15 +23,21 @@ namespace FRONTENDPlayer
         private void frmNgayNghi_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hRMDataSet.NgayNghi' table. You can move, or remove it, as needed.
-            this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
+            //this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
+            load_data();
         }
 
+        public void load_data()
+        {
+            this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
+        }
+        // click thêm ngày nghỉ
         private void barButtonItem1_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ThemNgayNghi themNgayNghi = new ThemNgayNghi();
             if (themNgayNghi.ShowDialog() == DialogResult.OK)
             {
-                this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
+                load_data();
             }
         }
 
@@ -61,7 +67,7 @@ namespace FRONTENDPlayer
                 if (formSua.ShowDialog() == DialogResult.OK)
                 {
                     // Sau khi sửa, tải lại dữ liệu vào GridControl
-                    this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
+                    load_data();
                 }
 
             }

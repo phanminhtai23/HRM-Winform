@@ -121,7 +121,7 @@ namespace FRONTENDPlayer
                 if (isDeleted)
                 {
                     XtraMessageBox.Show("Xóa công tác thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();  
+                    LoadData();
                 }
                 else
                 {

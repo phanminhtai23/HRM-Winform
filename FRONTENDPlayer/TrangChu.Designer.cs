@@ -258,6 +258,7 @@
             this.DanhMucLuong.Id = 35;
             this.DanhMucLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DanhMucLuong.ImageOptions.SvgImage")));
             this.DanhMucLuong.Name = "DanhMucLuong";
+            this.DanhMucLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DanhMucLuong_ItemClick);
             // 
             // ChiTietLuong
             // 
@@ -265,6 +266,7 @@
             this.ChiTietLuong.Id = 36;
             this.ChiTietLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ChiTietLuong.ImageOptions.SvgImage")));
             this.ChiTietLuong.Name = "ChiTietLuong";
+            this.ChiTietLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ChiTietLuong_ItemClick);
             // 
             // TKNgayNghi
             // 

@@ -43,14 +43,19 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
+            this.qTCongTacBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hRMDataSet = new FRONTENDPlayer.HRMDataSet();
             this.gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaCT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BatDau = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KetThuc = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.qT_CongTacTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.QT_CongTacTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qTCongTacBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hRMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,6 +178,7 @@
             // 
             // gcDanhSach
             // 
+            this.gcDanhSach.DataSource = this.qTCongTacBindingSource;
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcDanhSach.Location = new System.Drawing.Point(0, 47);
             this.gcDanhSach.MainView = this.gvDanhSach;
@@ -183,8 +189,20 @@
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
             // 
+            // qTCongTacBindingSource
+            // 
+            this.qTCongTacBindingSource.DataMember = "QT_CongTac";
+            this.qTCongTacBindingSource.DataSource = this.hRMDataSet;
+            // 
+            // hRMDataSet
+            // 
+            this.hRMDataSet.DataSetName = "HRMDataSet";
+            this.hRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gvDanhSach
             // 
+            this.gvDanhSach.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gvDanhSach.Appearance.HeaderPanel.Options.UseFont = true;
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaCT,
             this.MaNhanVien,
@@ -248,6 +266,10 @@
             this.GhiChu.VisibleIndex = 4;
             this.GhiChu.Width = 94;
             // 
+            // qT_CongTacTableAdapter
+            // 
+            this.qT_CongTacTableAdapter.ClearBeforeFill = true;
+            // 
             // frmCongTac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -263,6 +285,8 @@
             this.Load += new System.EventHandler(this.frmCongTac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qTCongTacBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hRMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,5 +314,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn KetThuc;
         private DevExpress.XtraGrid.Columns.GridColumn GhiChu;
         private DevExpress.XtraGrid.Columns.GridColumn MaCT;
+        private HRMDataSet hRMDataSet;
+        private System.Windows.Forms.BindingSource qTCongTacBindingSource;
+        private HRMDataSetTableAdapters.QT_CongTacTableAdapter qT_CongTacTableAdapter;
     }
 }

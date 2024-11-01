@@ -55,6 +55,8 @@
     <Compile Include="PhongBanBackEnd.cs" />
     <Compile Include="Logic_TaiKhoan.cs" />
     <Compile Include="NhanVienBackEnd.cs" />
+    <Compile Include="BackendDMLuong.cs" />
+    <Compile Include="CongTacBackEnd.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

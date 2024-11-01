@@ -105,7 +105,7 @@ namespace FRONTENDPlayer
                     GhiChu = ghichu
                 };
 
-                // Gọi logic layer để thêm công tác
+                //Gọi logic layer để thêm công tác
                 bool isAdded = CTBackEnd.UpdateCongTac(CongTacMoi);
 
                 if (isAdded)
