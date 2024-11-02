@@ -40,5 +40,14 @@ namespace FRONTENDPlayer
         {
             this.Close();
         }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ChonThongKe chonThongKe = new ChonThongKe();
+            if(DialogResult.OK == chonThongKe.ShowDialog())
+            {
+
+            }
+        }
     }
 }

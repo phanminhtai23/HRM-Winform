@@ -135,7 +135,6 @@ namespace FRONTENDPlayer
             this.NgayBatDau.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
             this.NgayBatDau.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
             this.NgayBatDau.Properties.MaskSettings.Set("useAdvancingCaret", null);
-            this.NgayBatDau.Properties.UseMaskAsDisplayFormat = false;
             this.NgayBatDau.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.NgayBatDau.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
             this.NgayBatDau.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
@@ -254,6 +253,7 @@ namespace FRONTENDPlayer
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "SuaCongTac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa công tác";
             this.Load += new System.EventHandler(this.SuaCongTac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();

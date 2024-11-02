@@ -269,6 +269,7 @@ namespace FRONTENDPlayer
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtMaNhanVien);
             this.Name = "ThemThongTinNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemThongTinNhanVien";
             this.Load += new System.EventHandler(this.frmThemThongTinNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNhanVien.Properties)).EndInit();

@@ -136,6 +136,8 @@
             // 
             // gridView1_ChoThoiViec
             // 
+            this.gridView1_ChoThoiViec.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gridView1_ChoThoiViec.Appearance.HeaderPanel.Options.UseFont = true;
             this.gridView1_ChoThoiViec.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaNhanVien,
             this.TenNhanVien,
@@ -147,6 +149,8 @@
             this.TinhTrangLamViec});
             this.gridView1_ChoThoiViec.GridControl = this.gcDanhSach_ThoiViec;
             this.gridView1_ChoThoiViec.Name = "gridView1_ChoThoiViec";
+            this.gridView1_ChoThoiViec.OptionsFind.AlwaysVisible = true;
+            this.gridView1_ChoThoiViec.OptionsFind.FindDelay = 100;
             // 
             // MaNhanVien
             // 

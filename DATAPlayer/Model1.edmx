@@ -194,56 +194,15 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="DM_ChucVu">
-          <Key>
-            <PropertyRef Name="MaChucVu" />
-          </Key>
-          <Property Name="MaChucVu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TenChucVu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="HeSoLuong" Type="Decimal" Precision="5" Scale="2" />
-          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__NhanVien__MaChuc__3C69FB99" FromRole="DM_ChucVu" ToRole="NhanVien" />
-        </EntityType>
-        <EntityType Name="DM_Luong">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="LuongCoBan" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="PhuCap" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="KhauTruThue" Type="Decimal" Precision="10" Scale="2" />
-          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__DM_Luong__MaNhan__4222D4EF" FromRole="DM_Luong" ToRole="NhanVien" />
-        </EntityType>
-        <EntityType Name="NgayNghi">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-            <PropertyRef Name="ThangNam" />
-          </Key>
-          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ThangNam" Type="String" MaxLength="7" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SoNgayNghi" Type="Int32" />
-          <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__NgayNghi__MaNhan__44FF419A" FromRole="NgayNghi" ToRole="NhanVien" />
-        </EntityType>
-        <EntityType Name="QT_CongTac">
-          <Key>
-            <PropertyRef Name="MaCT" />
-            <PropertyRef Name="MaNhanVien" />
-          </Key>
-          <Property Name="MaCT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MaNhanVien" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="BatDau" Type="DateTime" Precision="0" />
-          <Property Name="KetThuc" Type="DateTime" Precision="0" />
-          <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__QT_CongTa__MaNha__3F466844" FromRole="QT_CongTac" ToRole="NhanVien" />
-        </EntityType>
         <EntityContainer Name="HRMEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="DM_ChucVu" EntityType="Self.DM_ChucVu" />
-          <EntitySet Name="DM_Luong" EntityType="Self.DM_Luong" />
-          <EntitySet Name="NgayNghi" EntityType="Self.NgayNghi" />
-          <EntitySet Name="QT_CongTac" EntityType="Self.QT_CongTac" />
-          <EntitySet Name="TaiKhoan" EntityType="HRMModel.TaiKhoan" />
-          <EntitySet Name="PhongBan" EntityType="HRMModel.PhongBan" />
+          <EntitySet Name="DM_ChucVu" EntityType="HRMModel.DM_ChucVu" />
+          <EntitySet Name="DM_Luong" EntityType="HRMModel.DM_Luong" />
+          <EntitySet Name="Luong" EntityType="HRMModel.Luong" />
+          <EntitySet Name="NgayNghi" EntityType="HRMModel.NgayNghi" />
           <EntitySet Name="NhanVien" EntityType="HRMModel.NhanVien" />
+          <EntitySet Name="PhongBan" EntityType="HRMModel.PhongBan" />
+          <EntitySet Name="QT_CongTac" EntityType="HRMModel.QT_CongTac" />
+          <EntitySet Name="TaiKhoan" EntityType="HRMModel.TaiKhoan" />
           <AssociationSet Name="FK__NhanVien__MaChuc__3C69FB99" Association="HRMModel.FK__NhanVien__MaChuc__3C69FB99">
             <End Role="DM_ChucVu" EntitySet="DM_ChucVu" />
             <End Role="NhanVien" EntitySet="NhanVien" />
@@ -251,6 +210,10 @@
           <AssociationSet Name="FK__DM_Luong__MaNhan__4222D4EF" Association="HRMModel.FK__DM_Luong__MaNhan__4222D4EF">
             <End Role="NhanVien" EntitySet="NhanVien" />
             <End Role="DM_Luong" EntitySet="DM_Luong" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Luong__MaNhanVie__47DBAE45" Association="HRMModel.FK__Luong__MaNhanVie__47DBAE45">
+            <End Role="NhanVien" EntitySet="NhanVien" />
+            <End Role="Luong" EntitySet="Luong" />
           </AssociationSet>
           <AssociationSet Name="FK__NgayNghi__MaNhan__44FF419A" Association="HRMModel.FK__NgayNghi__MaNhan__44FF419A">
             <End Role="NhanVien" EntitySet="NhanVien" />
@@ -264,30 +227,47 @@
             <End Role="NhanVien" EntitySet="NhanVien" />
             <End Role="QT_CongTac" EntitySet="QT_CongTac" />
           </AssociationSet>
-          <EntitySet Name="Luong" EntityType="HRMModel.Luong" />
-          <AssociationSet Name="FK__Luong__MaNhanVie__47DBAE45" Association="HRMModel.FK__Luong__MaNhanVie__47DBAE45">
-            <End Role="NhanVien" EntitySet="NhanVien" />
-            <End Role="Luong" EntitySet="Luong" />
-          </AssociationSet>
-          </EntityContainer>
-        <EntityType Name="TaiKhoan">
+        </EntityContainer>
+        <EntityType Name="DM_ChucVu">
           <Key>
-            <PropertyRef Name="STT_Tk" />
+            <PropertyRef Name="MaChucVu" />
           </Key>
-          <Property Name="STT_Tk" Type="Int32" Nullable="false" />
-          <Property Name="TenTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
+          <Property Name="MaChucVu" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TenChucVu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HeSoLuong" Type="Decimal" Precision="5" Scale="2" />
+          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__NhanVien__MaChuc__3C69FB99" FromRole="DM_ChucVu" ToRole="NhanVien" />
         </EntityType>
-        <EntityType Name="PhongBan">
+        <EntityType Name="DM_Luong">
           <Key>
-            <PropertyRef Name="MaPhongBan" />
+            <PropertyRef Name="MaNhanVien" />
           </Key>
-          <Property Name="MaPhongBan" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="TenPhongBan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="VanPhong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__NhanVien__MaPhon__3B75D760" FromRole="PhongBan" ToRole="NhanVien" />
+          <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="LuongCoBan" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="PhuCap" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="KhauTruThue" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__DM_Luong__MaNhan__4222D4EF" FromRole="DM_Luong" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="Luong">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="ThangNam" />
+          </Key>
+          <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ThangNam" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="SoNgayLam" Type="Int32" />
+          <Property Name="LuongThucLanh" Type="Int32" />
+          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__Luong__MaNhanVie__47DBAE45" FromRole="Luong" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="NgayNghi">
+          <Key>
+            <PropertyRef Name="MaNhanVien" />
+            <PropertyRef Name="ThangNam" />
+          </Key>
+          <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ThangNam" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="SoNgayNghi" Type="Int32" />
+          <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__NgayNghi__MaNhan__44FF419A" FromRole="NgayNghi" ToRole="NhanVien" />
         </EntityType>
         <EntityType Name="NhanVien">
           <Key>
@@ -303,10 +283,41 @@
           <Property Name="TinhTrangLamViec" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="DM_ChucVu" Relationship="HRMModel.FK__NhanVien__MaChuc__3C69FB99" FromRole="NhanVien" ToRole="DM_ChucVu" />
           <NavigationProperty Name="DM_Luong" Relationship="HRMModel.FK__DM_Luong__MaNhan__4222D4EF" FromRole="NhanVien" ToRole="DM_Luong" />
+          <NavigationProperty Name="Luong" Relationship="HRMModel.FK__Luong__MaNhanVie__47DBAE45" FromRole="NhanVien" ToRole="Luong" />
           <NavigationProperty Name="NgayNghi" Relationship="HRMModel.FK__NgayNghi__MaNhan__44FF419A" FromRole="NhanVien" ToRole="NgayNghi" />
           <NavigationProperty Name="PhongBan" Relationship="HRMModel.FK__NhanVien__MaPhon__3B75D760" FromRole="NhanVien" ToRole="PhongBan" />
           <NavigationProperty Name="QT_CongTac" Relationship="HRMModel.FK__QT_CongTa__MaNha__3F466844" FromRole="NhanVien" ToRole="QT_CongTac" />
-          <NavigationProperty Name="Luong" Relationship="HRMModel.FK__Luong__MaNhanVie__47DBAE45" FromRole="NhanVien" ToRole="Luong" />
+        </EntityType>
+        <EntityType Name="PhongBan">
+          <Key>
+            <PropertyRef Name="MaPhongBan" />
+          </Key>
+          <Property Name="MaPhongBan" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TenPhongBan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="VanPhong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__NhanVien__MaPhon__3B75D760" FromRole="PhongBan" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="QT_CongTac">
+          <Key>
+            <PropertyRef Name="MaCT" />
+            <PropertyRef Name="MaNhanVien" />
+          </Key>
+          <Property Name="MaCT" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="BatDau" Type="DateTime" Precision="0" />
+          <Property Name="KetThuc" Type="DateTime" Precision="0" />
+          <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__QT_CongTa__MaNha__3F466844" FromRole="QT_CongTac" ToRole="NhanVien" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="STT_Tk" />
+          </Key>
+          <Property Name="STT_Tk" Type="Int32" Nullable="false" />
+          <Property Name="TenTaiKhoan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MatKhau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TinhTrang" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK__NhanVien__MaChuc__3C69FB99">
           <End Type="HRMModel.DM_ChucVu" Role="DM_ChucVu" Multiplicity="0..1" />
@@ -328,6 +339,18 @@
               <PropertyRef Name="MaNhanVien" />
             </Principal>
             <Dependent Role="DM_Luong">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Luong__MaNhanVie__47DBAE45">
+          <End Type="HRMModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+          <End Type="HRMModel.Luong" Role="Luong" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NhanVien">
+              <PropertyRef Name="MaNhanVien" />
+            </Principal>
+            <Dependent Role="Luong">
               <PropertyRef Name="MaNhanVien" />
             </Dependent>
           </ReferentialConstraint>
@@ -368,29 +391,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Luong">
-          <Key>
-            <PropertyRef Name="MaNhanVien" />
-            <PropertyRef Name="ThangNam" />
-          </Key>
-          <Property Name="MaNhanVien" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="ThangNam" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="true" />
-          <Property Name="SoNgayLam" Type="Int32" />
-          <Property Name="LuongThucLanh" Type="Int32" />
-          <NavigationProperty Name="NhanVien" Relationship="HRMModel.FK__Luong__MaNhanVie__47DBAE45" FromRole="Luong" ToRole="NhanVien" />
-        </EntityType>
-        <Association Name="FK__Luong__MaNhanVie__47DBAE45">
-          <End Type="HRMModel.NhanVien" Role="NhanVien" Multiplicity="1" />
-          <End Type="HRMModel.Luong" Role="Luong" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="NhanVien">
-              <PropertyRef Name="MaNhanVien" />
-            </Principal>
-            <Dependent Role="Luong">
-              <PropertyRef Name="MaNhanVien" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -400,60 +400,39 @@
           <EntitySetMapping Name="DM_ChucVu">
             <EntityTypeMapping TypeName="HRMModel.DM_ChucVu">
               <MappingFragment StoreEntitySet="DM_ChucVu">
-                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
-                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
                 <ScalarProperty Name="HeSoLuong" ColumnName="HeSoLuong" />
+                <ScalarProperty Name="TenChucVu" ColumnName="TenChucVu" />
+                <ScalarProperty Name="MaChucVu" ColumnName="MaChucVu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DM_Luong">
             <EntityTypeMapping TypeName="HRMModel.DM_Luong">
               <MappingFragment StoreEntitySet="DM_Luong">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="LuongCoBan" ColumnName="LuongCoBan" />
-                <ScalarProperty Name="PhuCap" ColumnName="PhuCap" />
                 <ScalarProperty Name="KhauTruThue" ColumnName="KhauTruThue" />
+                <ScalarProperty Name="PhuCap" ColumnName="PhuCap" />
+                <ScalarProperty Name="LuongCoBan" ColumnName="LuongCoBan" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Luong">
+            <EntityTypeMapping TypeName="HRMModel.Luong">
+              <MappingFragment StoreEntitySet="Luong">
+                <ScalarProperty Name="LuongThucLanh" ColumnName="LuongThucLanh" />
+                <ScalarProperty Name="SoNgayLam" ColumnName="SoNgayLam" />
+                <ScalarProperty Name="ThangNam" ColumnName="ThangNam" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NgayNghi">
             <EntityTypeMapping TypeName="HRMModel.NgayNghi">
               <MappingFragment StoreEntitySet="NgayNghi">
-                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="ThangNam" ColumnName="ThangNam" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
                 <ScalarProperty Name="SoNgayNghi" ColumnName="SoNgayNghi" />
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="QT_CongTac">
-            <EntityTypeMapping TypeName="HRMModel.QT_CongTac">
-              <MappingFragment StoreEntitySet="QT_CongTac">
-                <ScalarProperty Name="MaCT" ColumnName="MaCT" />
+                <ScalarProperty Name="ThangNam" ColumnName="ThangNam" />
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
-                <ScalarProperty Name="BatDau" ColumnName="BatDau" />
-                <ScalarProperty Name="KetThuc" ColumnName="KetThuc" />
-                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TaiKhoan">
-            <EntityTypeMapping TypeName="HRMModel.TaiKhoan">
-              <MappingFragment StoreEntitySet="TaiKhoan">
-                <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
-                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
-                <ScalarProperty Name="STT_Tk" ColumnName="STT_Tk" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PhongBan">
-            <EntityTypeMapping TypeName="HRMModel.PhongBan">
-              <MappingFragment StoreEntitySet="PhongBan">
-                <ScalarProperty Name="VanPhong" ColumnName="VanPhong" />
-                <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
-                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -471,13 +450,34 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Luong">
-            <EntityTypeMapping TypeName="HRMModel.Luong">
-              <MappingFragment StoreEntitySet="Luong">
-                <ScalarProperty Name="LuongThucLanh" ColumnName="LuongThucLanh" />
-                <ScalarProperty Name="SoNgayLam" ColumnName="SoNgayLam" />
-                <ScalarProperty Name="ThangNam" ColumnName="ThangNam" />
+          <EntitySetMapping Name="PhongBan">
+            <EntityTypeMapping TypeName="HRMModel.PhongBan">
+              <MappingFragment StoreEntitySet="PhongBan">
+                <ScalarProperty Name="VanPhong" ColumnName="VanPhong" />
+                <ScalarProperty Name="TenPhongBan" ColumnName="TenPhongBan" />
+                <ScalarProperty Name="MaPhongBan" ColumnName="MaPhongBan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QT_CongTac">
+            <EntityTypeMapping TypeName="HRMModel.QT_CongTac">
+              <MappingFragment StoreEntitySet="QT_CongTac">
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+                <ScalarProperty Name="KetThuc" ColumnName="KetThuc" />
+                <ScalarProperty Name="BatDau" ColumnName="BatDau" />
                 <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="MaCT" ColumnName="MaCT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoan">
+            <EntityTypeMapping TypeName="HRMModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+                <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+                <ScalarProperty Name="STT_Tk" ColumnName="STT_Tk" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

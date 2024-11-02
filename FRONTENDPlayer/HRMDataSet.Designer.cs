@@ -4893,11 +4893,11 @@ SELECT MaNhanVien, ThangNam, SoNgayNghi, GhiChu FROM NgayNghi WHERE (MaNhanVien 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT    MaNhanVien\r\nFROM         NhanVien";
+            this._commandCollection[0].CommandText = "SELECT    MaNhanVien\r\nFROM         NhanVien\r\nWHERE TinhTrangLamViec = 1";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT    MaNhanVien, TenNhanVien\r\nFROM         NhanVien";
+            this._commandCollection[1].CommandText = "SELECT MaNhanVien FROM NhanVien";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

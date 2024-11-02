@@ -45,9 +45,12 @@
     <Reference Include="DevExpress.RichEdit.v24.1.Export, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v24.1" />
     <Reference Include="DevExpress.Sparkline.v24.1.Core" />
+    <Reference Include="DevExpress.Utils.v24.1.UI, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v24.1, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v24.1.UI, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v24.1.Wizard, Version=24.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v24.1" />
     <Reference Include="DevExpress.Printing.v24.1.Core" />
     <Reference Include="DevExpress.Drawing.v24.1" />
@@ -75,12 +78,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChonThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonThongKe.Designer.cs">
+      <DependentUpon>ChonThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDanhMucLuong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDanhMucLuong.Designer.cs">
       <DependentUpon>frmDanhMucLuong.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChonThongKe.resx">
+      <DependentUpon>ChonThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDanhMucLuong.resx">
       <DependentUpon>frmDanhMucLuong.cs</DependentUpon>
     </EmbeddedResource>

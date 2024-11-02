@@ -125,7 +125,7 @@ namespace FRONTENDPlayer
             // 
             // NgayBatDau
             // 
-            this.NgayBatDau.EditValue = DateTime.Today;
+            this.NgayBatDau.EditValue = new System.DateTime(2024, 11, 2, 0, 0, 0, 0);
             this.NgayBatDau.Location = new System.Drawing.Point(455, 36);
             this.NgayBatDau.Name = "NgayBatDau";
             this.NgayBatDau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -133,7 +133,6 @@ namespace FRONTENDPlayer
             this.NgayBatDau.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.NgayBatDau.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.NgayBatDau.Properties.Mask.UseMaskAsDisplayFormat = false;
             this.NgayBatDau.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
             this.NgayBatDau.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.NgayBatDau.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
@@ -151,7 +150,7 @@ namespace FRONTENDPlayer
             // 
             // NgayKetThuc
             // 
-            this.NgayKetThuc.EditValue = DateTime.Today;
+            this.NgayKetThuc.EditValue = new System.DateTime(2024, 11, 2, 0, 0, 0, 0);
             this.NgayKetThuc.Location = new System.Drawing.Point(455, 89);
             this.NgayKetThuc.Name = "NgayKetThuc";
             this.NgayKetThuc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -159,7 +158,6 @@ namespace FRONTENDPlayer
             this.NgayKetThuc.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.NgayKetThuc.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.NgayKetThuc.Properties.Mask.UseMaskAsDisplayFormat = false;
             this.NgayKetThuc.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
             this.NgayKetThuc.Properties.VistaCalendarInitialViewStyle = DevExpress.XtraEditors.VistaCalendarInitialViewStyle.YearView;
             this.NgayKetThuc.Properties.VistaCalendarViewStyle = DevExpress.XtraEditors.VistaCalendarViewStyle.YearView;
@@ -211,19 +209,18 @@ namespace FRONTENDPlayer
             // 
             this.cmbMaCT.Location = new System.Drawing.Point(142, 28);
             this.cmbMaCT.Name = "cmbMaCT";
+            this.cmbMaCT.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.cmbMaCT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbMaCT.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("MaCT", "Mã công tác")});
             this.cmbMaCT.Properties.DataSource = this.qTCongTacBindingSource;
             this.cmbMaCT.Properties.DisplayMember = "MaCT";
-            this.cmbMaCT.Properties.ValueMember = "MaCT";
             this.cmbMaCT.Properties.NullText = "Mã công tác";
             this.cmbMaCT.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbMaCT.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.cmbMaCT.Properties.ValueMember = "MaCT";
             this.cmbMaCT.Size = new System.Drawing.Size(156, 34);
             this.cmbMaCT.TabIndex = 17;
-
             // 
             // qTCongTacBindingSource
             // 
@@ -252,6 +249,7 @@ namespace FRONTENDPlayer
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Name = "ThemCongTac";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm công tác";
             this.Load += new System.EventHandler(this.frmThemCongTac_Load);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();

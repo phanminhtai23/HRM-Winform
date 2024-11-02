@@ -208,6 +208,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "SuaNgayNghi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Ngày Nghỉ";
             this.Load += new System.EventHandler(this.SuaNgayNghi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1_MaNhanVien.Properties)).EndInit();

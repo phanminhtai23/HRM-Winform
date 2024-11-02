@@ -186,6 +186,7 @@
             this.Controls.Add(this.simpleButton_Luu);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuaDanhMucLuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Danh Mục Lương";
             ((System.ComponentModel.ISupportInitialize)(this.dMLuongBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hRMDataSetBindingSource)).EndInit();

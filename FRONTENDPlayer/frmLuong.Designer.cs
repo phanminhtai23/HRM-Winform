@@ -46,8 +46,8 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colThangNam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoNgayLam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLuongThucLanh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -98,6 +98,7 @@
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -218,16 +219,6 @@
             this.colTenNhanVien.VisibleIndex = 1;
             this.colTenNhanVien.Width = 94;
             // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.Caption = "Ngày Sinh";
-            this.colNgaySinh.FieldName = "NgaySinh";
-            this.colNgaySinh.MinWidth = 25;
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.Visible = true;
-            this.colNgaySinh.VisibleIndex = 2;
-            this.colNgaySinh.Width = 94;
-            // 
             // colThangNam
             // 
             this.colThangNam.Caption = "Tháng Năm";
@@ -237,6 +228,16 @@
             this.colThangNam.Visible = true;
             this.colThangNam.VisibleIndex = 3;
             this.colThangNam.Width = 94;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.Caption = "Ngày Sinh";
+            this.colNgaySinh.FieldName = "NgaySinh";
+            this.colNgaySinh.MinWidth = 25;
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.Visible = true;
+            this.colNgaySinh.VisibleIndex = 2;
+            this.colNgaySinh.Width = 94;
             // 
             // colSoNgayLam
             // 
