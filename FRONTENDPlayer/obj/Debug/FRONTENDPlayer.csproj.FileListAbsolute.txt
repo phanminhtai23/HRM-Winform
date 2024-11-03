@@ -261,7 +261,6 @@ D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmChucV
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmHopDong.resources
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmKhenThuongKyLuat.resources
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmNhanVien.resources
-D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmPhongBan.resources
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.Properties.Resources.resources
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemThongTinNhanVien.resources
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.TrangChu.resources
@@ -271,7 +270,6 @@ D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.csproj.C
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTEND.5B3E70E5.Up2Date
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.exe
 D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.pdb
-D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemChuVu.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.Utils.v24.1.dll
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraBars.v24.1.dll
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraEditors.v24.1.dll
@@ -455,3 +453,47 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDP
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmDanhMucLuong.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaDanhMucLuong.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmLuong.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraGrid.v24.1.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraGrid.v24.1.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmDanhMucLuong.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmLuong.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaDanhMucLuong.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmCongTac.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmNgayNghi.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmThoiViec.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaCongTac.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaNgayNghi.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaNhanVien.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmChucVu1.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmCapQuyen.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmPhongBan1.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaPhongBan.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaChucVu.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemChucVu.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemCongTac.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemNgayNghi.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemPhongBan.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.Utils.v24.1.UI.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraReports.v24.1.Extensions.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraRichEdit.v24.1.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraVerticalGrid.v24.1.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.DataAccess.v24.1.UI.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraNavBar.v24.1.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraCharts.v24.1.Wizard.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraPivotGrid.v24.1.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraCharts.v24.1.Extensions.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.Images.v24.1.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraDiagram.v24.1.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.Diagram.v24.1.Core.dll
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.Utils.v24.1.UI.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraReports.v24.1.Extensions.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraRichEdit.v24.1.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraVerticalGrid.v24.1.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.DataAccess.v24.1.UI.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraNavBar.v24.1.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraCharts.v24.1.Wizard.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraPivotGrid.v24.1.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.XtraDiagram.v24.1.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\bin\Debug\DevExpress.Diagram.v24.1.Core.xml
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.rptBangLuong.resources
+D:\Quan_Tri_Du_Lieu\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.InLuong.resources

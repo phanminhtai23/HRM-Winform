@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ChucVuBackEnd.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="InBackend.cs" />
     <Compile Include="NgayNghiBackEnd.cs" />
     <Compile Include="ThongBao.cs" />
     <Compile Include="PhongBanBackEnd.cs" />

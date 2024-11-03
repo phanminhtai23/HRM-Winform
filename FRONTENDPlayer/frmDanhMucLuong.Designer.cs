@@ -48,6 +48,8 @@
             this.colLuongCoBan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhuCap = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colKhauTruThue = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLuongCoBan.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colLuongCoBan.DisplayFormat.FormatString = "N0";
             this.dM_LuongTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.DM_LuongTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();

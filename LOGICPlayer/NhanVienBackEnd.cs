@@ -141,7 +141,7 @@ namespace LOGICPlayer
 
         public bool UpdateNhanVien(NhanVien nhanVienSua)
         {
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+            string connectionString = "Data Source=LAPTOP-881KRHJ2\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
             string query = "UPDATE NhanVien SET ";
             List<string> updateFields = new List<string>();
 
