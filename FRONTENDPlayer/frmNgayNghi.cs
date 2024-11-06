@@ -1,4 +1,5 @@
 ﻿using DATAPlayer;
+using DevExpress.XtraCharts.Designer.Native;
 using DevExpress.XtraEditors;
 using LOGICPlayer;
 using System;
@@ -34,59 +35,36 @@ namespace FRONTENDPlayer
         {
             this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
             gridView1.OptionsBehavior.Editable = false;
-            ngayNghiBackEnd.UpdateLuong();
-
         }
         // click thêm ngày nghỉ
         private void barButtonItem1_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ThemNgayNghi themNgayNghi = new ThemNgayNghi();
-            if (themNgayNghi.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                load_data();
-                ThongBao.CapNhatBang_Luong();
-                ThongBao.CapNhatBang_DMChucVu();
-                ThongBao.CapNhatBang_NhanVien();
+                openFileDialog.Filter = "Excel Files|*.xls;*.xlsx";
+                openFileDialog.Title = "Chọn file Excel";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Đọc và lưu dữ liệu từ file Excel trực tiếp vào cơ sở dữ liệu
+                    var filePath = openFileDialog.FileName;
+                    bool check = ngayNghiBackEnd.LoadNgayNghiFromExcel(filePath);
+                    if(!check)
+                    {
+                        XtraMessageBox.Show("File excel có dữ liệu sai, trùng hoặc dữ liệu đã tồn tại trong CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Cập nhật dữ liệu hiển thị
+                    load_data();
+                    ThongBao.CapNhatBang_Luong();
+                }
             }
         }
 
         private void barButtonItem4_Dong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             this.Close();
-        }
-
-        private void barButtonItem2_Sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            // Lấy GridView từ GridControl
-            var gridView = gridControl1.MainView as DevExpress.XtraGrid.Views.Grid.GridView;
-
-            // Kiểm tra xem có dòng nào được chọn không
-            if (gridView.FocusedRowHandle >= 0)
-            {
-                // Lấy dữ liệu từ dòng được chọn
-                string maNhanVien = gridView.GetRowCellValue(gridView.FocusedRowHandle, "MaNhanVien").ToString();
-                string thangNam = gridView.GetRowCellValue(gridView.FocusedRowHandle, "ThangNam").ToString();
-                int soNgayNghi = Convert.ToInt32(gridView.GetRowCellValue(gridView.FocusedRowHandle, "SoNgayNghi"));
-                string ghiChu = gridView.GetRowCellValue(gridView.FocusedRowHandle, "GhiChu").ToString();
-
-                // Tạo đối tượng form sửa với dữ liệu được chọn
-                SuaNgayNghi formSua = new SuaNgayNghi(maNhanVien, thangNam, soNgayNghi, ghiChu);
-
-                // Hiển thị form sửa
-                if (formSua.ShowDialog() == DialogResult.OK)
-                {
-                    // Sau khi sửa, tải lại dữ liệu vào GridControl
-                    load_data();
-                    ThongBao.CapNhatBang_Luong();
-                    ThongBao.CapNhatBang_DMChucVu();
-                    ThongBao.CapNhatBang_NhanVien();
-                }
-
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một dòng để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void barButtonItem3_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -121,8 +99,8 @@ namespace FRONTENDPlayer
                     MessageBox.Show("Xóa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
                     ThongBao.CapNhatBang_Luong();
-                    ThongBao.CapNhatBang_DMChucVu();
-                    ThongBao.CapNhatBang_NhanVien();
+                    //ThongBao.CapNhatBang_DMChucVu();
+                    //ThongBao.CapNhatBang_NhanVien();
                 }
                 catch
                 {

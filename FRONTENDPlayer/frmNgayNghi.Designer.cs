@@ -33,7 +33,6 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1_Them = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2_Sua = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3_Xoa = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4_Dong = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
@@ -45,13 +44,13 @@
             this.ngayNghiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hRMDataSet = new FRONTENDPlayer.HRMDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colThangNam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGhiChu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoNgayNghi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ngayNghiTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.NgayNghiTableAdapter();
             this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
+            this.ngayNghiTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.NgayNghiTableAdapter();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -74,7 +73,6 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1_Them,
-            this.barButtonItem2_Sua,
             this.barButtonItem3_Xoa,
             this.barButtonItem4_Dong});
             this.barManager1.MainMenu = this.bar2;
@@ -89,7 +87,6 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1_Them, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem2_Sua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem3_Xoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem4_Dong, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
@@ -103,14 +100,6 @@
             this.barButtonItem1_Them.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1_Them.ImageOptions.SvgImage")));
             this.barButtonItem1_Them.Name = "barButtonItem1_Them";
             this.barButtonItem1_Them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_Them_ItemClick);
-            // 
-            // barButtonItem2_Sua
-            // 
-            this.barButtonItem2_Sua.Caption = "Sửa";
-            this.barButtonItem2_Sua.Id = 1;
-            this.barButtonItem2_Sua.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2_Sua.ImageOptions.SvgImage")));
-            this.barButtonItem2_Sua.Name = "barButtonItem2_Sua";
-            this.barButtonItem2_Sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_Sua_ItemClick);
             // 
             // barButtonItem3_Xoa
             // 
@@ -212,16 +201,6 @@
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindDelay = 100;
             // 
-            // colMaNhanVien
-            // 
-            this.colMaNhanVien.Caption = "Mã Nhân Viên";
-            this.colMaNhanVien.FieldName = "MaNhanVien";
-            this.colMaNhanVien.MinWidth = 25;
-            this.colMaNhanVien.Name = "colMaNhanVien";
-            this.colMaNhanVien.Visible = true;
-            this.colMaNhanVien.VisibleIndex = 0;
-            this.colMaNhanVien.Width = 94;
-            // 
             // colNhanVien
             // 
             this.colNhanVien.Caption = "Tên nhân viên";
@@ -241,6 +220,16 @@
             this.colThangNam.Visible = true;
             this.colThangNam.VisibleIndex = 2;
             this.colThangNam.Width = 94;
+            // 
+            // colMaNhanVien
+            // 
+            this.colMaNhanVien.Caption = "Mã Nhân Viên";
+            this.colMaNhanVien.FieldName = "MaNhanVien";
+            this.colMaNhanVien.MinWidth = 25;
+            this.colMaNhanVien.Name = "colMaNhanVien";
+            this.colMaNhanVien.Visible = true;
+            this.colMaNhanVien.VisibleIndex = 0;
+            this.colMaNhanVien.Width = 94;
             // 
             // colGhiChu
             // 
@@ -262,16 +251,16 @@
             this.colSoNgayNghi.VisibleIndex = 4;
             this.colSoNgayNghi.Width = 94;
             // 
-            // ngayNghiTableAdapter
-            // 
-            this.ngayNghiTableAdapter.ClearBeforeFill = true;
-            // 
             // repositoryItemFontEdit1
             // 
             this.repositoryItemFontEdit1.AutoHeight = false;
             this.repositoryItemFontEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemFontEdit1.Name = "repositoryItemFontEdit1";
+            // 
+            // ngayNghiTableAdapter
+            // 
+            this.ngayNghiTableAdapter.ClearBeforeFill = true;
             // 
             // frmNgayNghi
             // 
@@ -303,7 +292,6 @@
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1_Them;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2_Sua;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3_Xoa;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;

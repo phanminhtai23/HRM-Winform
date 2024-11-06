@@ -31,7 +31,7 @@ namespace LOGICPlayer
         }
 
 
-        private string connectionString = "Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+        private string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
 
         // Thêm lương cho nhân viên mới với các hệ số là null
         public bool ThemLuongMoi(string maNhanVien)

@@ -21,7 +21,7 @@ namespace FRONTENDPlayer
         {
             ThongBao.Load_TableNhanVien += LoadData;
             ThongBao.Load_TableLamViec += LoadData;
-            ThongBao.Load_DM_Luong += LoadData;
+            //ThongBao.Load_DM_Luong += LoadData;
             InitializeComponent();
         }
 
@@ -104,6 +104,8 @@ namespace FRONTENDPlayer
 
         private void Dong_fromNV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            ThongBao.Load_TableNhanVien -= LoadData;
+            ThongBao.Load_TableLamViec -= LoadData;
             this.Close();
         }
 
@@ -194,6 +196,7 @@ namespace FRONTENDPlayer
                 nhanVienBackEnd.ChoThoiViec(nhanVienSua);
 
                 MessageBox.Show("Cho thôi việc thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 LoadData();
                 ThongBao.CapNhatBang_ChoThoiViec();
                 ThongBao.CapNhatBang_DMLuong();

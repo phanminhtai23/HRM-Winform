@@ -97,3 +97,19 @@ D:\GitClone\HRM-Winform\LOGICPlayer\obj\Debug\LOGICPlayer.csproj.CoreCompileInpu
 D:\GitClone\HRM-Winform\LOGICPlayer\obj\Debug\LOGICPla.1E6DCFD4.Up2Date
 D:\GitClone\HRM-Winform\LOGICPlayer\obj\Debug\LOGICPlayer.dll
 D:\GitClone\HRM-Winform\LOGICPlayer\obj\Debug\LOGICPlayer.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\ExcelDataReader.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Buffers.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Memory.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\ExcelDataReader.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\ExcelDataReader.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Buffers.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Memory.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\LOGICPlayer\bin\Debug\System.Text.Encoding.CodePages.xml

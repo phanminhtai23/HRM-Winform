@@ -336,9 +336,6 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDP
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.csproj.AssemblyReference.cache
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.DangKy.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.Dangnhap.resources
-C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmChucVu.resources
-C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmHopDong.resources
-C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmKhenThuongKyLuat.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmNhanVien.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.Properties.Resources.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemThongTinNhanVien.resources
@@ -447,8 +444,6 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\HRM-Winform\FRONTENDPlayer\ob
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaNhanVien.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmThoiViec.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmNgayNghi.resources
-C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemNgayNghi.resources
-C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaNgayNghi.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.frmCongTac.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.SuaCongTac.resources
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.ThemCongTac.resources
@@ -580,3 +575,21 @@ D:\GitClone\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.csproj.CoreCompi
 D:\GitClone\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTEND.5B3E70E5.Up2Date
 D:\GitClone\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.exe
 D:\GitClone\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.rptBangLuong.resources
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\obj\Debug\FRONTENDPlayer.InLuong.resources
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\ExcelDataReader.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Memory.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Buffers.dll
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\ExcelDataReader.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\ExcelDataReader.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Memory.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\FRONTENDPlayer\bin\Debug\System.Buffers.xml
