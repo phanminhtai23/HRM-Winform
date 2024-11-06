@@ -1,4 +1,5 @@
 ﻿using DATAPlayer;
+using LOGICPlayer;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,7 +11,8 @@ namespace LOGICPlayer
 {
     public class CongTacBackEnd
     {
-
+        Logic_TaiKhoan Logic_TaiKhoan = new Logic_TaiKhoan();
+        public string connectionString = Logic_TaiKhoan.LinkConnectData();
         readonly HRMEntities Adapter = new HRMEntities();
         public List<QT_CongTac> LoadDataTable() => Adapter.QT_CongTac.AsNoTracking().ToList();
 
@@ -42,7 +44,6 @@ namespace LOGICPlayer
         }
         public bool UpdateCongTac(QT_CongTac congTacSua)
         {
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
             string query = "UPDATE QT_CongTac SET ";
             List<string> updateFields = new List<string>();
             if (congTacSua.BatDau.HasValue)

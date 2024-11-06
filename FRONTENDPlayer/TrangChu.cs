@@ -34,11 +34,6 @@ namespace FRONTENDPlayer
             f.Show();
         }
 
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Hiển thị thông báo xác nhận
@@ -57,12 +52,6 @@ namespace FRONTENDPlayer
         private void PhongBang_ItemClick(object sender, ItemClickEventArgs e)
         {
             openForm(typeof(frmPhongBan1));
-        }
-
-
-        private void TrangChu_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void ChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -85,30 +74,9 @@ namespace FRONTENDPlayer
             openForm(typeof(frmNhanVien));
         }
 
-
-        private void DieuChuyen_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
         private void ThoiViec_ItemClick(object sender, ItemClickEventArgs e)
         {
             openForm(typeof(frmThoiViec));
-        }
-
-        private void DoiMatKhau_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void KhoiPhucDuLieu_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void SauLuuDuLieu_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
         }
 
         private void CongTac_ItemClick(object sender, ItemClickEventArgs e)

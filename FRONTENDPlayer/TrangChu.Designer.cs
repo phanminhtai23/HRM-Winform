@@ -106,7 +106,6 @@
             this.HeThong});
             this.ribbon.Size = new System.Drawing.Size(1940, 242);
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // barStaticItem2
             // 

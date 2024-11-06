@@ -26,7 +26,7 @@ namespace FRONTENDPlayer
         public void LoadData()
         {
             gcDanhSach_ThoiViec.DataSource = nhanvienbackend.LoadDataTable_ThoiViec();
-            //gcDanhSach_ThoiViec.OptionsBehavior.Editable = false;
+            gridView1_ChoThoiViec.OptionsBehavior.Editable = false;
         }
 
         public void frmThoiViec_Load(object sender, EventArgs e)
@@ -79,6 +79,7 @@ namespace FRONTENDPlayer
                 nhanVienBackEnd.LamViecLai(nhanVienSua);
 
                 MessageBox.Show("Cho làm việc lại thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 LoadData();
                 ThongBao.CapNhatBang_LamViecLai();
                 ThongBao.CapNhatBang_DMLuong();
@@ -89,10 +90,5 @@ namespace FRONTENDPlayer
             }
         }
 
-
-        private void barButtonItem1_TaiLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadData();
-        }
     }
 }

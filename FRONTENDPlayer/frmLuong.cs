@@ -1,14 +1,19 @@
 ﻿using DevExpress.XtraEditors;
-using LOGICPlayer;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraReports.UI;
+using DATAPlayer;
+using System.Data.SqlClient;
+using LOGICPlayer;
 
 namespace FRONTENDPlayer
 {
@@ -17,17 +22,29 @@ namespace FRONTENDPlayer
         public frmLuong()
         {
             ThongBao.Load_TableLuong += load_data;
-            ThongBao.Load_TableDM_ChucVu += load_data;
-            ThongBao.Load_TableNhanVien += load_data;
+            //ThongBao.Load_TableDM_ChucVu += load_data;
+            //ThongBao.Load_TableNhanVien += load_data;
             InitializeComponent();
         }
-        NgayNghiBackEnd ngayNghiBackEnd = new NgayNghiBackEnd();
 
+        Luong1 _bangLuong;
+        List<Luong1> _lstBangLuong;
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            InLuong inluong = new InLuong();
+            if (DialogResult.OK == inluong.ShowDialog())
+            {
+
+            }
+        }
+
+        NgayNghiBackEnd ngayNghiBackEnd = new NgayNghiBackEnd();
         public void load_data()
         {
+            ngayNghiBackEnd.UpdateLuong();
             this.luongTableAdapter.FillBy(this.hRMDataSet.Luong);
             gridView1.OptionsBehavior.Editable = false;
-            ngayNghiBackEnd.UpdateLuong();
         }
 
         private void Luong_Load(object sender, EventArgs e)
@@ -40,6 +57,7 @@ namespace FRONTENDPlayer
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            ThongBao.Load_TableLuong -= load_data;
             this.Close();
         }
 
@@ -51,21 +69,14 @@ namespace FRONTENDPlayer
 
             }
         }
-        private void barButtonItem_InLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            InLuong inLuong = new InLuong();
-            if (inLuong.ShowDialog() == DialogResult.OK)
-            {
 
-            }
+        public class Luong1
+        {
+            public string MaNhanVien { get; set; }
+            public string TenNhanVien { get; set; } // Thêm thuộc tính này để chứa tên nhân viên
+            public string ThangNam { get; set; }
+            public int SoNgayLam { get; set; } // Kiểu int cho Số Ngày Làm
+            public int LuongThucLanh { get; set; } // Kiểu int cho Lương Thực Lãnh
         }
-    }
-    public class Luong
-    {
-        public string MaNhanVien { get; set; }
-        public string TenNhanVien { get; set; } // Thêm thuộc tính này để chứa tên nhân viên
-        public string ThangNam { get; set; }
-        public int SoNgayLam { get; set; } // Kiểu int cho Số Ngày Làm
-        public int LuongThucLanh { get; set; } // Kiểu int cho Lương Thực Lãnh
     }
 }

@@ -13,6 +13,20 @@ namespace LOGICPlayer
 {
     public class Logic_TaiKhoan
     {
+        
+        public static string LinkConnectData()
+        {  //Chọn một cái đi
+            string str = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+
+            //string str = "Data Source=LAPTOP-881KRHJ2\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+
+            //string str= "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+
+            return str;
+        }
+
+        public string connectionString = LinkConnectData();
+
         readonly HRMEntities Adapter = new HRMEntities();
         public List<TaiKhoan> LoadDataTable() => Adapter.TaiKhoan.AsNoTracking().ToList();
         public bool CapQuyen(TaiKhoan taiKhoan)
@@ -77,7 +91,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+            //string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
             // Truy vấn SQL kiểm tra tài khoản
             string query = "SELECT COUNT(1) FROM TaiKhoan WHERE TenTaiKhoan = @username AND MatKhau = @password";
             string query_Ktra_Actived = "SELECT TinhTrang FROM TaiKhoan WHERE TenTaiKhoan = @username AND MatKhau = @password";
@@ -153,7 +167,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source = localhost; Initial Catalog = HRM; Integrated Security = True";
+            //string connectionString = "Data Source = localhost; Initial Catalog = HRM; Integrated Security = True";
 
             // Truy vấn SQL kiểm tra tài khoản
             string query = "SELECT COUNT(1) FROM TaiKhoan WHERE TenTaiKhoan = @username";
@@ -188,7 +202,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source = localhost; Initial Catalog = HRM; Integrated Security = True";
+            //string connectionString = "Data Source = localhost; Initial Catalog = HRM; Integrated Security = True";
 
 
             // Tạo kết nối
@@ -226,13 +240,11 @@ namespace LOGICPlayer
             }
         }
 
-    
-
-    public bool ThemTaiKhoan(string Username, string Password, string Email, int TinhTrang = 0)
-    {
-        // Chuỗi kết nối đến cơ sở dữ liệu
-        //Trust Server Certificate = True; Encrypt = True;
-        string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+        public bool ThemTaiKhoan(string Username, string Password, string Email, int TinhTrang = 0)
+        {
+            // Chuỗi kết nối đến cơ sở dữ liệu
+            //Trust Server Certificate = True; Encrypt = True;
+            //string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
 
         // Truy vấn SQL kiểm tra tài khoản
         string query = "INSERT INTO TaiKhoan (STT_Tk, TenTaiKhoan, MatKhau, Email, TinhTrang) VALUES (@count_acc, @Username, @Password, @Email, @TinhTrang)";
@@ -279,7 +291,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+            //string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
 
             // Truy vấn SQL kiểm tra tài khoản
             string query = "INSERT INTO TaiKhoan (STT_Tk, TenTaiKhoan, MatKhau, Email, TinhTrang) VALUES (@count_acc, @Username, @Password, @Email, @TinhTrang)";

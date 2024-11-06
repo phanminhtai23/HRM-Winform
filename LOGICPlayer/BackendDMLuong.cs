@@ -5,12 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DATAPlayer;
+using LOGICPlayer;
 
 namespace LOGICPlayer
 {
     public class BackendDMLuong
     {
         readonly HRMEntities Adapter = new HRMEntities();
+
+        Logic_TaiKhoan Logic_TaiKhoan = new Logic_TaiKhoan();
+        public string connectionString = Logic_TaiKhoan.LinkConnectData();
         public List<object> LoadDataTable()
         {
             return Adapter.DM_Luong
@@ -31,7 +35,6 @@ namespace LOGICPlayer
         }
 
 
-        private string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
 
         // Thêm lương cho nhân viên mới với các hệ số là null
         public bool ThemLuongMoi(string maNhanVien)

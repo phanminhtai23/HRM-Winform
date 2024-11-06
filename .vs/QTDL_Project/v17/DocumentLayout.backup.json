@@ -13,7 +13,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 308,
+          "DockedWidth": 200,
           "SelectedChildIndex": 5,
           "Children": [
             {
@@ -44,9 +44,9 @@
               "RelativeDocumentMoniker": "LOGICPlayer\\Logic_TaiKhoan.cs",
               "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\Logic_TaiKhoan.cs",
               "RelativeToolTip": "LOGICPlayer\\Logic_TaiKhoan.cs",
-              "ViewState": "AgIAACABAAAAAAAAAAAuwDcBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIBAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:49:21.755Z",
+              "WhenOpened": "2024-11-06T17:31:02.833Z",
               "EditorCaption": ""
             }
           ]
