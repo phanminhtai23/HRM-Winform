@@ -29,7 +29,8 @@ namespace FRONTENDPlayer
             //this.dM_LuongTableAdapter.FillBy(this.hRMDataSet.DM_Luong);
             gridControl1.DataSource = backend.LoadDataTable();
             gridView1.OptionsBehavior.Editable = false;
-            nhavienBE.Update_DMLuong();
+
+            nhavienBE.Update_DMLuong(); 
         }
         private void frmDanhMucLuong_Load(object sender, EventArgs e)
         {
@@ -50,8 +51,6 @@ namespace FRONTENDPlayer
                 SuaDanhMucLuong suaDanhMucLuong = new SuaDanhMucLuong(maNhanVien, luongCoBan, phuCap, khauTruThue);
                 if (suaDanhMucLuong.ShowDialog() == DialogResult.OK)
                 {
-                    // Tải lại dữ liệu sau khi sửa
-                    //this.dM_LuongTableAdapter.FillBy(this.hRMDataSet.DM_Luong);
                     LoadData();
                 }
             }
@@ -61,33 +60,10 @@ namespace FRONTENDPlayer
             }
         }
 
-        private void Xoa_DMLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (gridView1.GetSelectedRows().Length > 0)
-            {
-                string maNhanVien = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MaNhanVien").ToString();
-
-                if (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xóa Lương", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    if (backend.XoaLuong(maNhanVien))
-                    {
-                        MessageBox.Show("Xóa lương thành công.");
-                        this.dM_LuongTableAdapter.Fill(this.hRMDataSet.DM_Luong);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa lương thất bại.");
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một dòng để xóa.");
-            }
-        }
 
         private void Dong_DMLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            ThongBao.Load_DM_Luong -= LoadData;
             this.Close();
         }
     }

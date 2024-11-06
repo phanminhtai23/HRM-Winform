@@ -17,7 +17,7 @@ namespace FRONTENDPlayer
     {
         public frmChucVu1()
         {
-            ThongBao.Load_TableDM_ChucVu += load_data;
+            //ThongBao.Load_TableDM_ChucVu += load_data;
             InitializeComponent();
         }
 
@@ -44,8 +44,6 @@ namespace FRONTENDPlayer
             if (formthem.ShowDialog() == DialogResult.OK)
             {
                 this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
-                ThongBao.CapNhatBang_DMChucVu();
-                ThongBao.CapNhatBang_Luong();
             }
         }
 
@@ -70,8 +68,6 @@ namespace FRONTENDPlayer
                 {
                     // Sau khi sửa, tải lại dữ liệu vào GridControl
                     this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
-                    ThongBao.CapNhatBang_DMChucVu();
-                    ThongBao.CapNhatBang_Luong();
                 }
             }
             else
@@ -89,7 +85,7 @@ namespace FRONTENDPlayer
             {
                 try
                 {
-                    //// Lấy dữ liệu của hàng được chọ
+                    //// Lấy dữ liệu của hàng được chọn
 
                     string maChucVu = gridView.GetRowCellValue(gridView.FocusedRowHandle, "MaChucVu").ToString();
 
@@ -99,16 +95,14 @@ namespace FRONTENDPlayer
 
                     chucVuBackEnd.Remove(chucVu);
 
-                    MessageBox.Show("Thêm chức vụ thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Xóa chức vụ thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                     this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
                 }
                 catch
                 {
                     MessageBox.Show("Không thể xóa chức vụ đã có trong bảng nhân viên .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
-
             }
             else
             {

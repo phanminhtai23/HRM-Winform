@@ -17,17 +17,17 @@ namespace FRONTENDPlayer
         public frmLuong()
         {
             ThongBao.Load_TableLuong += load_data;
-            ThongBao.Load_TableDM_ChucVu += load_data;
-            ThongBao.Load_TableNhanVien += load_data;
+            //ThongBao.Load_TableDM_ChucVu += load_data;
+            //ThongBao.Load_TableNhanVien += load_data;
             InitializeComponent();
         }
         NgayNghiBackEnd ngayNghiBackEnd = new NgayNghiBackEnd();
 
         public void load_data()
         {
+            ngayNghiBackEnd.UpdateLuong();
             this.luongTableAdapter.FillBy(this.hRMDataSet.Luong);
             gridView1.OptionsBehavior.Editable = false;
-            ngayNghiBackEnd.UpdateLuong();
         }
 
         private void Luong_Load(object sender, EventArgs e)
@@ -40,6 +40,7 @@ namespace FRONTENDPlayer
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            ThongBao.Load_TableLuong -= load_data;
             this.Close();
         }
 

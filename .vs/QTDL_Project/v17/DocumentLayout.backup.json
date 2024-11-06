@@ -3,52 +3,28 @@
   "WorkspaceRootPath": "D:\\GitClone\\HRM-Winform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|d:\\gitclone\\hrm-winform\\logicplayer\\logic_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|solutionrelative:logicplayer\\logic_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|d:\\gitclone\\hrm-winform\\logicplayer\\ngaynghibackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|solutionrelative:logicplayer\\ngaynghibackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\frmchucvu1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmchucvu1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\frmdanhmucluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmdanhmucluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\frmluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|d:\\gitclone\\hrm-winform\\logicplayer\\thongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|solutionrelative:logicplayer\\thongbao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmngaynghi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\suanhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\suanhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\suanhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\suanhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\frmluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\frmluong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|d:\\gitclone\\hrm-winform\\frontendplayer\\suachucvu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,21 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 308,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Logic_TaiKhoan.cs",
-              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\LOGICPlayer\\Logic_TaiKhoan.cs",
-              "RelativeDocumentMoniker": "LOGICPlayer\\Logic_TaiKhoan.cs",
-              "ToolTip": "D:\\GitClone\\HRM-Winform\\LOGICPlayer\\Logic_TaiKhoan.cs",
-              "RelativeToolTip": "LOGICPlayer\\Logic_TaiKhoan.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAIA0wLgAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T06:42:57.626Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -115,135 +78,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\Form1.cs",
-              "RelativeDocumentMoniker": "FRONTENDPlayer\\Form1.cs",
-              "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\Form1.cs [Design]",
-              "RelativeToolTip": "FRONTENDPlayer\\Form1.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "frmNgayNghi.cs [Design]",
+              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmNgayNghi.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\frmNgayNghi.cs",
+              "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmNgayNghi.cs [Design]",
+              "RelativeToolTip": "FRONTENDPlayer\\frmNgayNghi.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T06:19:23.22Z",
+              "WhenOpened": "2024-11-06T14:25:52.443Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DangKy.cs [Design]",
-              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\DangKy.cs",
-              "RelativeDocumentMoniker": "FRONTENDPlayer\\DangKy.cs",
-              "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\DangKy.cs [Design]",
-              "RelativeToolTip": "FRONTENDPlayer\\DangKy.cs [Design]",
+              "Title": "SuaNhanVien.cs",
+              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\SuaNhanVien.cs",
+              "RelativeDocumentMoniker": "FRONTENDPlayer\\SuaNhanVien.cs",
+              "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\SuaNhanVien.cs",
+              "RelativeToolTip": "FRONTENDPlayer\\SuaNhanVien.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T06:21:26.662Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\Program.cs",
-              "RelativeDocumentMoniker": "FRONTENDPlayer\\Program.cs",
-              "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\Program.cs",
-              "RelativeToolTip": "FRONTENDPlayer\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T06:19:13.572Z",
+              "WhenOpened": "2024-11-06T14:10:36.18Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "frmChucVu1.cs",
-              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmChucVu1.cs",
-              "RelativeDocumentMoniker": "FRONTENDPlayer\\frmChucVu1.cs",
-              "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmChucVu1.cs",
-              "RelativeToolTip": "FRONTENDPlayer\\frmChucVu1.cs",
-              "ViewState": "AgIAACsAAAAAOY7jHMclwC4AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T05:26:23.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "frmLuong.cs",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmLuong.cs",
               "RelativeDocumentMoniker": "FRONTENDPlayer\\frmLuong.cs",
               "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmLuong.cs",
               "RelativeToolTip": "FRONTENDPlayer\\frmLuong.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T05:24:08.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ThongBao.cs",
-              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\LOGICPlayer\\ThongBao.cs",
-              "RelativeDocumentMoniker": "LOGICPlayer\\ThongBao.cs",
-              "ToolTip": "D:\\GitClone\\HRM-Winform\\LOGICPlayer\\ThongBao.cs",
-              "RelativeToolTip": "LOGICPlayer\\ThongBao.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T05:20:01.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmNhanVien.cs",
-              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmNhanVien.cs",
-              "RelativeDocumentMoniker": "FRONTENDPlayer\\frmNhanVien.cs",
-              "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmNhanVien.cs",
-              "RelativeToolTip": "FRONTENDPlayer\\frmNhanVien.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAxwDAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T05:12:23.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "NgayNghiBackEnd.cs",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\LOGICPlayer\\NgayNghiBackEnd.cs",
               "RelativeDocumentMoniker": "LOGICPlayer\\NgayNghiBackEnd.cs",
               "ToolTip": "D:\\GitClone\\HRM-Winform\\LOGICPlayer\\NgayNghiBackEnd.cs",
               "RelativeToolTip": "LOGICPlayer\\NgayNghiBackEnd.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAIA1wDwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T04:42:21.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmDanhMucLuong.cs",
-              "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmDanhMucLuong.cs",
-              "RelativeDocumentMoniker": "FRONTENDPlayer\\frmDanhMucLuong.cs",
-              "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmDanhMucLuong.cs",
-              "RelativeToolTip": "FRONTENDPlayer\\frmDanhMucLuong.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T05:31:07.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "frmNgayNghi.cs",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmNgayNghi.cs",
               "RelativeDocumentMoniker": "FRONTENDPlayer\\frmNgayNghi.cs",
               "ToolTip": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmNgayNghi.cs",
               "RelativeToolTip": "FRONTENDPlayer\\frmNgayNghi.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwHwAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwD8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T05:09:48.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "SuaNhanVien.cs [Design]",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\SuaNhanVien.cs",
               "RelativeDocumentMoniker": "FRONTENDPlayer\\SuaNhanVien.cs",
@@ -255,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "ChucVuBackEnd.cs",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\LOGICPlayer\\ChucVuBackEnd.cs",
               "RelativeDocumentMoniker": "LOGICPlayer\\ChucVuBackEnd.cs",
@@ -268,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "SuaChucVu.Designer.cs",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\SuaChucVu.Designer.cs",
               "RelativeDocumentMoniker": "FRONTENDPlayer\\SuaChucVu.Designer.cs",
@@ -281,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "ThemChucVu.Designer.cs",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\ThemChucVu.Designer.cs",
               "RelativeDocumentMoniker": "FRONTENDPlayer\\ThemChucVu.Designer.cs",
@@ -294,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "ThemCongTac.Designer.cs",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\ThemCongTac.Designer.cs",
               "RelativeDocumentMoniker": "FRONTENDPlayer\\ThemCongTac.Designer.cs",
@@ -307,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "frmChucVu1.cs [Design]",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmChucVu1.cs",
               "RelativeDocumentMoniker": "FRONTENDPlayer\\frmChucVu1.cs",
@@ -319,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
               "Title": "frmChucVu1.Designer.cs",
               "DocumentMoniker": "D:\\GitClone\\HRM-Winform\\FRONTENDPlayer\\frmChucVu1.Designer.cs",
               "RelativeDocumentMoniker": "FRONTENDPlayer\\frmChucVu1.Designer.cs",
