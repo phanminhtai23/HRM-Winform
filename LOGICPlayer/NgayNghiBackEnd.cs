@@ -25,6 +25,7 @@ namespace LOGICPlayer
 
                 foreach (var luong in dsLuong)
                 {
+                    Console.Write($"Luong: {luong}");
                     // Kiểm tra xem bản ghi tương ứng trong bảng NgayNghi có tồn tại không
                     var ngayNghiRecord = dsNgayNghi
                         .FirstOrDefault(n => n.MaNhanVien == luong.MaNhanVien && n.ThangNam == luong.ThangNam);
@@ -47,6 +48,8 @@ namespace LOGICPlayer
                     // Tính số ngày làm việc
                     int month = int.Parse(ngayNghi.ThangNam.Substring(0, 2));
                     int year = int.Parse(ngayNghi.ThangNam.Substring(3, 4));
+                    Console.Write($"{month}, {year}");
+
                     int ngayTrongThang = ngaylam;
                     int soNgayLam = (int)(ngayTrongThang - ngayNghi.SoNgayNghi);
 
