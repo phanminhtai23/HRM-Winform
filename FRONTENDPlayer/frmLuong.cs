@@ -1,13 +1,19 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraReports.UI;
+using DATAPlayer;
+using System.Data.SqlClient;
+using LOGICPlayer;
 
 namespace FRONTENDPlayer
 {
@@ -18,9 +24,16 @@ namespace FRONTENDPlayer
             InitializeComponent();
         }
 
+        Luong1 _bangLuong;
+        List<Luong1> _lstBangLuong;
+
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            InLuong inluong = new InLuong();
+            if (DialogResult.OK == inluong.ShowDialog())
+            {
 
+            }
         }
 
         public void load_data()
@@ -48,6 +61,15 @@ namespace FRONTENDPlayer
             {
 
             }
+        }
+
+        public class Luong1
+        {
+            public string MaNhanVien { get; set; }
+            public string TenNhanVien { get; set; } // Thêm thuộc tính này để chứa tên nhân viên
+            public string ThangNam { get; set; }
+            public int SoNgayLam { get; set; } // Kiểu int cho Số Ngày Làm
+            public int LuongThucLanh { get; set; } // Kiểu int cho Lương Thực Lãnh
         }
     }
 }
