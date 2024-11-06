@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChucVuBackEnd.cs" />
+    <Compile Include="InBackEnd.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ThongKeBackEnd.cs" />
     <Compile Include="NgayNghiBackEnd.cs" />

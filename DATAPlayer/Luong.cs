@@ -19,6 +19,12 @@ namespace DATAPlayer
         public Nullable<int> SoNgayLam { get; set; }
         public Nullable<int> LuongThucLanh { get; set; }
     
+        public string TenNhanVien { get; set; }
         public virtual NhanVien NhanVien { get; set; }
+
+        public List<Luong> getList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

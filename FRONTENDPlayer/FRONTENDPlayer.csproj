@@ -98,6 +98,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="InLuong.resx">
+      <DependentUpon>InLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="InLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InLuong.Designer.cs">
+      <DependentUpon>InLuong.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="rptBangLuong.resx">
+      <DependentUpon>rptBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="rptBangLuong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBangLuong.Designer.cs">
+      <DependentUpon>rptBangLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChonThongKe.cs">
       <SubType>Form</SubType>
     </Compile>

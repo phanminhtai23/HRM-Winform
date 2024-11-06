@@ -13,6 +13,8 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FRONTENDPlayer;
+
 
 namespace FRONTENDPlayer
 {
@@ -36,7 +38,7 @@ namespace FRONTENDPlayer
             string selectedThangNam = ThangNamIn.DateTime.ToString("MM/yyyy");
 
             // Tạo danh sách Luong theo ThangNam
-            List<Luong> luongTheoThangNam = LayBangLuongTheoThangNam(selectedThangNam);
+            List<frmLuong.Luong1> luongTheoThangNam = LayBangLuongTheoThangNam(selectedThangNam);
 
             int tongLuongThucLanh = inBackend.TinhTongLuongThucLanh(selectedThangNam);
 
@@ -57,14 +59,17 @@ namespace FRONTENDPlayer
 
         }
 
-        public List<Luong> LayBangLuongTheoThangNam(string thangNam)
+
+        frmLuong frmLuong = new frmLuong();
+
+        public List<frmLuong.Luong1> LayBangLuongTheoThangNam(string thangNam)
         {
             using (var context = new HRMEntities())
             {
                 var query = from luong in context.Luong
                             join nhanVien in context.NhanVien on luong.MaNhanVien equals nhanVien.MaNhanVien
                             where luong.ThangNam == thangNam
-                            select new Luong
+                            select new frmLuong.Luong1
                             {
                                 MaNhanVien = luong.MaNhanVien,
                                 TenNhanVien = nhanVien.TenNhanVien,
@@ -74,6 +79,7 @@ namespace FRONTENDPlayer
                             };
 
                 return query.ToList();
+               
             }
         }
     }

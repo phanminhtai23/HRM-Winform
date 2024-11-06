@@ -15,20 +15,19 @@ namespace FRONTENDPlayer
             InitializeComponent();
         }
 
-        //List<Luong> _lst;
-        public rptBangLuong(List<Luong> _lstBangLuong)
+        List<frmLuong.Luong1> _lst;
+        public rptBangLuong(List<frmLuong.Luong1> _lstBangLuong)
         {
             InitializeComponent();
             this.DataSource = _lstBangLuong;
             loadData();
         }
 
-        public rptBangLuong( List<Luong> luongTheoThangNam, int tongLuongThucLanh)
+        public rptBangLuong( List<frmLuong.Luong1> luongTheoThangNam, int tongLuongThucLanh)
         {
             InitializeComponent();
             this.DataSource = luongTheoThangNam;
             lblTongLuong.Text = tongLuongThucLanh.ToString("N0");
-            lblLuongThucLanh.TextFormatString = "{0:N0}";
             loadData();
         }
 
