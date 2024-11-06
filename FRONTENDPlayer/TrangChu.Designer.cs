@@ -332,6 +332,7 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("TrangChu.IconOptions.Image")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "TrangChu";

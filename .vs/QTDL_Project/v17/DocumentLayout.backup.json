@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\logicplayer\\ngaynghibackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|solutionrelative:logicplayer\\ngaynghibackend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\frontendplayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\frontendplayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{2D7FA088-C4E6-4EBE-AF3F-3F947320E1D0}|FRONTENDPlayer\\FRONTENDPlayer.csproj|solutionrelative:frontendplayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\logicplayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|solutionrelative:logicplayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2767DE12-B98C-4B46-B3EC-030FF02E6DC5}|DATAPlayer\\DATAPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\dataplayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{2767DE12-B98C-4B46-B3EC-030FF02E6DC5}|DATAPlayer\\DATAPlayer.csproj|solutionrelative:dataplayer\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2767DE12-B98C-4B46-B3EC-030FF02E6DC5}|DATAPlayer\\DATAPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\dataplayer\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{2767DE12-B98C-4B46-B3EC-030FF02E6DC5}|DATAPlayer\\DATAPlayer.csproj|solutionrelative:dataplayer\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+      "AbsoluteMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|c:\\users\\minh tai\\desktop\\qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\project\\hrm-winform\\logicplayer\\logic_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB7F520A-F817-46E7-BC48-5F24D72A14C8}|LOGICPlayer\\LOGICPlayer.csproj|solutionrelative:logicplayer\\logic_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 308,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,80 +38,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\Program.cs",
-              "RelativeDocumentMoniker": "FRONTENDPlayer\\Program.cs",
-              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\Program.cs",
-              "RelativeToolTip": "FRONTENDPlayer\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAmwBcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T07:49:39.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NgayNghiBackEnd.cs",
-              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\NgayNghiBackEnd.cs",
-              "RelativeDocumentMoniker": "LOGICPlayer\\NgayNghiBackEnd.cs",
-              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\NgayNghiBackEnd.cs",
-              "RelativeToolTip": "LOGICPlayer\\NgayNghiBackEnd.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwGYAAAAnAAAAAAAAAA==",
+              "Title": "Logic_TaiKhoan.cs",
+              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\Logic_TaiKhoan.cs",
+              "RelativeDocumentMoniker": "LOGICPlayer\\Logic_TaiKhoan.cs",
+              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\Logic_TaiKhoan.cs",
+              "RelativeToolTip": "LOGICPlayer\\Logic_TaiKhoan.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAowGEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T07:32:29.91Z",
+              "WhenOpened": "2024-11-06T11:49:21.755Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\App.config",
-              "RelativeDocumentMoniker": "LOGICPlayer\\App.config",
-              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\LOGICPlayer\\App.config",
-              "RelativeToolTip": "LOGICPlayer\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-06T07:31:50.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\App.config",
-              "RelativeDocumentMoniker": "FRONTENDPlayer\\App.config",
-              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\FRONTENDPlayer\\App.config",
-              "RelativeToolTip": "FRONTENDPlayer\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAADCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-06T07:25:35.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.Config",
-              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\DATAPlayer\\App.Config",
-              "RelativeDocumentMoniker": "DATAPlayer\\App.Config",
-              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\DATAPlayer\\App.Config",
-              "RelativeToolTip": "DATAPlayer\\App.Config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-06T07:25:11.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Model1.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\DATAPlayer\\Model1.edmx",
-              "RelativeDocumentMoniker": "DATAPlayer\\Model1.edmx",
-              "ToolTip": "C:\\Users\\MINH TAI\\Desktop\\Qu\u1EA3n tr\u1ECB d\u1EEF li\u1EC7u\\Project\\HRM-Winform\\DATAPlayer\\Model1.edmx [Diagram1]",
-              "RelativeToolTip": "DATAPlayer\\Model1.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-11-06T07:24:52.686Z",
-              "EditorCaption": " [Diagram1]"
             }
           ]
         },

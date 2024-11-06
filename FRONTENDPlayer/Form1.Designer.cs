@@ -201,6 +201,7 @@
             this.ClientSize = new System.Drawing.Size(918, 606);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Dangnhap.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dangnhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

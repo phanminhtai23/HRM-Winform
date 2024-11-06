@@ -247,6 +247,7 @@
             this.ClientSize = new System.Drawing.Size(918, 606);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("DangKy.IconOptions.Image")));
             this.Name = "DangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangKy";

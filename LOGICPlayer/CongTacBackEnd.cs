@@ -42,7 +42,7 @@ namespace LOGICPlayer
         }
         public bool UpdateCongTac(QT_CongTac congTacSua)
         {
-            string connectionString = "Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
             string query = "UPDATE QT_CongTac SET ";
             List<string> updateFields = new List<string>();
             if (congTacSua.BatDau.HasValue)
