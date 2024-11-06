@@ -52,3 +52,15 @@ C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlaye
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.Up2Date
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.dll
 C:\Users\MINH TAI\Desktop\Quản trị dữ liệu\Project\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.pdb
+D:\GitClone\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.dll.config
+D:\GitClone\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.dll
+D:\GitClone\HRM-Winform\DATAPlayer\bin\Debug\DATAPlayer.pdb
+D:\GitClone\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.dll
+D:\GitClone\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitClone\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.xml
+D:\GitClone\HRM-Winform\DATAPlayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitClone\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.AssemblyReference.cache
+D:\GitClone\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.CoreCompileInputs.cache
+D:\GitClone\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.csproj.Up2Date
+D:\GitClone\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.dll
+D:\GitClone\HRM-Winform\DATAPlayer\obj\Debug\DATAPlayer.pdb

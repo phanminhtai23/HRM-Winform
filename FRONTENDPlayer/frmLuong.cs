@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using LOGICPlayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,17 +16,16 @@ namespace FRONTENDPlayer
     {
         public frmLuong()
         {
+            ThongBao.Load_TableLuong += load_data;
             InitializeComponent();
         }
-
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
+        NgayNghiBackEnd ngayNghiBackEnd = new NgayNghiBackEnd();
 
         public void load_data()
         {
             this.luongTableAdapter.FillBy(this.hRMDataSet.Luong);
+            gridView1.OptionsBehavior.Editable = false;
+            ngayNghiBackEnd.UpdateLuong();
         }
 
         private void Luong_Load(object sender, EventArgs e)

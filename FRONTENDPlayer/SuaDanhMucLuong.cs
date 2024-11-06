@@ -22,12 +22,13 @@ namespace FRONTENDPlayer
             InitializeComponent();
             this.maNhanVien = maNhanVien;
 
-            // Hiển thị dữ liệu vào các TextBox
+            // Hiển thị dữ liệu vào các TextBox không có dấu phân cách
             textBox_MaNhanVien.Text = maNhanVien;
-            textBox_LuongCoBan.Text = luongCoBan?.ToString() ?? string.Empty;
-            textBox_PhuCap.Text = phuCap?.ToString() ?? string.Empty;
-            textBox_KhauTruThue.Text = khauTruThue?.ToString() ?? string.Empty;
+            textBox_LuongCoBan.Text = luongCoBan?.ToString("F0") ?? string.Empty;
+            textBox_PhuCap.Text = phuCap?.ToString("F0") ?? string.Empty;
+            textBox_KhauTruThue.Text = khauTruThue?.ToString("F0") ?? string.Empty;
         }
+
 
         private void simpleButton_Luu_Click(object sender, EventArgs e)
         {

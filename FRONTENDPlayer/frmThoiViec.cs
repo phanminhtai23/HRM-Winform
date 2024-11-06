@@ -15,9 +15,11 @@ namespace FRONTENDPlayer
 {
     public partial class frmThoiViec : DevExpress.XtraEditors.XtraForm
     {
+
         public frmThoiViec()
         {
             ThongBao.Load_TableThoiViec += LoadData;
+            ThongBao.Load_DM_Luong += LoadData;
             InitializeComponent();
         }
         NhanVienBackEnd nhanvienbackend = new NhanVienBackEnd();
@@ -79,6 +81,7 @@ namespace FRONTENDPlayer
                 MessageBox.Show("Cho làm việc lại thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
                 ThongBao.CapNhatBang_LamViecLai();
+                ThongBao.CapNhatBang_DMLuong();
             }
             catch
             {
@@ -86,10 +89,6 @@ namespace FRONTENDPlayer
             }
         }
 
-        private void gcDanhSach_ThoiViec_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void barButtonItem1_TaiLai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

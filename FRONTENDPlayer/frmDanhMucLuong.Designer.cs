@@ -221,6 +221,8 @@
             this.colLuongCoBan.Visible = true;
             this.colLuongCoBan.VisibleIndex = 2;
             this.colLuongCoBan.Width = 87;
+            this.colLuongCoBan.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colLuongCoBan.DisplayFormat.FormatString = "N0";
             // 
             // colPhuCap
             // 
@@ -231,6 +233,8 @@
             this.colPhuCap.Visible = true;
             this.colPhuCap.VisibleIndex = 3;
             this.colPhuCap.Width = 87;
+            this.colPhuCap.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colPhuCap.DisplayFormat.FormatString = "N0";
             // 
             // colKhauTruThue
             // 
@@ -241,6 +245,8 @@
             this.colKhauTruThue.Visible = true;
             this.colKhauTruThue.VisibleIndex = 4;
             this.colKhauTruThue.Width = 87;
+            this.colKhauTruThue.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colKhauTruThue.DisplayFormat.FormatString = "N0";
             // 
             // dM_LuongTableAdapter
             // 

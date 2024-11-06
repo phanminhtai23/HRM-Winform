@@ -95,7 +95,7 @@
             // 
             // simpleButton_Huy
             // 
-            this.simpleButton_Huy.Location = new System.Drawing.Point(288, 209);
+            this.simpleButton_Huy.Location = new System.Drawing.Point(369, 200);
             this.simpleButton_Huy.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton_Huy.Name = "simpleButton_Huy";
             this.simpleButton_Huy.Size = new System.Drawing.Size(88, 28);
@@ -105,7 +105,7 @@
             // 
             // simpleButton_Luu
             // 
-            this.simpleButton_Luu.Location = new System.Drawing.Point(384, 209);
+            this.simpleButton_Luu.Location = new System.Drawing.Point(259, 200);
             this.simpleButton_Luu.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton_Luu.Name = "simpleButton_Luu";
             this.simpleButton_Luu.Size = new System.Drawing.Size(88, 28);

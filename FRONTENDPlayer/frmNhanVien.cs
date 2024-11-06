@@ -20,6 +20,7 @@ namespace FRONTENDPlayer
         public frmNhanVien()
         {
             ThongBao.Load_TableLamViec += LoadData;
+            ThongBao.Load_DM_Luong += LoadData;
             InitializeComponent();
         }
 
@@ -29,6 +30,7 @@ namespace FRONTENDPlayer
         {
             gcDanhSach.DataSource = nhanvienbackend.LoadDataTable_DangLamViec();
             gvDanhSach.OptionsBehavior.Editable = false;
+            nhanvienbackend.Update_DMLuong();
         }
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
@@ -43,6 +45,7 @@ namespace FRONTENDPlayer
                 
             }
             LoadData();
+            ThongBao.CapNhatBang_DMLuong();
         }
 
         private void Sua_NV_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -94,6 +97,7 @@ namespace FRONTENDPlayer
                 
             }
             LoadData();
+            ThongBao.CapNhatBang_DMLuong();
         }
 
 
@@ -135,22 +139,13 @@ namespace FRONTENDPlayer
                 {
                     XtraMessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();  // Reload data after deletion
+                    ThongBao.CapNhatBang_DMLuong();
                 }
                 else
                 {
                     XtraMessageBox.Show("Xóa nhân viên thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void barDockingMenuItem1_ListItemClick(object sender, DevExpress.XtraBars.ListItemClickEventArgs e)
-        {
-
-        }
-
-        private void gcDanhSach_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void ChoThoiViec_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -200,6 +195,7 @@ namespace FRONTENDPlayer
                 MessageBox.Show("Cho thôi việc thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
                 ThongBao.CapNhatBang_ChoThoiViec();
+                ThongBao.CapNhatBang_DMLuong();
             }
             catch
             {

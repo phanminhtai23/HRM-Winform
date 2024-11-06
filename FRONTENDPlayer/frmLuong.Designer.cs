@@ -106,7 +106,6 @@
             this.barButtonItem2.Id = 1;
             this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
             this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -258,6 +257,8 @@
             this.colLuongThucLanh.Visible = true;
             this.colLuongThucLanh.VisibleIndex = 5;
             this.colLuongThucLanh.Width = 94;
+            this.colLuongThucLanh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.colLuongThucLanh.DisplayFormat.FormatString = "N0";
             // 
             // luongTableAdapter
             // 

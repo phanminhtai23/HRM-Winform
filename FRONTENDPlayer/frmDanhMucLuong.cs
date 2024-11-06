@@ -16,31 +16,27 @@ namespace FRONTENDPlayer
     public partial class frmDanhMucLuong : DevExpress.XtraEditors.XtraForm
     {
         private BackendDMLuong backend = new BackendDMLuong();
+        NhanVienBackEnd nhavienBE = new NhanVienBackEnd();
 
         public frmDanhMucLuong()
         {
+            ThongBao.Load_DM_Luong += LoadData;
             InitializeComponent();
         }
 
+        private void LoadData()
+        {
+            //this.dM_LuongTableAdapter.FillBy(this.hRMDataSet.DM_Luong);
+            gridControl1.DataSource = backend.LoadDataTable();
+            gridView1.OptionsBehavior.Editable = false;
+            nhavienBE.Update_DMLuong();
+        }
         private void frmDanhMucLuong_Load(object sender, EventArgs e)
         {
-            this.dM_LuongTableAdapter.FillBy(this.hRMDataSet.DM_Luong);
+            LoadData();
         }
 
-        private void Them_DMLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            string maNhanVien = "Mã nhân viên mới"; // Giá trị mã nhân viên mới, tùy chỉnh
-            if (backend.ThemLuongMoi(maNhanVien))
-            {
-                MessageBox.Show("Đã thêm lương mới cho nhân viên.");
-                this.dM_LuongTableAdapter.Fill(this.hRMDataSet.DM_Luong);
-            }
-            else
-            {
-                MessageBox.Show("Thêm lương thất bại.");
-            }
-        }
-
+  
         private void Sua_DMLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (gridView1.GetSelectedRows().Length > 0)
@@ -55,7 +51,8 @@ namespace FRONTENDPlayer
                 if (suaDanhMucLuong.ShowDialog() == DialogResult.OK)
                 {
                     // Tải lại dữ liệu sau khi sửa
-                    this.dM_LuongTableAdapter.FillBy(this.hRMDataSet.DM_Luong);
+                    //this.dM_LuongTableAdapter.FillBy(this.hRMDataSet.DM_Luong);
+                    LoadData();
                 }
             }
             else

@@ -10,7 +10,28 @@ namespace LOGICPlayer
 {
     public class BackendDMLuong
     {
-        private string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+        readonly HRMEntities Adapter = new HRMEntities();
+        public List<object> LoadDataTable()
+        {
+            return Adapter.DM_Luong
+                .AsNoTracking()
+                .Join(
+                    Adapter.NhanVien.Where(nv => nv.TinhTrangLamViec == true),  // Chỉ lấy nhân viên đang làm việc
+                    dmLuong => dmLuong.MaNhanVien,  // Khóa ngoại ở DM_Luong
+                    nv => nv.MaNhanVien,  // Khóa chính ở NhanVien
+                    (dmLuong, nv) => new  // Kết quả sau khi join
+                    {
+                        MaNhanVien = dmLuong.MaNhanVien,
+                        TenNhanVien = nv.TenNhanVien,
+                        LuongCoBan = dmLuong.LuongCoBan,
+                        PhuCap = dmLuong.PhuCap,
+                        KhauTruThue = dmLuong.KhauTruThue
+                    })
+                .ToList<object>();
+        }
+
+
+        private string connectionString = "Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
 
         // Thêm lương cho nhân viên mới với các hệ số là null
         public bool ThemLuongMoi(string maNhanVien)

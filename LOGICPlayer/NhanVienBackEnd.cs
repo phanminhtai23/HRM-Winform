@@ -139,54 +139,82 @@ namespace LOGICPlayer
             return chucVu?.MaChucVu; // Trả về mã chức vụ hoặc null nếu không tìm thấy
         }
 
-        public bool UpdateNhanVien(NhanVien nhanVienSua)
+        public void Update_DMLuong()
         {
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
-            string query = "UPDATE NhanVien SET ";
-            List<string> updateFields = new List<string>();
-
-            if (!string.IsNullOrEmpty(nhanVienSua.TenNhanVien))
-                updateFields.Add("TenNhanVien = @TenNhanVien");
-            if (nhanVienSua.NgaySinh.HasValue)
-                updateFields.Add("NgaySinh = @NgaySinh");
-            if (!string.IsNullOrEmpty(nhanVienSua.DiaChi))
-                updateFields.Add("DiaChi = @DiaChi");
-            if (!string.IsNullOrEmpty(nhanVienSua.SoDienThoai))
-                updateFields.Add("SoDienThoai = @SoDienThoai");
-            if (!string.IsNullOrEmpty(nhanVienSua.MaPhongBan))
-                updateFields.Add("MaPhongBan = @MaPhongBan");
-            if (!string.IsNullOrEmpty(nhanVienSua.MaChucVu))
-                updateFields.Add("MaChucVu = @MaChucVu");
-
-            if (updateFields.Count == 0)
-                return false;  // Không có gì để cập nhật
-
-            query += string.Join(", ", updateFields) + " WHERE MaNhanVien = @MaNhanVien";
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@MaNhanVien", nhanVienSua.MaNhanVien);
-                        if (!string.IsNullOrEmpty(nhanVienSua.TenNhanVien))
-                            cmd.Parameters.AddWithValue("@TenNhanVien", nhanVienSua.TenNhanVien);
-                        if (nhanVienSua.NgaySinh.HasValue)
-                            cmd.Parameters.AddWithValue("@NgaySinh", nhanVienSua.NgaySinh.Value);
-                        if (!string.IsNullOrEmpty(nhanVienSua.DiaChi))
-                            cmd.Parameters.AddWithValue("@DiaChi", nhanVienSua.DiaChi);
-                        if (!string.IsNullOrEmpty(nhanVienSua.SoDienThoai))
-                            cmd.Parameters.AddWithValue("@SoDienThoai", nhanVienSua.SoDienThoai);
-                        if (!string.IsNullOrEmpty(nhanVienSua.MaPhongBan))
-                            cmd.Parameters.AddWithValue("@MaPhongBan", nhanVienSua.MaPhongBan);
-                        if (!string.IsNullOrEmpty(nhanVienSua.MaChucVu))
-                            cmd.Parameters.AddWithValue("@MaChucVu", nhanVienSua.MaChucVu);
+                var dsNhanVien = Adapter.NhanVien.ToList();
+                var dsDMLuong = Adapter.DM_Luong.ToList();
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0;
+                // Step 1: Remove records from DM_Luong if corresponding employee record doesn't exist
+                foreach (var luong in dsDMLuong)
+                {
+                    var nhanVienRecord = dsNhanVien.FirstOrDefault(n => n.MaNhanVien == luong.MaNhanVien);
+                    if (nhanVienRecord == null)
+                    {
+                        Adapter.DM_Luong.Remove(luong);
                     }
                 }
+                Adapter.SaveChanges();
+
+                // Step 2: Add new records in DM_Luong for employees without existing records
+                foreach (var nhanvien in dsNhanVien)
+                {
+                    var luongRecord = dsDMLuong.FirstOrDefault(l => l.MaNhanVien == nhanvien.MaNhanVien);
+
+                    if (luongRecord == null)
+                    {
+                        // Create a new DM_Luong record if it doesn't exist for this employee
+                        DM_Luong dmLuongMoi = new DM_Luong
+                        {
+                            MaNhanVien = nhanvien.MaNhanVien,
+                            LuongCoBan = null,
+                            PhuCap = null,
+                            KhauTruThue = null
+                        };
+                        Adapter.DM_Luong.Add(dmLuongMoi);
+                    }
+                }
+
+                // Save changes after adding any new records
+                Adapter.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi: " + ex.Message);
+            }
+        }
+
+
+
+        public bool UpdateNhanVien(NhanVien nhanVienSua)
+        {
+            try
+            {
+                // Kiểm tra xem đối tượng nhân viên cần cập nhật có tồn tại hay không
+                var nhanVien = Adapter.NhanVien.FirstOrDefault(x => x.MaNhanVien == nhanVienSua.MaNhanVien);
+                if (nhanVien == null)
+                {
+                    throw new Exception($"Nhân viên với mã {nhanVienSua.MaNhanVien} không tồn tại.");
+                }
+
+                // Cập nhật các trường cần thiết nếu có dữ liệu
+                if (!string.IsNullOrEmpty(nhanVienSua.TenNhanVien))
+                    nhanVien.TenNhanVien = nhanVienSua.TenNhanVien;
+                if (nhanVienSua.NgaySinh.HasValue)
+                    nhanVien.NgaySinh = nhanVienSua.NgaySinh;
+                if (!string.IsNullOrEmpty(nhanVienSua.DiaChi))
+                    nhanVien.DiaChi = nhanVienSua.DiaChi;
+                if (!string.IsNullOrEmpty(nhanVienSua.SoDienThoai))
+                    nhanVien.SoDienThoai = nhanVienSua.SoDienThoai;
+                if (!string.IsNullOrEmpty(nhanVienSua.MaPhongBan))
+                    nhanVien.MaPhongBan = nhanVienSua.MaPhongBan;
+                if (!string.IsNullOrEmpty(nhanVienSua.MaChucVu))
+                    nhanVien.MaChucVu = nhanVienSua.MaChucVu;
+
+                // Lưu các thay đổi vào CSDL
+                Adapter.SaveChanges();
+                return true;
             }
             catch (Exception ex)
             {
@@ -194,6 +222,7 @@ namespace LOGICPlayer
                 return false;
             }
         }
+
 
         public bool ChoThoiViec(NhanVien nhanVien)
         {
@@ -242,22 +271,38 @@ namespace LOGICPlayer
                 {
                     throw new ArgumentNullException(nameof(nhanVienMoi), "Nhân viên mới không được null");
                 }
-                //Kiểm tra mã nhân viên đã tồn tại chưa
+
+                // Kiểm tra mã nhân viên đã tồn tại chưa
                 var existingNhanVien = Adapter.NhanVien.FirstOrDefault(x => x.MaNhanVien == nhanVienMoi.MaNhanVien);
                 if (existingNhanVien != null)
                 {
                     throw new Exception($"Mã nhân viên {nhanVienMoi.MaNhanVien} đã tồn tại.");
                 }
 
+                // Thêm nhân viên vào bảng NhanVien
                 Adapter.NhanVien.Add(nhanVienMoi);
                 Adapter.SaveChanges(); // Lưu thay đổi vào CSDL
-                return true; // Thêm thành công
+
+                // Thêm bản ghi mới vào bảng DM_Luong với MaNhanVien vừa thêm
+                DM_Luong dmLuongMoi = new DM_Luong
+                {
+                    MaNhanVien = nhanVienMoi.MaNhanVien,
+                    LuongCoBan = null,
+                    PhuCap = null,
+                    KhauTruThue = null
+                };
+
+                Adapter.DM_Luong.Add(dmLuongMoi);
+                Adapter.SaveChanges(); // Lưu thay đổi vào CSDL cho DM_Luong
+
+                return true; // Thêm thành công cả hai bảng
             }
             catch (Exception ex)
             {
                 throw new Exception("Lỗi khi thêm nhân viên mới", ex);
             }
         }
+
         public bool DeleteNhanVien(string maNV)
         {
             try

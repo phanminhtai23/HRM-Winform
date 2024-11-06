@@ -26,7 +26,8 @@ namespace FRONTENDPlayer
         {
             // TODO: This line of code loads data into the 'hRMDataSet.PhongBan' table. You can move, or remove it, as needed.
             this.phongBanTableAdapter.Fill(this.hRMDataSet.PhongBan);
-  
+            gridView1_PhongBan.OptionsBehavior.Editable = false;
+
 
         }
 

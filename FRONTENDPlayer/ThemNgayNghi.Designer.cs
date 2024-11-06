@@ -192,6 +192,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEdit1_MaNhanVien.Properties.DataSource = this.nhanVienBindingSource;
             this.lookUpEdit1_MaNhanVien.Properties.DisplayMember = "MaNhanVien";
+            this.lookUpEdit1_MaNhanVien.Properties.NullText = "Mã nhân viên";
             this.lookUpEdit1_MaNhanVien.Size = new System.Drawing.Size(158, 34);
             this.lookUpEdit1_MaNhanVien.TabIndex = 20;
             // 

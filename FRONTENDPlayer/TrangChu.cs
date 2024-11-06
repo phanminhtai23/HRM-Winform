@@ -85,15 +85,6 @@ namespace FRONTENDPlayer
             openForm(typeof(frmNhanVien));
         }
 
-        private void HopDong_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            openForm(typeof (frmHopDong));
-        }
-
-        private void KhienThuongKyLuat_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            openForm(typeof(frmKhenThuongKyLuat));
-        }
 
         private void DieuChuyen_ItemClick(object sender, ItemClickEventArgs e)
         {

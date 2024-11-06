@@ -17,9 +17,10 @@ namespace FRONTENDPlayer
     {
         public frmNgayNghi()
         {
+            ThongBao.Load_TableLuong += load_data;
             InitializeComponent();
         }
-
+        NgayNghiBackEnd ngayNghiBackEnd = new NgayNghiBackEnd();
         private void frmNgayNghi_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hRMDataSet.NgayNghi' table. You can move, or remove it, as needed.
@@ -30,6 +31,9 @@ namespace FRONTENDPlayer
         public void load_data()
         {
             this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
+            gridView1.OptionsBehavior.Editable = false;
+            ngayNghiBackEnd.UpdateLuong();
+
         }
         // click thêm ngày nghỉ
         private void barButtonItem1_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -38,6 +42,7 @@ namespace FRONTENDPlayer
             if (themNgayNghi.ShowDialog() == DialogResult.OK)
             {
                 load_data();
+                ThongBao.CapNhatBang_Luong();
             }
         }
 
@@ -68,6 +73,7 @@ namespace FRONTENDPlayer
                 {
                     // Sau khi sửa, tải lại dữ liệu vào GridControl
                     load_data();
+                    ThongBao.CapNhatBang_Luong();
                 }
 
             }
@@ -102,12 +108,13 @@ namespace FRONTENDPlayer
                     ngayNghi.SoNgayNghi = soNgayNghi;
                     ngayNghi.GhiChu = ghiChu;
 
-                    NgayNghiBackEnd ngayNghiBackEnd = new NgayNghiBackEnd();
+                    
                     ngayNghiBackEnd.Remove(ngayNghi);
 
 
                     MessageBox.Show("Xóa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
+                    ThongBao.CapNhatBang_Luong();
                 }
                 catch
                 {

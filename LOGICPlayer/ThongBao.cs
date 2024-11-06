@@ -21,6 +21,18 @@ namespace LOGICPlayer
         {
             Load_TableLamViec?.Invoke();
         }
+        public static event Action Load_DM_Luong;
+
+        public static void CapNhatBang_DMLuong()
+        {
+            Load_DM_Luong?.Invoke();
+        }
+        public static event Action Load_TableLuong;
+
+        public static void CapNhatBang_Luong()
+        {
+            Load_TableLuong?.Invoke();
+        }
 
     }
 }

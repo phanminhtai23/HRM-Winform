@@ -184,7 +184,6 @@
             this.barDockingMenuItem1.Caption = "barDockingMenuItem1";
             this.barDockingMenuItem1.Id = 6;
             this.barDockingMenuItem1.Name = "barDockingMenuItem1";
-            this.barDockingMenuItem1.ListItemClick += new DevExpress.XtraBars.ListItemClickEventHandler(this.barDockingMenuItem1_ListItemClick);
             // 
             // gcDanhSach
             // 
@@ -197,7 +196,6 @@
             this.gcDanhSach.TabIndex = 14;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
-            this.gcDanhSach.Click += new System.EventHandler(this.gcDanhSach_Click);
             // 
             // gvDanhSach
             // 

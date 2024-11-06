@@ -243,7 +243,6 @@
             this.gcDanhSach_ThoiViec.TabIndex = 4;
             this.gcDanhSach_ThoiViec.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1_ChoThoiViec});
-            this.gcDanhSach_ThoiViec.Click += new System.EventHandler(this.gcDanhSach_ThoiViec_Click);
             // 
             // bar1
             // 
