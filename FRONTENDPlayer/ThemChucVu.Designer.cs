@@ -34,21 +34,24 @@
             this.label_HeSoLuong = new DevExpress.XtraEditors.LabelControl();
             this.textEdit_MaChucVu = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_TenChucVu = new DevExpress.XtraEditors.TextEdit();
-            this.comboBox_HeSoLuong = new System.Windows.Forms.ComboBox();
             this.dMChucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hRMDataSet = new FRONTENDPlayer.HRMDataSet();
             this.dM_ChucVuTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.DM_ChucVuTableAdapter();
             this.simpleButton_Luu = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton_Huy = new DevExpress.XtraEditors.SimpleButton();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.dMChucVuBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_MaChucVu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenChucVu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lable_MaChuVu
             // 
-            this.lable_MaChuVu.Location = new System.Drawing.Point(34, 32);
+            this.lable_MaChuVu.Location = new System.Drawing.Point(33, 32);
             this.lable_MaChuVu.Margin = new System.Windows.Forms.Padding(5);
             this.lable_MaChuVu.Name = "lable_MaChuVu";
             this.lable_MaChuVu.Size = new System.Drawing.Size(69, 16);
@@ -57,7 +60,7 @@
             // 
             // label_TenChucVu
             // 
-            this.label_TenChucVu.Location = new System.Drawing.Point(29, 76);
+            this.label_TenChucVu.Location = new System.Drawing.Point(28, 76);
             this.label_TenChucVu.Margin = new System.Windows.Forms.Padding(5);
             this.label_TenChucVu.Name = "label_TenChucVu";
             this.label_TenChucVu.Size = new System.Drawing.Size(74, 16);
@@ -66,7 +69,7 @@
             // 
             // label_HeSoLuong
             // 
-            this.label_HeSoLuong.Location = new System.Drawing.Point(30, 113);
+            this.label_HeSoLuong.Location = new System.Drawing.Point(29, 127);
             this.label_HeSoLuong.Margin = new System.Windows.Forms.Padding(5);
             this.label_HeSoLuong.Name = "label_HeSoLuong";
             this.label_HeSoLuong.Size = new System.Drawing.Size(73, 16);
@@ -80,7 +83,6 @@
             this.textEdit_MaChucVu.Name = "textEdit_MaChucVu";
             this.textEdit_MaChucVu.Size = new System.Drawing.Size(154, 34);
             this.textEdit_MaChucVu.TabIndex = 3;
-            this.textEdit_MaChucVu.EditValueChanged += new System.EventHandler(this.textEdit_MaChucVu_EditValueChanged);
             // 
             // textEdit_TenChucVu
             // 
@@ -89,24 +91,6 @@
             this.textEdit_TenChucVu.Name = "textEdit_TenChucVu";
             this.textEdit_TenChucVu.Size = new System.Drawing.Size(251, 34);
             this.textEdit_TenChucVu.TabIndex = 4;
-            this.textEdit_TenChucVu.EditValueChanged += new System.EventHandler(this.textEdit_TenChucVu_EditValueChanged);
-            // 
-            // comboBox_HeSoLuong
-            // 
-            this.comboBox_HeSoLuong.FormattingEnabled = true;
-            this.comboBox_HeSoLuong.Items.AddRange(new object[] {
-            "3.00",
-            "3.50",
-            "4.00",
-            "4.50",
-            "5.00",
-            "5.50",
-            "6.00"});
-            this.comboBox_HeSoLuong.Location = new System.Drawing.Point(112, 113);
-            this.comboBox_HeSoLuong.Name = "comboBox_HeSoLuong";
-            this.comboBox_HeSoLuong.Size = new System.Drawing.Size(121, 24);
-            this.comboBox_HeSoLuong.TabIndex = 5;
-            this.comboBox_HeSoLuong.SelectedIndexChanged += new System.EventHandler(this.comboBox_HeSoLuong_SelectedIndexChanged);
             // 
             // dMChucVuBindingSource
             // 
@@ -140,14 +124,35 @@
             this.simpleButton_Huy.Text = "Hủy";
             this.simpleButton_Huy.Click += new System.EventHandler(this.simpleButton_Huy_Click);
             // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(112, 118);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("HeSoLuong", "Hệ số lương")});
+            this.lookUpEdit1.Properties.DataSource = this.dMChucVuBindingSource1;
+            this.lookUpEdit1.Properties.DisplayMember = "HeSoLuong";
+            this.lookUpEdit1.Properties.NullText = "Hệ số lương";
+            this.lookUpEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lookUpEdit1.Properties.ValueMember = "HeSoLuong";
+            this.lookUpEdit1.Size = new System.Drawing.Size(125, 34);
+            this.lookUpEdit1.TabIndex = 12;
+            // 
+            // dMChucVuBindingSource1
+            // 
+            this.dMChucVuBindingSource1.DataMember = "DM_ChucVu";
+            this.dMChucVuBindingSource1.DataSource = this.hRMDataSet;
+            // 
             // ThemChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 180);
+            this.Controls.Add(this.lookUpEdit1);
             this.Controls.Add(this.simpleButton_Huy);
             this.Controls.Add(this.simpleButton_Luu);
-            this.Controls.Add(this.comboBox_HeSoLuong);
             this.Controls.Add(this.textEdit_TenChucVu);
             this.Controls.Add(this.textEdit_MaChucVu);
             this.Controls.Add(this.label_HeSoLuong);
@@ -161,6 +166,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_TenChucVu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMChucVuBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,11 +180,12 @@
         private DevExpress.XtraEditors.LabelControl label_HeSoLuong;
         private DevExpress.XtraEditors.TextEdit textEdit_MaChucVu;
         private DevExpress.XtraEditors.TextEdit textEdit_TenChucVu;
-        private System.Windows.Forms.ComboBox comboBox_HeSoLuong;
         private HRMDataSet hRMDataSet;
         private System.Windows.Forms.BindingSource dMChucVuBindingSource;
         private HRMDataSetTableAdapters.DM_ChucVuTableAdapter dM_ChucVuTableAdapter;
         private DevExpress.XtraEditors.SimpleButton simpleButton_Luu;
         private DevExpress.XtraEditors.SimpleButton simpleButton_Huy;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private System.Windows.Forms.BindingSource dMChucVuBindingSource1;
     }
 }

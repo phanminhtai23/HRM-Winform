@@ -17,6 +17,7 @@ namespace FRONTENDPlayer
     {
         public frmChucVu1()
         {
+            ThongBao.Load_TableDM_ChucVu += load_data;
             InitializeComponent();
         }
 
@@ -24,12 +25,15 @@ namespace FRONTENDPlayer
         {
             this.Close();
         }
-
+        public void load_data()
+        {
+            this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
+        }
         private void frmChucVu1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'hRMDataSet1.DM_ChucVu' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'hRMDataSet.DM_ChucVu' table. You can move, or remove it, as needed.
-            this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
+            load_data();
             gridView1.OptionsBehavior.Editable = false;
 
         }
@@ -40,6 +44,8 @@ namespace FRONTENDPlayer
             if (formthem.ShowDialog() == DialogResult.OK)
             {
                 this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
+                ThongBao.CapNhatBang_DMChucVu();
+                ThongBao.CapNhatBang_Luong();
             }
         }
 
@@ -64,6 +70,8 @@ namespace FRONTENDPlayer
                 {
                     // Sau khi sửa, tải lại dữ liệu vào GridControl
                     this.dM_ChucVuTableAdapter.Fill(this.hRMDataSet.DM_ChucVu);
+                    ThongBao.CapNhatBang_DMChucVu();
+                    ThongBao.CapNhatBang_Luong();
                 }
             }
             else
@@ -72,10 +80,6 @@ namespace FRONTENDPlayer
             }
         }
 
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Xoa_ChuVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

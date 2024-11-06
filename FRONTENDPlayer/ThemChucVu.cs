@@ -22,20 +22,7 @@ namespace FRONTENDPlayer
         }
         ChucVuBackEnd chucVuBackEnd = new ChucVuBackEnd();
 
-        private void textEdit_MaChucVu_EditValueChanged(object sender, EventArgs e)
-        {
-            
-        }
 
-        private void textEdit_TenChucVu_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox_HeSoLuong_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void ThemChucVu_Load(object sender, EventArgs e)
         {
@@ -53,10 +40,11 @@ namespace FRONTENDPlayer
         {
             try
             {
-                // Lay du lieu tu cac truong 
-                string maChucVu = textEdit_MaChucVu.Text;
+                // Lấy dữ liệu từ các trường
+                string maChucVu = textEdit_MaChucVu.Text.ToUpper();
                 string tenChucVu = textEdit_TenChucVu.Text;
                 decimal heSoLuong;
+
                 // Kiểm tra các điều kiện không được để trống
                 if (string.IsNullOrEmpty(maChucVu))
                 {
@@ -69,18 +57,19 @@ namespace FRONTENDPlayer
                     return;
                 }
 
-
                 if (string.IsNullOrEmpty(tenChucVu))
                 {
                     MessageBox.Show("Tên chức vụ không được để trống.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if (!decimal.TryParse(comboBox_HeSoLuong.Text, out heSoLuong))
+                if (!decimal.TryParse(lookUpEdit1.Text, out heSoLuong))
                 {
                     MessageBox.Show("Hệ số lương không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+     
 
                 // Kiểm tra trùng lặp mã hoặc tên chức vụ
                 if (chucVuBackEnd.IsDuplicate(maChucVu, tenChucVu))
@@ -88,6 +77,7 @@ namespace FRONTENDPlayer
                     MessageBox.Show("Mã hoặc tên chức vụ đã tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
                 bool result = chucVuBackEnd.AddChucVu(maChucVu, tenChucVu, heSoLuong);
 
                 if (result)
@@ -106,5 +96,6 @@ namespace FRONTENDPlayer
                 MessageBox.Show("Lỗi khi thêm chức vụ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

@@ -72,7 +72,7 @@ namespace FRONTENDPlayer
 
         private void Thoat_H_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            this.Close();
         }
 
         private void Thoat_ItemClick(object sender, ItemClickEventArgs e)

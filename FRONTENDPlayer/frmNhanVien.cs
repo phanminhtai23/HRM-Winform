@@ -19,6 +19,7 @@ namespace FRONTENDPlayer
     {
         public frmNhanVien()
         {
+            ThongBao.Load_TableNhanVien += LoadData;
             ThongBao.Load_TableLamViec += LoadData;
             ThongBao.Load_DM_Luong += LoadData;
             InitializeComponent();

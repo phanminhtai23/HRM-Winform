@@ -75,7 +75,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+            string connectionString = "Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
             // Truy vấn SQL kiểm tra tài khoản
             string query = "SELECT COUNT(1) FROM TaiKhoan WHERE TenTaiKhoan = @username AND MatKhau = @password";
             string query_Ktra_Actived = "SELECT TinhTrang FROM TaiKhoan WHERE TenTaiKhoan = @username AND MatKhau = @password";
@@ -147,7 +147,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source = localhost; Initial Catalog = HRM; Integrated Security = True";
+            string connectionString = "Data Source = MICHAEL\\SQLEXPRESS; Initial Catalog = HRM; Integrated Security = True";
 
             // Truy vấn SQL kiểm tra tài khoản
             string query = "SELECT COUNT(1) FROM TaiKhoan WHERE TenTaiKhoan = @username";
@@ -182,7 +182,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source = localhost; Initial Catalog = HRM; Integrated Security = True";
+            string connectionString = "Data Source = MICHAEL\\SQLEXPRESS; Initial Catalog = HRM; Integrated Security = True";
 
 
             // Tạo kết nối
@@ -224,7 +224,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+            string connectionString = "Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
 
             // Truy vấn SQL kiểm tra tài khoản
             string query = "INSERT INTO TaiKhoan (STT_Tk, TenTaiKhoan, MatKhau, Email, TinhTrang) VALUES (@count_acc, @Username, @Password, @Email, @TinhTrang)";
@@ -268,7 +268,7 @@ namespace LOGICPlayer
         {
             // Chuỗi kết nối đến cơ sở dữ liệu
             //Trust Server Certificate = True; Encrypt = True;
-            string connectionString = "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+            string connectionString = "Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
 
             // Truy vấn SQL kiểm tra tài khoản
             string query = "INSERT INTO TaiKhoan (STT_Tk, TenTaiKhoan, MatKhau, Email, TinhTrang) VALUES (@count_acc, @Username, @Password, @Email, @TinhTrang)";

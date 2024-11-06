@@ -17,6 +17,8 @@ namespace FRONTENDPlayer
         public frmLuong()
         {
             ThongBao.Load_TableLuong += load_data;
+            ThongBao.Load_TableDM_ChucVu += load_data;
+            ThongBao.Load_TableNhanVien += load_data;
             InitializeComponent();
         }
         NgayNghiBackEnd ngayNghiBackEnd = new NgayNghiBackEnd();
@@ -49,5 +51,21 @@ namespace FRONTENDPlayer
 
             }
         }
+        private void barButtonItem_InLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            InLuong inLuong = new InLuong();
+            if (inLuong.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+    }
+    public class Luong
+    {
+        public string MaNhanVien { get; set; }
+        public string TenNhanVien { get; set; } // Thêm thuộc tính này để chứa tên nhân viên
+        public string ThangNam { get; set; }
+        public int SoNgayLam { get; set; } // Kiểu int cho Số Ngày Làm
+        public int LuongThucLanh { get; set; } // Kiểu int cho Lương Thực Lãnh
     }
 }

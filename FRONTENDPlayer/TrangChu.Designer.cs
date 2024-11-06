@@ -38,9 +38,6 @@
             this.ChucVu = new DevExpress.XtraBars.BarButtonItem();
             this.ThoiViec = new DevExpress.XtraBars.BarButtonItem();
             this.Thoat_N = new DevExpress.XtraBars.BarButtonItem();
-            this.DoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
-            this.SauLuuDuLieu = new DevExpress.XtraBars.BarButtonItem();
-            this.KhoiPhucDuLieu = new DevExpress.XtraBars.BarButtonItem();
             this.Thoat_H = new DevExpress.XtraBars.BarButtonItem();
             this.ThoiGian = new DevExpress.XtraBars.BarButtonItem();
             this.NhanVien = new DevExpress.XtraBars.BarButtonItem();
@@ -59,10 +56,7 @@
             this.Luong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ThongTinLamViec = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ThongTinLuong = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.DanhMucThongKe = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.HeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.GiaoDien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
@@ -87,9 +81,6 @@
             this.ChucVu,
             this.ThoiViec,
             this.Thoat_N,
-            this.DoiMatKhau,
-            this.SauLuuDuLieu,
-            this.KhoiPhucDuLieu,
             this.Thoat_H,
             this.ThoiGian,
             this.NhanVien,
@@ -112,7 +103,6 @@
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.NhanSu,
             this.Luong,
-            this.ThongKe,
             this.HeThong});
             this.ribbon.Size = new System.Drawing.Size(1940, 242);
             this.ribbon.StatusBar = this.ribbonStatusBar;
@@ -174,30 +164,6 @@
             this.Thoat_N.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Thoat_N.ImageOptions.SvgImage")));
             this.Thoat_N.Name = "Thoat_N";
             this.Thoat_N.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Thoat_ItemClick);
-            // 
-            // DoiMatKhau
-            // 
-            this.DoiMatKhau.Caption = "Đổi Mật Khẩu";
-            this.DoiMatKhau.Id = 15;
-            this.DoiMatKhau.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("DoiMatKhau.ImageOptions.SvgImage")));
-            this.DoiMatKhau.Name = "DoiMatKhau";
-            this.DoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DoiMatKhau_ItemClick);
-            // 
-            // SauLuuDuLieu
-            // 
-            this.SauLuuDuLieu.Caption = "Sau Lưu Dữ Liệu";
-            this.SauLuuDuLieu.Id = 16;
-            this.SauLuuDuLieu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("SauLuuDuLieu.ImageOptions.SvgImage")));
-            this.SauLuuDuLieu.Name = "SauLuuDuLieu";
-            this.SauLuuDuLieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.SauLuuDuLieu_ItemClick);
-            // 
-            // KhoiPhucDuLieu
-            // 
-            this.KhoiPhucDuLieu.Caption = "Khôi Phục Dữ Liệu";
-            this.KhoiPhucDuLieu.Id = 17;
-            this.KhoiPhucDuLieu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("KhoiPhucDuLieu.ImageOptions.SvgImage")));
-            this.KhoiPhucDuLieu.Name = "KhoiPhucDuLieu";
-            this.KhoiPhucDuLieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.KhoiPhucDuLieu_ItemClick);
             // 
             // Thoat_H
             // 
@@ -326,41 +292,18 @@
             this.ThongTinLuong.Name = "ThongTinLuong";
             this.ThongTinLuong.Text = "Thông Tin Lương";
             // 
-            // ThongKe
-            // 
-            this.ThongKe.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.DanhMucThongKe});
-            this.ThongKe.Name = "ThongKe";
-            this.ThongKe.Text = "Thống Kê";
-            // 
-            // DanhMucThongKe
-            // 
-            this.DanhMucThongKe.ItemLinks.Add(this.TKNgayNghi);
-            this.DanhMucThongKe.ItemLinks.Add(this.TKLuong, true);
-            this.DanhMucThongKe.Name = "DanhMucThongKe";
-            this.DanhMucThongKe.Text = "Danh Mục Thống Kê";
-            // 
             // HeThong
             // 
             this.HeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
             this.GiaoDien});
             this.HeThong.Name = "HeThong";
             this.HeThong.Text = "Hệ Thống";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.DoiMatKhau);
-            this.ribbonPageGroup1.ItemLinks.Add(this.KhoiPhucDuLieu, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.SauLuuDuLieu, true);
-            this.ribbonPageGroup1.ItemLinks.Add(this.Thoat_H, true);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // GiaoDien
             // 
             this.GiaoDien.ItemLinks.Add(this.skinDropDownButtonItem1);
             this.GiaoDien.ItemLinks.Add(this.skinPaletteDropDownButtonItem2);
+            this.GiaoDien.ItemLinks.Add(this.Thoat_H, true);
             this.GiaoDien.Name = "GiaoDien";
             this.GiaoDien.Text = "Giao Diện";
             // 
@@ -420,17 +363,11 @@
         private DevExpress.XtraBars.BarButtonItem ThoiViec;
         private DevExpress.XtraBars.BarButtonItem Thoat_N;
         private DevExpress.XtraBars.Ribbon.RibbonPage HeThong;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarButtonItem DoiMatKhau;
-        private DevExpress.XtraBars.BarButtonItem SauLuuDuLieu;
-        private DevExpress.XtraBars.BarButtonItem KhoiPhucDuLieu;
         private DevExpress.XtraBars.BarButtonItem Thoat_H;
         private DevExpress.XtraBars.BarButtonItem ThoiGian;
         private DevExpress.XtraBars.BarButtonItem NhanVien;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ThongKe;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup DanhMucThongKe;
         private DevExpress.XtraBars.BarButtonItem CongTac;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;

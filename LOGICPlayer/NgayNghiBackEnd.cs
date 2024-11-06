@@ -12,6 +12,7 @@ namespace LOGICPlayer
         readonly HRMEntities Adapter = new HRMEntities();
         public List<NgayNghi> LoadDataTable() => Adapter.NgayNghi.AsNoTracking().ToList();
 
+        public int ngaylam = 24;
         public void UpdateLuong()
         {
             try
@@ -46,7 +47,7 @@ namespace LOGICPlayer
                     // Tính số ngày làm việc
                     int month = int.Parse(ngayNghi.ThangNam.Substring(0, 2));
                     int year = int.Parse(ngayNghi.ThangNam.Substring(3, 4));
-                    int ngayTrongThang = DateTime.DaysInMonth(year, month);
+                    int ngayTrongThang = ngaylam;
                     int soNgayLam = (int)(ngayTrongThang - ngayNghi.SoNgayNghi);
 
                     // Lấy thông tin lương cơ bản, phụ cấp và khấu trừ thuế từ bảng DM_Luong
@@ -126,7 +127,7 @@ namespace LOGICPlayer
                     int year = int.Parse(ThemNgayNghi.ThangNam.Substring(3, 4));
 
                     // Lấy tổng số ngày trong tháng
-                    int ngayTrongThang = DateTime.DaysInMonth(year, month);
+                    int ngayTrongThang = ngaylam;
 
                     // Tính số ngày làm việc
                     int soNgayLam = (int)(ngayTrongThang - ThemNgayNghi.SoNgayNghi);
@@ -205,7 +206,7 @@ namespace LOGICPlayer
                    Row.SoNgayNghi = UpdateNgayNghi.SoNgayNghi;
                    Row.GhiChu = UpdateNgayNghi.GhiChu;
                    Adapter.SaveChanges();
-
+                   UpdateLuong();
                    return true;
             }
             catch (Exception ex)

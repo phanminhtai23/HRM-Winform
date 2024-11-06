@@ -26,7 +26,7 @@ namespace FRONTENDPlayer
             textEdit_TenChucVu.Text = tenChucVu;
 
             // Gán giá trị cho comboBox_HeSoLuong
-            comboBox_HeSoLuong.SelectedItem = heSoLuong.ToString();
+            lookUpEdit1.EditValue = heSoLuong;
 
             this.AcceptButton = this.simpleButton_Luu;
         }
@@ -58,7 +58,7 @@ namespace FRONTENDPlayer
             }
 
             // Kiểm tra nếu giá trị trong comboBox hợp lệ và là decimal
-            if (!decimal.TryParse(comboBox_HeSoLuong.Text, out heSoLuongMoi) || heSoLuongMoi <= 0)
+            if (!decimal.TryParse(lookUpEdit1.Text, out heSoLuongMoi) || heSoLuongMoi <= 0)
             {
                 MessageBox.Show("Hệ số lương phải là một số hợp lệ lớn hơn 0.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -79,5 +79,6 @@ namespace FRONTENDPlayer
                 MessageBox.Show("Lỗi khi sửa chức vụ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

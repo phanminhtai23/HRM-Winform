@@ -168,6 +168,8 @@
             this.textBox_MaNhanVien.Name = "textBox_MaNhanVien";
             this.textBox_MaNhanVien.Size = new System.Drawing.Size(158, 23);
             this.textBox_MaNhanVien.TabIndex = 26;
+            this.textBox_MaNhanVien.Enabled = false;
+            this.textBox_MaNhanVien.ReadOnly = true;
             // 
             // SuaDanhMucLuong
             // 

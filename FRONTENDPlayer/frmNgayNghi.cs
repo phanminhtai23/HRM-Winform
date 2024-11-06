@@ -17,6 +17,8 @@ namespace FRONTENDPlayer
     {
         public frmNgayNghi()
         {
+            ThongBao.Load_TableDM_ChucVu += load_data;
+            ThongBao.Load_TableNhanVien += load_data;
             ThongBao.Load_TableLuong += load_data;
             InitializeComponent();
         }
@@ -43,6 +45,8 @@ namespace FRONTENDPlayer
             {
                 load_data();
                 ThongBao.CapNhatBang_Luong();
+                ThongBao.CapNhatBang_DMChucVu();
+                ThongBao.CapNhatBang_NhanVien();
             }
         }
 
@@ -74,6 +78,8 @@ namespace FRONTENDPlayer
                     // Sau khi sửa, tải lại dữ liệu vào GridControl
                     load_data();
                     ThongBao.CapNhatBang_Luong();
+                    ThongBao.CapNhatBang_DMChucVu();
+                    ThongBao.CapNhatBang_NhanVien();
                 }
 
             }
@@ -115,6 +121,8 @@ namespace FRONTENDPlayer
                     MessageBox.Show("Xóa thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
                     ThongBao.CapNhatBang_Luong();
+                    ThongBao.CapNhatBang_DMChucVu();
+                    ThongBao.CapNhatBang_NhanVien();
                 }
                 catch
                 {

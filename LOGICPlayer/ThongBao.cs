@@ -33,6 +33,18 @@ namespace LOGICPlayer
         {
             Load_TableLuong?.Invoke();
         }
+        public static event Action Load_TableDM_ChucVu;
+
+        public static void CapNhatBang_DMChucVu()
+        {
+            Load_TableDM_ChucVu?.Invoke();
+        }
+        public static event Action Load_TableNhanVien;
+
+        public static void CapNhatBang_NhanVien()
+        {
+            Load_TableNhanVien?.Invoke();
+        }
 
     }
 }

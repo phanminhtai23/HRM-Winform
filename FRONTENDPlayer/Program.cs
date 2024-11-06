@@ -21,7 +21,7 @@ namespace FRONTENDPlayer
             CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("vi-VN");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TrangChu());
+            Application.Run(new Dangnhap());
         }
     }
 }

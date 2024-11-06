@@ -33,7 +33,7 @@
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem_InLuong = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
@@ -72,7 +72,7 @@
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1,
-            this.barButtonItem2,
+            this.barButtonItem_InLuong,
             this.barButtonItem3});
             this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 3;
@@ -86,7 +86,7 @@
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem2, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem_InLuong, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
@@ -100,12 +100,13 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
-            // barButtonItem2
+            // barButtonItem_InLuong
             // 
-            this.barButtonItem2.Caption = "In";
-            this.barButtonItem2.Id = 1;
-            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem_InLuong.Caption = "In";
+            this.barButtonItem_InLuong.Id = 1;
+            this.barButtonItem_InLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem_InLuong.Name = "barButtonItem_InLuong";
+            this.barButtonItem_InLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_InLuong_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -251,14 +252,14 @@
             // colLuongThucLanh
             // 
             this.colLuongThucLanh.Caption = "Lương Thực Lãnh";
+            this.colLuongThucLanh.DisplayFormat.FormatString = "N0";
+            this.colLuongThucLanh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colLuongThucLanh.FieldName = "LuongThucLanh";
             this.colLuongThucLanh.MinWidth = 25;
             this.colLuongThucLanh.Name = "colLuongThucLanh";
             this.colLuongThucLanh.Visible = true;
             this.colLuongThucLanh.VisibleIndex = 5;
             this.colLuongThucLanh.Width = 94;
-            this.colLuongThucLanh.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.colLuongThucLanh.DisplayFormat.FormatString = "N0";
             // 
             // luongTableAdapter
             // 
@@ -298,7 +299,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem_InLuong;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private HRMDataSet hRMDataSet;
