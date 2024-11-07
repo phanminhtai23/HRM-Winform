@@ -156,19 +156,17 @@
             // 
             this.textBox_MatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox_MatKhau.Location = new System.Drawing.Point(177, 302);
-            this.textBox_MatKhau.Multiline = true;
             this.textBox_MatKhau.Name = "textBox_MatKhau";
             this.textBox_MatKhau.PasswordChar = '*';
-            this.textBox_MatKhau.Size = new System.Drawing.Size(218, 40);
+            this.textBox_MatKhau.Size = new System.Drawing.Size(218, 30);
             this.textBox_MatKhau.TabIndex = 1;
             // 
             // textBox_TaiKhoan
             // 
             this.textBox_TaiKhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox_TaiKhoan.Location = new System.Drawing.Point(177, 237);
-            this.textBox_TaiKhoan.Multiline = true;
             this.textBox_TaiKhoan.Name = "textBox_TaiKhoan";
-            this.textBox_TaiKhoan.Size = new System.Drawing.Size(218, 40);
+            this.textBox_TaiKhoan.Size = new System.Drawing.Size(218, 30);
             this.textBox_TaiKhoan.TabIndex = 0;
             // 
             // button_Thoat

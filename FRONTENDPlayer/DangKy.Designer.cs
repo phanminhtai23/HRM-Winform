@@ -122,9 +122,8 @@
             // 
             this.textBox1_Gmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox1_Gmail.Location = new System.Drawing.Point(75, 373);
-            this.textBox1_Gmail.Multiline = true;
             this.textBox1_Gmail.Name = "textBox1_Gmail";
-            this.textBox1_Gmail.Size = new System.Drawing.Size(301, 40);
+            this.textBox1_Gmail.Size = new System.Drawing.Size(301, 30);
             this.textBox1_Gmail.TabIndex = 3;
             // 
             // pictureBox3
@@ -204,29 +203,26 @@
             // 
             this.textBox3_XacNhanMK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox3_XacNhanMK.Location = new System.Drawing.Point(75, 289);
-            this.textBox3_XacNhanMK.Multiline = true;
             this.textBox3_XacNhanMK.Name = "textBox3_XacNhanMK";
             this.textBox3_XacNhanMK.PasswordChar = '*';
-            this.textBox3_XacNhanMK.Size = new System.Drawing.Size(301, 40);
+            this.textBox3_XacNhanMK.Size = new System.Drawing.Size(301, 30);
             this.textBox3_XacNhanMK.TabIndex = 2;
             // 
             // textBox2_MatKhau
             // 
             this.textBox2_MatKhau.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox2_MatKhau.Location = new System.Drawing.Point(75, 207);
-            this.textBox2_MatKhau.Multiline = true;
             this.textBox2_MatKhau.Name = "textBox2_MatKhau";
             this.textBox2_MatKhau.PasswordChar = '*';
-            this.textBox2_MatKhau.Size = new System.Drawing.Size(301, 40);
+            this.textBox2_MatKhau.Size = new System.Drawing.Size(301, 30);
             this.textBox2_MatKhau.TabIndex = 1;
             // 
             // textBox_TaiKhoan
             // 
             this.textBox_TaiKhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textBox_TaiKhoan.Location = new System.Drawing.Point(75, 124);
-            this.textBox_TaiKhoan.Multiline = true;
             this.textBox_TaiKhoan.Name = "textBox_TaiKhoan";
-            this.textBox_TaiKhoan.Size = new System.Drawing.Size(301, 40);
+            this.textBox_TaiKhoan.Size = new System.Drawing.Size(301, 30);
             this.textBox_TaiKhoan.TabIndex = 0;
             // 
             // button1_DangKy

@@ -42,7 +42,6 @@ namespace FRONTENDPlayer
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.NgayBatDau = new DevExpress.XtraEditors.DateEdit();
-            this.txtGhiChu = new DevExpress.XtraEditors.TextEdit();
             this.NgayKetThuc = new DevExpress.XtraEditors.DateEdit();
             this.cmbNhanVien = new DevExpress.XtraEditors.LookUpEdit();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -52,10 +51,10 @@ namespace FRONTENDPlayer
             this.cmbMaCT = new DevExpress.XtraEditors.LookUpEdit();
             this.qTCongTacBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qT_CongTacTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.QT_CongTacTableAdapter();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgayBatDau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgayBatDau.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgayKetThuc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgayKetThuc.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNhanVien.Properties)).BeginInit();
@@ -107,7 +106,7 @@ namespace FRONTENDPlayer
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(405, 229);
+            this.btnLuu.Location = new System.Drawing.Point(401, 264);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(94, 29);
             this.btnLuu.TabIndex = 13;
@@ -116,7 +115,7 @@ namespace FRONTENDPlayer
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(517, 229);
+            this.btnThoat.Location = new System.Drawing.Point(517, 264);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(94, 29);
             this.btnThoat.TabIndex = 14;
@@ -140,14 +139,6 @@ namespace FRONTENDPlayer
             this.NgayBatDau.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.NgayBatDau.Size = new System.Drawing.Size(156, 34);
             this.NgayBatDau.TabIndex = 10;
-            // 
-            // txtGhiChu
-            // 
-            this.txtGhiChu.Location = new System.Drawing.Point(142, 146);
-            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(469, 34);
-            this.txtGhiChu.TabIndex = 7;
             // 
             // NgayKetThuc
             // 
@@ -198,7 +189,7 @@ namespace FRONTENDPlayer
             // 
             this.GhiChu.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GhiChu.Appearance.Options.UseFont = true;
-            this.GhiChu.Location = new System.Drawing.Point(75, 164);
+            this.GhiChu.Location = new System.Drawing.Point(74, 186);
             this.GhiChu.Name = "GhiChu";
             this.GhiChu.Size = new System.Drawing.Size(42, 16);
             this.GhiChu.TabIndex = 16;
@@ -235,11 +226,20 @@ namespace FRONTENDPlayer
             // 
             this.qT_CongTacTableAdapter.ClearBeforeFill = true;
             // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.Location = new System.Drawing.Point(142, 139);
+            this.txtGhiChu.Multiline = true;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(469, 104);
+            this.txtGhiChu.TabIndex = 18;
+            // 
             // SuaCongTac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 296);
+            this.ClientSize = new System.Drawing.Size(696, 326);
+            this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.cmbMaCT);
             this.Controls.Add(this.GhiChu);
             this.Controls.Add(this.NgayKetThuc);
@@ -247,7 +247,6 @@ namespace FRONTENDPlayer
             this.Controls.Add(this.cmbNhanVien);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
@@ -259,7 +258,6 @@ namespace FRONTENDPlayer
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgayBatDau.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgayBatDau.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgayKetThuc.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgayKetThuc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNhanVien.Properties)).EndInit();
@@ -277,7 +275,6 @@ namespace FRONTENDPlayer
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtGhiChu;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
@@ -291,6 +288,7 @@ namespace FRONTENDPlayer
         private DevExpress.XtraEditors.LookUpEdit cmbMaCT;
         private System.Windows.Forms.BindingSource qTCongTacBindingSource;
         private HRMDataSetTableAdapters.QT_CongTacTableAdapter qT_CongTacTableAdapter;
+        private TextBox txtGhiChu;
     }
 
 }

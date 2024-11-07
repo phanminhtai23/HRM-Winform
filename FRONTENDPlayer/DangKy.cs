@@ -114,6 +114,5 @@ namespace FRONTENDPlayer
                 this.Close();
             }
         }
-
     }
 }

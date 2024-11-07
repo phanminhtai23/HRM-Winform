@@ -39,7 +39,7 @@ namespace LOGICPlayer
                         var maNhanVien = row[1].ToString(); // Cột thứ 2 chứa mã nhân viên
                         var thangNam = row[2].ToString(); // Cột thứ 3 chứa tháng năm
                         var soNgayNghi = int.Parse(row[3].ToString()); // Cột thứ 4 chứa số ngày nghỉ
-                        var ghiChu = row[4].ToString();
+                        var ghichu = row[4].ToString(); // Cột thứ 4 chứ ghi chú 
 
                         // Kiểm tra xem bản ghi đã tồn tại trong cơ sở dữ liệu chưa
                         var existingRecord = Adapter.NgayNghi
@@ -52,8 +52,7 @@ namespace LOGICPlayer
                             {
                                 MaNhanVien = maNhanVien,
                                 ThangNam = thangNam,
-                                SoNgayNghi = soNgayNghi,
-                                GhiChu = ghiChu
+                                SoNgayNghi = soNgayNghi
                             };
 
                             Adapter.NgayNghi.Add(ngayNghi);
