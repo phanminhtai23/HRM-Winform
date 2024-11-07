@@ -57,7 +57,7 @@ namespace FRONTENDPlayer
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ThongBao.Load_TableLuong -= load_data;
+            ThongBao.Load_TableLuong += load_data;
             this.Close();
         }
 
@@ -77,6 +77,15 @@ namespace FRONTENDPlayer
             public string ThangNam { get; set; }
             public int SoNgayLam { get; set; } // Kiểu int cho Số Ngày Làm
             public int LuongThucLanh { get; set; } // Kiểu int cho Lương Thực Lãnh
+        }
+
+        private void barButtonItem_InLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            InLuong inluong = new InLuong();
+            if (DialogResult.OK == inluong.ShowDialog())
+            {
+
+            }
         }
     }
 }

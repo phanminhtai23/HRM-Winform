@@ -91,9 +91,9 @@ namespace FRONTENDPlayer
                         // Tạo biểu đồ
                         label3_TongLuong.Text = $"Tổng lương: {TongLuong:N0} VNĐ";
                         label3_TongLuong.Visible = true;
+                         DrawChart(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
                     }
 
-                    DrawChart(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
 
                 }
                 catch
