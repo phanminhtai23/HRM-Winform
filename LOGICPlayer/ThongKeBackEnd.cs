@@ -11,14 +11,21 @@ namespace LOGICPlayer
     public class ThongKeBackEnd
     {
         readonly HRMEntities Adapter = new HRMEntities();
-        public int TongLuongNhanVien_ddMMyyy(string NgayBatDau, string NgayKetThuc)
+        public long TongLuongNhanVien_ddMMyyy(string NgayBatDau, string NgayKetThuc)
         {
             using (var context = new HRMEntities())
             {
+                // Lấy thử 1 dữ liệu từ bảng Lương
+                var firstLuong = context.Luong.FirstOrDefault();
+                if (firstLuong != null)
+                {
+                    Console.WriteLine($"MaNhanVien: {firstLuong.MaNhanVien}, ThangNam: {(int.Parse(firstLuong.ThangNam.Substring(3, 4)) * 100 + int.Parse(firstLuong.ThangNam.Substring(0, 2)))}, LuongThucLanh: {firstLuong.LuongThucLanh}");
+                }
 
                 // Chuyển NgayBatDau và NgayKetThuc thành định dạng YYYYMM để so sánh
                 int ngayBatDauInt = int.Parse(NgayBatDau.Substring(6, 4)) * 100 + int.Parse(NgayBatDau.Substring(3, 2));
                 int ngayKetThucInt = int.Parse(NgayKetThuc.Substring(6, 4)) * 100 + int.Parse(NgayKetThuc.Substring(3, 2));
+                Console.WriteLine($"ok{ngayBatDauInt}, {ngayKetThucInt}");
 
                 var totalSalary = context.Luong
                     .AsEnumerable()
@@ -26,7 +33,7 @@ namespace LOGICPlayer
                         (int.Parse(l.ThangNam.Substring(3, 4)) * 100 + int.Parse(l.ThangNam.Substring(0, 2))) >= ngayBatDauInt &&
                         (int.Parse(l.ThangNam.Substring(3, 4)) * 100 + int.Parse(l.ThangNam.Substring(0, 2))) <= ngayKetThucInt)
                     .Sum(l => l.LuongThucLanh);
-
+                Console.WriteLine("ok1");
                 return totalSalary ?? 0; // Trả về 0 nếu totalSalary là null
             }
         }

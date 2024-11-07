@@ -32,26 +32,9 @@ namespace FRONTENDPlayer
 
         }
 
-        private void dateEdit2_DateKetThuc_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateEdit1_DateBatDau_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void simpleButton1_Huy_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-
-
-        private void splitterControl1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
         }
 
         private void simpleButton2_XacNhan_Click_1(object sender, EventArgs e)
@@ -93,8 +76,9 @@ namespace FRONTENDPlayer
                 try
                 {
                     ThongKeBackEnd thongKeBackEnd = new ThongKeBackEnd();
-                    int TongLuong = thongKeBackEnd.TongLuongNhanVien_ddMMyyy(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
+                    long TongLuong = thongKeBackEnd.TongLuongNhanVien_ddMMyyy(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
 
+                    Console.Write($"Tongluong: {TongLuong}");
                     // Print the values of dateEdit1_DateBatDau and dateEdit2_DateKetThuc
                     //MessageBox.Show($"Ngày bắt đầu: {dateEdit1_DateBatDau.EditValue.ToString()}\nNgày kết thúc: {dateEdit2_DateKetThuc.EditValue.ToString()}", "Thông tin ngày", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
