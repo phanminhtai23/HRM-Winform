@@ -16,11 +16,11 @@ namespace LOGICPlayer
         
         public static string LinkConnectData()
         {  //Chọn một cái đi
-            string str = "Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
+            // string str = "Data Source=MICHAEL\\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
 
             //string str = "Data Source=LAPTOP-881KRHJ2\SQLEXPRESS;Initial Catalog=HRM;Integrated Security=True";
 
-            //string str= "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
+            string str= "Data Source=localhost;Initial Catalog=HRM;Integrated Security=True";
 
             return str;
         }

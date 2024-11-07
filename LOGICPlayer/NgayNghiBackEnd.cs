@@ -52,7 +52,8 @@ namespace LOGICPlayer
                             {
                                 MaNhanVien = maNhanVien,
                                 ThangNam = thangNam,
-                                SoNgayNghi = soNgayNghi
+                                SoNgayNghi = soNgayNghi,
+                                GhiChu = ghichu
                             };
 
                             Adapter.NgayNghi.Add(ngayNghi);
