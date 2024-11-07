@@ -180,6 +180,7 @@
             // 
             this.gcDanhSach.DataSource = this.qTCongTacBindingSource;
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcDanhSach.EmbeddedNavigator.AutoSize = true;
             this.gcDanhSach.Location = new System.Drawing.Point(0, 47);
             this.gcDanhSach.MainView = this.gvDanhSach;
             this.gcDanhSach.MenuManager = this.barManager1;

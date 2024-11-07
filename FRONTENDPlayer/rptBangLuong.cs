@@ -15,7 +15,6 @@ namespace FRONTENDPlayer
             InitializeComponent();
         }
 
-        List<frmLuong.Luong1> _lst;
         public rptBangLuong(List<frmLuong.Luong1> _lstBangLuong)
         {
             InitializeComponent();
@@ -28,7 +27,9 @@ namespace FRONTENDPlayer
             InitializeComponent();
             this.DataSource = luongTheoThangNam;
             lblTongLuong.Text = tongLuongThucLanh.ToString("N0");
+            lblLuongThucLanh.TextFormatString = "{0:N0}";
             loadData();
+
         }
 
         void loadData()

@@ -10,10 +10,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraReports.UI;
 using DATAPlayer;
 using System.Data.SqlClient;
 using LOGICPlayer;
+using System.Runtime.CompilerServices;
 
 namespace FRONTENDPlayer
 {
@@ -27,17 +27,6 @@ namespace FRONTENDPlayer
             InitializeComponent();
         }
 
-        Luong1 _bangLuong;
-        List<Luong1> _lstBangLuong;
-
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            InLuong inluong = new InLuong();
-            if (DialogResult.OK == inluong.ShowDialog())
-            {
-
-            }
-        }
 
         NgayNghiBackEnd ngayNghiBackEnd = new NgayNghiBackEnd();
         public void load_data()
@@ -77,6 +66,16 @@ namespace FRONTENDPlayer
             public string ThangNam { get; set; }
             public int SoNgayLam { get; set; } // Kiểu int cho Số Ngày Làm
             public int LuongThucLanh { get; set; } // Kiểu int cho Lương Thực Lãnh
+        }
+
+        private void barButtonItem_InLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            InLuong inLuong = new InLuong();
+            if (DialogResult.OK == inLuong.ShowDialog())
+            {
+
+            }
+                
         }
     }
 }

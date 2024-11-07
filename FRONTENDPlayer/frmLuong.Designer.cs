@@ -104,9 +104,9 @@
             // 
             this.barButtonItem_InLuong.Caption = "In";
             this.barButtonItem_InLuong.Id = 1;
-            this.barButtonItem_InLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.barButtonItem_InLuong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem_InLuong.ImageOptions.SvgImage")));
             this.barButtonItem_InLuong.Name = "barButtonItem_InLuong";
-            //this.barButtonItem_InLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_InLuong_ItemClick);
+            this.barButtonItem_InLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_InLuong_ItemClick);
             // 
             // barButtonItem3
             // 

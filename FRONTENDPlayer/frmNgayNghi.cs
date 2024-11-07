@@ -35,6 +35,30 @@ namespace FRONTENDPlayer
         {
             this.ngayNghiTableAdapter.FillBy1(this.hRMDataSet.NgayNghi);
             gridView1.OptionsBehavior.Editable = false;
+            // Khởi tạo RepositoryItemMemoEdit cho việc hiển thị nhiều dòng trong ô
+            DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit memoEdit = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+
+            gridControl1.RepositoryItems.Add(memoEdit);
+
+            // Tìm cột GhiChu và gán memoEdit vào cột đó
+            var ghiChuColumn = gridView1.Columns["GhiChu"];
+            if (ghiChuColumn != null)
+            {
+                ghiChuColumn.ColumnEdit = memoEdit;
+                ghiChuColumn.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap; // Kích hoạt WordWrap cho cột GhiChu
+            }
+
+            // Bật tính năng tự động điều chỉnh chiều cao của hàng
+            gridView1.OptionsView.RowAutoHeight = true;
+
+            // Đảm bảo các cột được điều chỉnh để hiển thị hết nội dung
+            gridView1.BestFitColumns();
+
+            // Áp dụng WordWrap cho tất cả các cột trong GridView
+            foreach (DevExpress.XtraGrid.Columns.GridColumn column in gridView1.Columns)
+            {
+                column.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            }
         }
         // click thêm ngày nghỉ
         private void barButtonItem1_Them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

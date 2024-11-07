@@ -28,7 +28,31 @@ namespace FRONTENDPlayer
         {
             gcDanhSach.DataSource = congtacbackend.LoadDataTable();
             gvDanhSach.OptionsBehavior.Editable = false;
-      
+            // Khởi tạo RepositoryItemMemoEdit cho việc hiển thị nhiều dòng trong ô
+            DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit memoEdit = new DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit();
+
+            gcDanhSach.RepositoryItems.Add(memoEdit);
+
+            // Tìm cột GhiChu và gán memoEdit vào cột đó
+            var ghiChuColumn = gvDanhSach.Columns["GhiChu"];
+            if (ghiChuColumn != null)
+            {
+                ghiChuColumn.ColumnEdit = memoEdit;
+                ghiChuColumn.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap; // Kích hoạt WordWrap cho cột GhiChu
+            }
+
+            // Bật tính năng tự động điều chỉnh chiều cao của hàng
+            gvDanhSach.OptionsView.RowAutoHeight = true;
+
+            // Đảm bảo các cột được điều chỉnh để hiển thị hết nội dung
+            gvDanhSach.BestFitColumns();
+
+            // Áp dụng WordWrap cho tất cả các cột trong GridView
+            foreach (DevExpress.XtraGrid.Columns.GridColumn column in gvDanhSach.Columns)
+            {
+                column.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            }
+
         }
         private void frmCongTac_Load(object sender, EventArgs e)
         {

@@ -11,7 +11,7 @@ namespace LOGICPlayer
     public class ThongKeBackEnd
     {
         readonly HRMEntities Adapter = new HRMEntities();
-        public int TongLuongNhanVien_ddMMyyy(string NgayBatDau, string NgayKetThuc)
+        public long TongLuongNhanVien_ddMMyyy(string NgayBatDau, string NgayKetThuc)
         {
             using (var context = new HRMEntities())
             {
@@ -20,14 +20,14 @@ namespace LOGICPlayer
                 int ngayBatDauInt = int.Parse(NgayBatDau.Substring(6, 4)) * 100 + int.Parse(NgayBatDau.Substring(3, 2));
                 int ngayKetThucInt = int.Parse(NgayKetThuc.Substring(6, 4)) * 100 + int.Parse(NgayKetThuc.Substring(3, 2));
 
-                var totalSalary = context.Luong
+                long totalSalary = context.Luong
                     .AsEnumerable()
                     .Where(l =>
                         (int.Parse(l.ThangNam.Substring(3, 4)) * 100 + int.Parse(l.ThangNam.Substring(0, 2))) >= ngayBatDauInt &&
                         (int.Parse(l.ThangNam.Substring(3, 4)) * 100 + int.Parse(l.ThangNam.Substring(0, 2))) <= ngayKetThucInt)
-                    .Sum(l => l.LuongThucLanh);
+                    .Sum(l => (long)l.LuongThucLanh);
 
-                return totalSalary ?? 0; // Trả về 0 nếu totalSalary là null
+                return totalSalary; // Trả về 0 nếu totalSalary là null
             }
         }
 
