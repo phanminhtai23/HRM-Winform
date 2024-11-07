@@ -42,6 +42,10 @@
             this.hRMDataSet = new FRONTENDPlayer.HRMDataSet();
             this.luongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.luongTableAdapter = new FRONTENDPlayer.HRMDataSetTableAdapters.LuongTableAdapter();
+            this.label3_tbLuongThang = new System.Windows.Forms.Label();
+            this.label4_LuongTBNV = new System.Windows.Forms.Label();
+            this.label5_LuongNVCaoNhat = new System.Windows.Forms.Label();
+            this.label6_LuongNVThapNhat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -66,6 +70,10 @@
             // splitContainerControl1.Panel1
             // 
             this.splitContainerControl1.Panel1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.splitContainerControl1.Panel1.Controls.Add(this.label6_LuongNVThapNhat);
+            this.splitContainerControl1.Panel1.Controls.Add(this.label5_LuongNVCaoNhat);
+            this.splitContainerControl1.Panel1.Controls.Add(this.label4_LuongTBNV);
+            this.splitContainerControl1.Panel1.Controls.Add(this.label3_tbLuongThang);
             this.splitContainerControl1.Panel1.Controls.Add(this.label3_TongLuong);
             this.splitContainerControl1.Panel1.Controls.Add(this.label3_CanhBao);
             this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton2_XacNhan);
@@ -80,15 +88,15 @@
             // 
             this.splitContainerControl1.Panel2.Controls.Add(this.chartControl1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(933, 451);
-            this.splitContainerControl1.SplitterPosition = 300;
+            this.splitContainerControl1.Size = new System.Drawing.Size(1033, 637);
+            this.splitContainerControl1.SplitterPosition = 329;
             this.splitContainerControl1.TabIndex = 0;
             // 
             // label3_TongLuong
             // 
             this.label3_TongLuong.AutoSize = true;
             this.label3_TongLuong.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3_TongLuong.Location = new System.Drawing.Point(10, 267);
+            this.label3_TongLuong.Location = new System.Drawing.Point(8, 243);
             this.label3_TongLuong.Name = "label3_TongLuong";
             this.label3_TongLuong.Size = new System.Drawing.Size(108, 19);
             this.label3_TongLuong.TabIndex = 25;
@@ -190,7 +198,7 @@
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
             this.chartControl1.Name = "chartControl1";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartControl1.Size = new System.Drawing.Size(613, 451);
+            this.chartControl1.Size = new System.Drawing.Size(684, 637);
             this.chartControl1.TabIndex = 0;
             // 
             // hRMDataSet
@@ -207,11 +215,57 @@
             // 
             this.luongTableAdapter.ClearBeforeFill = true;
             // 
+            // label3_tbLuongThang
+            // 
+            this.label3_tbLuongThang.AutoSize = true;
+            this.label3_tbLuongThang.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3_tbLuongThang.Location = new System.Drawing.Point(8, 296);
+            this.label3_tbLuongThang.Name = "label3_tbLuongThang";
+            this.label3_tbLuongThang.Size = new System.Drawing.Size(140, 19);
+            this.label3_tbLuongThang.TabIndex = 26;
+            this.label3_tbLuongThang.Text = "TB tháng lương:";
+            this.label3_tbLuongThang.Visible = false;
+            this.label3_tbLuongThang.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4_LuongTBNV
+            // 
+            this.label4_LuongTBNV.AutoSize = true;
+            this.label4_LuongTBNV.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4_LuongTBNV.Location = new System.Drawing.Point(8, 344);
+            this.label4_LuongTBNV.Name = "label4_LuongTBNV";
+            this.label4_LuongTBNV.Size = new System.Drawing.Size(306, 19);
+            this.label4_LuongTBNV.TabIndex = 27;
+            this.label4_LuongTBNV.Text = "Lương trung bình: 2.000.000.000 VND";
+            this.label4_LuongTBNV.Visible = false;
+            this.label4_LuongTBNV.Click += new System.EventHandler(this.label4_LuongTBNV_Click);
+            // 
+            // label5_LuongNVCaoNhat
+            // 
+            this.label5_LuongNVCaoNhat.AutoSize = true;
+            this.label5_LuongNVCaoNhat.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5_LuongNVCaoNhat.Location = new System.Drawing.Point(8, 391);
+            this.label5_LuongNVCaoNhat.Name = "label5_LuongNVCaoNhat";
+            this.label5_LuongNVCaoNhat.Size = new System.Drawing.Size(142, 19);
+            this.label5_LuongNVCaoNhat.TabIndex = 28;
+            this.label5_LuongNVCaoNhat.Text = "Lương cao nhất:";
+            this.label5_LuongNVCaoNhat.Visible = false;
+            // 
+            // label6_LuongNVThapNhat
+            // 
+            this.label6_LuongNVThapNhat.AutoSize = true;
+            this.label6_LuongNVThapNhat.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6_LuongNVThapNhat.Location = new System.Drawing.Point(8, 439);
+            this.label6_LuongNVThapNhat.Name = "label6_LuongNVThapNhat";
+            this.label6_LuongNVThapNhat.Size = new System.Drawing.Size(149, 19);
+            this.label6_LuongNVThapNhat.TabIndex = 29;
+            this.label6_LuongNVThapNhat.Text = "Lương thấp nhất:";
+            this.label6_LuongNVThapNhat.Visible = false;
+            // 
             // ChonThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 451);
+            this.ClientSize = new System.Drawing.Size(1033, 637);
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "ChonThongKe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -251,5 +305,9 @@
         private HRMDataSet hRMDataSet;
         private System.Windows.Forms.BindingSource luongBindingSource;
         private HRMDataSetTableAdapters.LuongTableAdapter luongTableAdapter;
+        private System.Windows.Forms.Label label4_LuongTBNV;
+        private System.Windows.Forms.Label label3_tbLuongThang;
+        private System.Windows.Forms.Label label5_LuongNVCaoNhat;
+        private System.Windows.Forms.Label label6_LuongNVThapNhat;
     }
 }

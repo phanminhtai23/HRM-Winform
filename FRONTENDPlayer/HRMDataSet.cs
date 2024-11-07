@@ -16,6 +16,10 @@
 
 namespace FRONTENDPlayer.HRMDataSetTableAdapters
 {
+    partial class LuongTableAdapter
+    {
+    }
+
     partial class DM_ChucVuTableAdapter
     {
     }

@@ -28,7 +28,12 @@ namespace FRONTENDPlayer
             // TODO: This line of code loads data into the 'hRMDataSet.Luong' table. You can move, or remove it, as needed.
             this.luongTableAdapter.Fill(this.hRMDataSet.Luong);
             label3_CanhBao.Visible = false;
+
             label3_TongLuong.Visible = false;
+            label3_tbLuongThang.Visible = false;
+            label4_LuongTBNV.Visible = false;
+            label6_LuongNVThapNhat.Visible = false;
+            label5_LuongNVCaoNhat.Visible = false;
 
         }
 
@@ -40,7 +45,12 @@ namespace FRONTENDPlayer
         private void simpleButton2_XacNhan_Click_1(object sender, EventArgs e)
         {
             label3_CanhBao.Visible = false;
+
             label3_TongLuong.Visible = false;
+            label3_tbLuongThang.Visible = false;
+            label4_LuongTBNV.Visible = false;
+            label6_LuongNVThapNhat.Visible = false;
+            label5_LuongNVCaoNhat.Visible = false;
             if (dateEdit1_DateBatDau.EditValue == null || string.IsNullOrEmpty(dateEdit1_DateBatDau.EditValue.ToString()))
             {
                 label3_CanhBao.Text = "Vui lòng chọn tháng bắt đầu thống kê.";
@@ -77,6 +87,37 @@ namespace FRONTENDPlayer
                 {
                     ThongKeBackEnd thongKeBackEnd = new ThongKeBackEnd();
                     long TongLuong = thongKeBackEnd.TongLuongNhanVien_ddMMyyy(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
+                    var dsThang = LayDanhSachThang(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
+
+                    List<long> dsLuongTBNV = new List<long>();
+                    List<long> dsLuongCaoNhat = new List<long>();
+                    List<long> dsLuongThapNhat = new List<long>();
+                    int demThangCoLuong = 0;
+                    foreach (string thang in dsThang)
+                    {
+                        Console.WriteLine(thang);
+                        if ( thongKeBackEnd.TrungBinhLuongNVMotThang(thang) != 0 &&
+                            thongKeBackEnd.LuongCaoNhatTrongThang(thang) != 0 &&
+                            thongKeBackEnd.LuongThapNhatTrongThang(thang) != 0) 
+                        {
+                            demThangCoLuong++;
+                            dsLuongTBNV.Add(thongKeBackEnd.TrungBinhLuongNVMotThang(thang));
+                            dsLuongCaoNhat.Add(thongKeBackEnd.LuongCaoNhatTrongThang(thang));
+                            dsLuongThapNhat.Add(thongKeBackEnd.LuongThapNhatTrongThang(thang));
+                        }
+                        
+                    }
+
+                    long luongTBThang = TongLuong / demThangCoLuong;
+
+                    long luongTB = dsLuongTBNV.Sum() / demThangCoLuong;
+                    long luongCN = dsLuongCaoNhat.Max();
+                    long luongTN = dsLuongThapNhat.Min();
+
+                    Console.Write($"LuongTB: {luongTB}");
+                    Console.Write($"LuongCN: {luongCN}");
+                    Console.Write($"LuongTN: {luongTN}");
+                    Console.Write($"luongTBThang: {luongTBThang}");
 
                     Console.Write($"Tongluong: {TongLuong}");
                     // Print the values of dateEdit1_DateBatDau and dateEdit2_DateKetThuc
@@ -90,15 +131,25 @@ namespace FRONTENDPlayer
                     {
                         // Tạo biểu đồ
                         label3_TongLuong.Text = $"Tổng lương: {TongLuong:N0} VNĐ";
+                        label3_tbLuongThang.Text = $"TB tháng lương: {luongTBThang:N0} VNĐ";
+                        label4_LuongTBNV.Text = $"Lương trung bình: {luongTB:N0} VNĐ";
+                        label5_LuongNVCaoNhat.Text = $"Lương cao nhất: {luongCN:N0} VNĐ";
+                        label6_LuongNVThapNhat.Text = $"Lương thấp nhất: {luongTN:N0} VNĐ";
+
                         label3_TongLuong.Visible = true;
-                         DrawChart(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
+                        label3_tbLuongThang.Visible = true;
+                        label4_LuongTBNV.Visible = true;
+                        label6_LuongNVThapNhat.Visible = true;
+                        label5_LuongNVCaoNhat.Visible = true;
+
+                        DrawChart(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
                     }
 
-
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi cơ sở dữ liệu !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"{ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
         }
@@ -118,7 +169,7 @@ namespace FRONTENDPlayer
             var danhSachThang = LayDanhSachThang(startDate, endDate);
             foreach (string thang in danhSachThang)
             {
-                int luong = thongKeBackEnd.TongLuongNhanVien_MMyyy(thang, thang);
+                long luong = thongKeBackEnd.TongLuongNhanVien_MMyyy(thang, thang);
                 series.Points.Add(new SeriesPoint(thang, luong));
             }
 
@@ -180,6 +231,16 @@ namespace FRONTENDPlayer
         private void simpleButton1_Huy_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_LuongTBNV_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

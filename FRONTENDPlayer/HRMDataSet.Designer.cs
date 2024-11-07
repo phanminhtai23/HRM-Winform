@@ -6732,7 +6732,7 @@ SELECT MaNhanVien, LuongCoBan, PhuCap, KhauTruThue FROM DM_Luong WHERE (MaNhanVi
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT    Luong.MaNhanVien, Luong.ThangNam, Luong.SoNgayLam, Luong.LuongThucLanh\r" +
@@ -6745,6 +6745,13 @@ SELECT MaNhanVien, LuongCoBan, PhuCap, KhauTruThue FROM DM_Luong WHERE (MaNhanVi
                 ", Luong.LuongThucLanh, NhanVien.NgaySinh\r\nFROM         Luong INNER JOIN\r\n       " +
                 "               NhanVien ON Luong.MaNhanVien = NhanVien.MaNhanVien";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT    Luong.MaNhanVien, NhanVien.TenNhanVien, NhanVien.NgaySinh, DM_ChucVu.TenChucVu, DM_ChucVu.HeSoLuong, Luong.ThangNam, Luong.SoNgayLam, Luong.LuongThucLanh
+FROM         Luong INNER JOIN
+                      NhanVien ON Luong.MaNhanVien = NhanVien.MaNhanVien INNER JOIN
+                      DM_ChucVu ON NhanVien.MaChucVu = DM_ChucVu.MaChucVu";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6790,6 +6797,30 @@ SELECT MaNhanVien, LuongCoBan, PhuCap, KhauTruThue FROM DM_Luong WHERE (MaNhanVi
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual HRMDataSet.LuongDataTable GetDataBy() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            HRMDataSet.LuongDataTable dataTable = new HRMDataSet.LuongDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy1(HRMDataSet.LuongDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual HRMDataSet.LuongDataTable GetDataBy1() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             HRMDataSet.LuongDataTable dataTable = new HRMDataSet.LuongDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

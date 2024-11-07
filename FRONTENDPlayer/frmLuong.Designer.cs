@@ -46,8 +46,10 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTenNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colThangNam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTenChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHeSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colThangNam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSoNgayLam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLuongThucLanh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -190,8 +192,10 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMaNhanVien,
             this.colTenNhanVien,
-            this.colThangNam,
             this.colNgaySinh,
+            this.colTenChucVu,
+            this.colHeSoLuong,
+            this.colThangNam,
             this.colSoNgayLam,
             this.colLuongThucLanh});
             this.gridView1.GridControl = this.gridControl1;
@@ -219,16 +223,6 @@
             this.colTenNhanVien.VisibleIndex = 1;
             this.colTenNhanVien.Width = 94;
             // 
-            // colThangNam
-            // 
-            this.colThangNam.Caption = "Tháng Năm";
-            this.colThangNam.FieldName = "ThangNam";
-            this.colThangNam.MinWidth = 25;
-            this.colThangNam.Name = "colThangNam";
-            this.colThangNam.Visible = true;
-            this.colThangNam.VisibleIndex = 3;
-            this.colThangNam.Width = 94;
-            // 
             // colNgaySinh
             // 
             this.colNgaySinh.Caption = "Ngày Sinh";
@@ -239,6 +233,36 @@
             this.colNgaySinh.VisibleIndex = 2;
             this.colNgaySinh.Width = 94;
             // 
+            // colTenChucVu
+            // 
+            this.colTenChucVu.Caption = "Chức Vụ";
+            this.colTenChucVu.FieldName = "TenChucVu";
+            this.colTenChucVu.MinWidth = 25;
+            this.colTenChucVu.Name = "colTenChucVu";
+            this.colTenChucVu.Visible = true;
+            this.colTenChucVu.VisibleIndex = 3;
+            this.colTenChucVu.Width = 94;
+            // 
+            // colHeSoLuong
+            // 
+            this.colHeSoLuong.Caption = "Hệ Số Lương";
+            this.colHeSoLuong.FieldName = "HeSoLuong";
+            this.colHeSoLuong.MinWidth = 25;
+            this.colHeSoLuong.Name = "colHeSoLuong";
+            this.colHeSoLuong.Visible = true;
+            this.colHeSoLuong.VisibleIndex = 4;
+            this.colHeSoLuong.Width = 94;
+            // 
+            // colThangNam
+            // 
+            this.colThangNam.Caption = "Tháng Lương";
+            this.colThangNam.FieldName = "ThangNam";
+            this.colThangNam.MinWidth = 25;
+            this.colThangNam.Name = "colThangNam";
+            this.colThangNam.Visible = true;
+            this.colThangNam.VisibleIndex = 5;
+            this.colThangNam.Width = 94;
+            // 
             // colSoNgayLam
             // 
             this.colSoNgayLam.Caption = "Số Ngày Làm";
@@ -246,7 +270,7 @@
             this.colSoNgayLam.MinWidth = 25;
             this.colSoNgayLam.Name = "colSoNgayLam";
             this.colSoNgayLam.Visible = true;
-            this.colSoNgayLam.VisibleIndex = 4;
+            this.colSoNgayLam.VisibleIndex = 6;
             this.colSoNgayLam.Width = 94;
             // 
             // colLuongThucLanh
@@ -258,7 +282,7 @@
             this.colLuongThucLanh.MinWidth = 25;
             this.colLuongThucLanh.Name = "colLuongThucLanh";
             this.colLuongThucLanh.Visible = true;
-            this.colLuongThucLanh.VisibleIndex = 5;
+            this.colLuongThucLanh.VisibleIndex = 7;
             this.colLuongThucLanh.Width = 94;
             // 
             // luongTableAdapter
@@ -313,5 +337,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private System.Windows.Forms.BindingSource luongBindingSource;
         private HRMDataSetTableAdapters.LuongTableAdapter luongTableAdapter;
+        private DevExpress.XtraGrid.Columns.GridColumn colTenChucVu;
+        private DevExpress.XtraGrid.Columns.GridColumn colHeSoLuong;
     }
 }

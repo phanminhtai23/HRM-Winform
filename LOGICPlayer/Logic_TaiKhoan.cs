@@ -67,25 +67,65 @@ namespace LOGICPlayer
             }
         }
 
+        //public bool Xoa(TaiKhoan taiKhoan)
+        //{
+        //    try
+        //    {
+        //        TaiKhoan Row = Adapter.TaiKhoan.FirstOrDefault(x => x.STT_Tk == taiKhoan.STT_Tk);
+
+        //        Adapter.TaiKhoan.Remove(Row);
+
+        //        Adapter.SaveChanges();
+
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return false;
+        //        throw new Exception("Lỗi: " + ex.Message);
+
+        //    }
+        //}
+
+
+        // Transaction xóa tài khoản
         public bool Xoa(TaiKhoan taiKhoan)
         {
-            try
+            // Sử dụng try-catch để bắt lỗi và rollback nếu có lỗi xảy ra
+            using (var transaction = Adapter.Database.BeginTransaction())
             {
-                TaiKhoan Row = Adapter.TaiKhoan.FirstOrDefault(x => x.STT_Tk == taiKhoan.STT_Tk);
+                try
+                {
+                    // Tìm tài khoản trong DbContext
+                    TaiKhoan Row = Adapter.TaiKhoan.FirstOrDefault(x => x.STT_Tk == taiKhoan.STT_Tk);
 
-                Adapter.TaiKhoan.Remove(Row);
+                    // Nếu không tìm thấy tài khoản, trả về false
+                    if (Row == null)
+                    {
+                        return false;
+                    }
 
-                Adapter.SaveChanges();
+                    // Xóa tài khoản khỏi DbSet
+                    Adapter.TaiKhoan.Remove(Row);
 
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-                throw new Exception("Lỗi: " + ex.Message);
+                    // Lưu các thay đổi vào cơ sở dữ liệu
+                    Adapter.SaveChanges();
 
+                    // Commit transaction nếu mọi thứ thành công
+                    transaction.Commit();
+
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    // Nếu có lỗi, rollback transaction
+                    transaction.Rollback();
+                    // Thực thi ngoại lệ để thông báo lỗi
+                    throw new Exception("Lỗi: " + ex.Message);
+                }
             }
         }
+
 
         public Object[] KiemTraDangNhap(string username, string password)
         {

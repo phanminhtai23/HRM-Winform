@@ -32,7 +32,7 @@ namespace FRONTENDPlayer
         public void load_data()
         {
             ngayNghiBackEnd.UpdateLuong();
-            this.luongTableAdapter.FillBy(this.hRMDataSet.Luong);
+            this.luongTableAdapter.FillBy1(this.hRMDataSet.Luong);
             gridView1.OptionsBehavior.Editable = false;
         }
 

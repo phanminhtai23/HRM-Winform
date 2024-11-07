@@ -487,6 +487,17 @@ FROM         Luong INNER JOIN
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="HRMConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT    Luong.MaNhanVien, NhanVien.TenNhanVien, NhanVien.NgaySinh, DM_ChucVu.TenChucVu, DM_ChucVu.HeSoLuong, Luong.ThangNam, Luong.SoNgayLam, Luong.LuongThucLanh
+FROM         Luong INNER JOIN
+                      NhanVien ON Luong.MaNhanVien = NhanVien.MaNhanVien INNER JOIN
+                      DM_ChucVu ON NhanVien.MaChucVu = DM_ChucVu.MaChucVu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
         </Tables>
@@ -583,43 +594,43 @@ FROM         Luong INNER JOIN
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TenNhanVien" msprop:Generator_ColumnPropNameInRow="TenNhanVien" msprop:Generator_ColumnPropNameInTable="TenNhanVienColumn" msprop:Generator_ColumnVarNameInTable="columnTenNhanVien" msprop:Generator_UserColumnName="TenNhanVien" minOccurs="0">
+              <xs:element name="TenNhanVien" msprop:Generator_UserColumnName="TenNhanVien" msprop:Generator_ColumnPropNameInTable="TenNhanVienColumn" msprop:Generator_ColumnPropNameInRow="TenNhanVien" msprop:Generator_ColumnVarNameInTable="columnTenNhanVien" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NgaySinh" msprop:Generator_ColumnPropNameInRow="NgaySinh" msprop:Generator_ColumnPropNameInTable="NgaySinhColumn" msprop:Generator_ColumnVarNameInTable="columnNgaySinh" msprop:Generator_UserColumnName="NgaySinh" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="DiaChi" msprop:Generator_ColumnPropNameInRow="DiaChi" msprop:Generator_ColumnPropNameInTable="DiaChiColumn" msprop:Generator_ColumnVarNameInTable="columnDiaChi" msprop:Generator_UserColumnName="DiaChi" minOccurs="0">
+              <xs:element name="NgaySinh" msprop:Generator_UserColumnName="NgaySinh" msprop:Generator_ColumnPropNameInTable="NgaySinhColumn" msprop:Generator_ColumnPropNameInRow="NgaySinh" msprop:Generator_ColumnVarNameInTable="columnNgaySinh" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DiaChi" msprop:Generator_UserColumnName="DiaChi" msprop:Generator_ColumnPropNameInTable="DiaChiColumn" msprop:Generator_ColumnPropNameInRow="DiaChi" msprop:Generator_ColumnVarNameInTable="columnDiaChi" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SoDienThoai" msprop:Generator_ColumnPropNameInRow="SoDienThoai" msprop:Generator_ColumnPropNameInTable="SoDienThoaiColumn" msprop:Generator_ColumnVarNameInTable="columnSoDienThoai" msprop:Generator_UserColumnName="SoDienThoai" minOccurs="0">
+              <xs:element name="SoDienThoai" msprop:Generator_UserColumnName="SoDienThoai" msprop:Generator_ColumnPropNameInTable="SoDienThoaiColumn" msprop:Generator_ColumnPropNameInRow="SoDienThoai" msprop:Generator_ColumnVarNameInTable="columnSoDienThoai" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="MaPhongBan" msprop:Generator_ColumnPropNameInRow="MaPhongBan" msprop:Generator_ColumnPropNameInTable="MaPhongBanColumn" msprop:Generator_ColumnVarNameInTable="columnMaPhongBan" msprop:Generator_UserColumnName="MaPhongBan" minOccurs="0">
+              <xs:element name="MaPhongBan" msprop:Generator_UserColumnName="MaPhongBan" msprop:Generator_ColumnPropNameInTable="MaPhongBanColumn" msprop:Generator_ColumnPropNameInRow="MaPhongBan" msprop:Generator_ColumnVarNameInTable="columnMaPhongBan" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="MaChucVu" msprop:Generator_ColumnPropNameInRow="MaChucVu" msprop:Generator_ColumnPropNameInTable="MaChucVuColumn" msprop:Generator_ColumnVarNameInTable="columnMaChucVu" msprop:Generator_UserColumnName="MaChucVu" minOccurs="0">
+              <xs:element name="MaChucVu" msprop:Generator_UserColumnName="MaChucVu" msprop:Generator_ColumnPropNameInTable="MaChucVuColumn" msprop:Generator_ColumnPropNameInRow="MaChucVu" msprop:Generator_ColumnVarNameInTable="columnMaChucVu" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TinhTrangLamViec" msprop:Generator_ColumnPropNameInRow="TinhTrangLamViec" msprop:Generator_ColumnPropNameInTable="TinhTrangLamViecColumn" msprop:Generator_ColumnVarNameInTable="columnTinhTrangLamViec" msprop:Generator_UserColumnName="TinhTrangLamViec" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TinhTrangLamViec" msprop:Generator_UserColumnName="TinhTrangLamViec" msprop:Generator_ColumnPropNameInTable="TinhTrangLamViecColumn" msprop:Generator_ColumnPropNameInRow="TinhTrangLamViec" msprop:Generator_ColumnVarNameInTable="columnTinhTrangLamViec" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -726,12 +737,12 @@ FROM         Luong INNER JOIN
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__NgayNghi__MaNhan__44FF419A" msdata:parent="NhanVien" msdata:child="NgayNghi" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="NgayNghi" msprop:Generator_RelationVarName="relationFK__NgayNghi__MaNhan__44FF419A" msprop:Generator_ChildPropName="GetNgayNghiRows" msprop:Generator_UserRelationName="FK__NgayNghi__MaNhan__44FF419A" msprop:Generator_ParentPropName="NhanVienRow" />
-      <msdata:Relationship name="FK__QT_CongTa__MaNha__3F466844" msdata:parent="NhanVien" msdata:child="QT_CongTac" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="QT_CongTac" msprop:Generator_RelationVarName="relationFK__QT_CongTa__MaNha__3F466844" msprop:Generator_ChildPropName="GetQT_CongTacRows" msprop:Generator_ParentPropName="NhanVienRow" msprop:Generator_UserRelationName="FK__QT_CongTa__MaNha__3F466844" />
-      <msdata:Relationship name="FK__DM_Luong__MaNhan__4222D4EF" msdata:parent="NhanVien" msdata:child="DM_Luong" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="DM_Luong" msprop:Generator_RelationVarName="relationFK__DM_Luong__MaNhan__4222D4EF" msprop:Generator_ChildPropName="GetDM_LuongRows" msprop:Generator_UserRelationName="FK__DM_Luong__MaNhan__4222D4EF" msprop:Generator_ParentPropName="NhanVienRow" />
-      <msdata:Relationship name="FK__Luong__MaNhanVie__47DBAE45" msdata:parent="NhanVien" msdata:child="Luong" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="Luong" msprop:Generator_RelationVarName="relationFK__Luong__MaNhanVie__47DBAE45" msprop:Generator_ChildPropName="GetLuongRows" msprop:Generator_ParentPropName="NhanVienRow" msprop:Generator_UserRelationName="FK__Luong__MaNhanVie__47DBAE45" />
-      <msdata:Relationship name="FK__NhanVien__MaChuc__3C69FB99" msdata:parent="DM_ChucVu" msdata:child="NhanVien" msdata:parentkey="MaChucVu" msdata:childkey="MaChucVu" msprop:Generator_UserParentTable="DM_ChucVu" msprop:Generator_UserChildTable="NhanVien" msprop:Generator_RelationVarName="relationFK__NhanVien__MaChuc__3C69FB99" msprop:Generator_ChildPropName="GetNhanVienRows" msprop:Generator_ParentPropName="DM_ChucVuRow" msprop:Generator_UserRelationName="FK__NhanVien__MaChuc__3C69FB99" />
-      <msdata:Relationship name="FK__NhanVien__MaPhon__3B75D760" msdata:parent="PhongBan" msdata:child="NhanVien" msdata:parentkey="MaPhongBan" msdata:childkey="MaPhongBan" msprop:Generator_UserParentTable="PhongBan" msprop:Generator_UserChildTable="NhanVien" msprop:Generator_RelationVarName="relationFK__NhanVien__MaPhon__3B75D760" msprop:Generator_ChildPropName="GetNhanVienRows" msprop:Generator_ParentPropName="PhongBanRow" msprop:Generator_UserRelationName="FK__NhanVien__MaPhon__3B75D760" />
+      <msdata:Relationship name="FK__NgayNghi__MaNhan__44FF419A" msdata:parent="NhanVien" msdata:child="NgayNghi" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="NgayNghi" msprop:Generator_RelationVarName="relationFK__NgayNghi__MaNhan__44FF419A" msprop:Generator_ChildPropName="GetNgayNghiRows" msprop:Generator_ParentPropName="NhanVienRow" msprop:Generator_UserRelationName="FK__NgayNghi__MaNhan__44FF419A" />
+      <msdata:Relationship name="FK__QT_CongTa__MaNha__3F466844" msdata:parent="NhanVien" msdata:child="QT_CongTac" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="QT_CongTac" msprop:Generator_RelationVarName="relationFK__QT_CongTa__MaNha__3F466844" msprop:Generator_ChildPropName="GetQT_CongTacRows" msprop:Generator_UserRelationName="FK__QT_CongTa__MaNha__3F466844" msprop:Generator_ParentPropName="NhanVienRow" />
+      <msdata:Relationship name="FK__DM_Luong__MaNhan__4222D4EF" msdata:parent="NhanVien" msdata:child="DM_Luong" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="DM_Luong" msprop:Generator_RelationVarName="relationFK__DM_Luong__MaNhan__4222D4EF" msprop:Generator_ChildPropName="GetDM_LuongRows" msprop:Generator_ParentPropName="NhanVienRow" msprop:Generator_UserRelationName="FK__DM_Luong__MaNhan__4222D4EF" />
+      <msdata:Relationship name="FK__Luong__MaNhanVie__47DBAE45" msdata:parent="NhanVien" msdata:child="Luong" msdata:parentkey="MaNhanVien" msdata:childkey="MaNhanVien" msprop:Generator_UserParentTable="NhanVien" msprop:Generator_UserChildTable="Luong" msprop:Generator_RelationVarName="relationFK__Luong__MaNhanVie__47DBAE45" msprop:Generator_ChildPropName="GetLuongRows" msprop:Generator_UserRelationName="FK__Luong__MaNhanVie__47DBAE45" msprop:Generator_ParentPropName="NhanVienRow" />
+      <msdata:Relationship name="FK__NhanVien__MaChuc__3C69FB99" msdata:parent="DM_ChucVu" msdata:child="NhanVien" msdata:parentkey="MaChucVu" msdata:childkey="MaChucVu" msprop:Generator_UserParentTable="DM_ChucVu" msprop:Generator_UserChildTable="NhanVien" msprop:Generator_RelationVarName="relationFK__NhanVien__MaChuc__3C69FB99" msprop:Generator_ChildPropName="GetNhanVienRows" msprop:Generator_UserRelationName="FK__NhanVien__MaChuc__3C69FB99" msprop:Generator_ParentPropName="DM_ChucVuRow" />
+      <msdata:Relationship name="FK__NhanVien__MaPhon__3B75D760" msdata:parent="PhongBan" msdata:child="NhanVien" msdata:parentkey="MaPhongBan" msdata:childkey="MaPhongBan" msprop:Generator_UserParentTable="PhongBan" msprop:Generator_UserChildTable="NhanVien" msprop:Generator_RelationVarName="relationFK__NhanVien__MaPhon__3B75D760" msprop:Generator_ChildPropName="GetNhanVienRows" msprop:Generator_UserRelationName="FK__NhanVien__MaPhon__3B75D760" msprop:Generator_ParentPropName="PhongBanRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
