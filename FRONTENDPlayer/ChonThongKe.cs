@@ -114,12 +114,13 @@ namespace FRONTENDPlayer
                     long luongCN = dsLuongCaoNhat.Max();
                     long luongTN = dsLuongThapNhat.Min();
 
+                    Console.Write($"Tongluong: {TongLuong}");
+                    Console.Write($"luongTBThang: {luongTBThang}");
+
                     Console.Write($"LuongTB: {luongTB}");
                     Console.Write($"LuongCN: {luongCN}");
                     Console.Write($"LuongTN: {luongTN}");
-                    Console.Write($"luongTBThang: {luongTBThang}");
 
-                    Console.Write($"Tongluong: {TongLuong}");
                     // Print the values of dateEdit1_DateBatDau and dateEdit2_DateKetThuc
                     //MessageBox.Show($"Ngày bắt đầu: {dateEdit1_DateBatDau.EditValue.ToString()}\nNgày kết thúc: {dateEdit2_DateKetThuc.EditValue.ToString()}", "Thông tin ngày", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -129,7 +130,7 @@ namespace FRONTENDPlayer
                     }
                     else
                     {
-                        // Tạo biểu đồ
+                        // gán và hiển thị dữ liệu
                         label3_TongLuong.Text = $"Tổng lương: {TongLuong:N0} VNĐ";
                         label3_tbLuongThang.Text = $"TB tháng lương: {luongTBThang:N0} VNĐ";
                         label4_LuongTBNV.Text = $"Lương trung bình: {luongTB:N0} VNĐ";
@@ -142,6 +143,7 @@ namespace FRONTENDPlayer
                         label6_LuongNVThapNhat.Visible = true;
                         label5_LuongNVCaoNhat.Visible = true;
 
+                        // Vẽ biểu đồ
                         DrawChart(dateEdit1_DateBatDau.EditValue.ToString(), dateEdit2_DateKetThuc.EditValue.ToString());
                     }
 
