@@ -108,28 +108,29 @@ namespace FRONTENDPlayer
                         
                     }
 
-                    long luongTBThang = TongLuong / demThangCoLuong;
 
-                    long luongTB = dsLuongTBNV.Sum() / demThangCoLuong;
-                    long luongCN = dsLuongCaoNhat.Max();
-                    long luongTN = dsLuongThapNhat.Min();
-
-                    Console.Write($"Tongluong: {TongLuong}");
-                    Console.Write($"luongTBThang: {luongTBThang}");
-
-                    Console.Write($"LuongTB: {luongTB}");
-                    Console.Write($"LuongCN: {luongCN}");
-                    Console.Write($"LuongTN: {luongTN}");
 
                     // Print the values of dateEdit1_DateBatDau and dateEdit2_DateKetThuc
                     //MessageBox.Show($"Ngày bắt đầu: {dateEdit1_DateBatDau.EditValue.ToString()}\nNgày kết thúc: {dateEdit2_DateKetThuc.EditValue.ToString()}", "Thông tin ngày", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    if (TongLuong == 0)
+                    if (TongLuong == 0 || demThangCoLuong == 0)
                     {
                         MessageBox.Show("Không có dữ liệu thống kê trong khoảng thời gian đã chọn !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
+                        long luongTBThang = TongLuong / demThangCoLuong;
+
+                        long luongTB = dsLuongTBNV.Sum() / demThangCoLuong;
+                        long luongCN = dsLuongCaoNhat.Max();
+                        long luongTN = dsLuongThapNhat.Min();
+                        Console.Write($"Tongluong: {TongLuong}");
+                        Console.Write($"luongTBThang: {luongTBThang}");
+
+                        Console.Write($"LuongTB: {luongTB}");
+                        Console.Write($"LuongCN: {luongCN}");
+                        Console.Write($"LuongTN: {luongTN}");
+
                         // gán và hiển thị dữ liệu
                         label3_TongLuong.Text = $"Tổng lương: {TongLuong:N0} VNĐ";
                         label3_tbLuongThang.Text = $"TB tháng lương: {luongTBThang:N0} VNĐ";
